@@ -27,10 +27,21 @@
     margin-top: 40px;
     border-top: 1px solid var(--color-black);
     border-bottom: 1px solid var(--color-black);
-    padding: 6px ;
+    padding: 6px;
 }
-.title-section p{
+
+.title-section p {
     font-size: 24px;
     font-weight: 300;
     margin: -10px 0;
+}
+
+@media screen and (max-width: 576px) {
+    .section-title .title-number {
+        font-size: 80px;
+    }
+
+    .section-title .title-name {
+        font-size: 25px;
+    }
 }
