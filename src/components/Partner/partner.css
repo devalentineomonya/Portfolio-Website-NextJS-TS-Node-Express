@@ -1,5 +1,8 @@
 .partner-image{
     cursor: grab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .partner-image img{
     transition: 0.4s ease-in-out;
@@ -8,4 +11,10 @@
 }
 .partner-image img:hover{
     transform: scale(1.1);
+}
+@media screen and (max-width:768px) {
+    .partner-image img{
+        width: 100%;
+    }
+    
 }
