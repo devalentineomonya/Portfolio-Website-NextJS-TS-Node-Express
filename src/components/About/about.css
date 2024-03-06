@@ -1,0 +1,114 @@
+/* Adjusting margins and layout for the about section */
+.about-section {
+    margin-top: 100px;
+}
+
+/* Flex layout for the about content */
+.about-content {
+    position: relative;
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    height: 600px;
+    /* You might want to adjust this height as needed */
+}
+
+/* Styling for the counts section */
+.counts-section {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../../assets/images/slider1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+}
+
+/* Styling for the counter container */
+.counter-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    width: 80%;
+    height: 70%;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 50px;
+    overflow: hidden;
+}
+
+/* Styling for the description section */
+.description-section {
+    position: relative;
+    display: block;
+    width: 50%;
+    padding: 60px 150px 100px 100px;
+}
+
+.description-section h3 {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.description-section p {
+    font-size: 18px;
+    color: #393939;
+    line-height: 1.75em;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 1200px) {
+    .counter-container {
+        width: 95%;
+    }
+
+    .description-section {
+        padding: 0 20px 0 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .counter-container {
+        width: 95%;
+    }
+
+    .about-content {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        height: auto;
+    }
+
+    .counts-section,
+    .description-section {
+        width: 100%;
+    }
+
+    .description-section {
+        margin-top: 50px;
+    }
+
+    .description-section h3 {
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .counter-container {
+        grid-template-columns: 1fr ;
+    }
+    .counter-container {
+        height: 95%;
+    }
+    .counts-section {
+        height: 130%;
+    }
+    .description-section {
+        position: relative;
+        top: 30%;
+    }
+}

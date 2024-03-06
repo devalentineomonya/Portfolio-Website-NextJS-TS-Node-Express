@@ -1,0 +1,8 @@
+.partner-section{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: var(--color-white-smoke);
+    height:400px;
+    margin-top: 100px;
+}

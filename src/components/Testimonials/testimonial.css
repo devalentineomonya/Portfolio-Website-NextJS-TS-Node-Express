@@ -1,0 +1,31 @@
+.testimonial-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 100px;
+    
+}
+
+
+.swipper-container {
+    margin-top: 50px;
+    width: 60%;
+}
+
+@media screen and (max-width: 1200px) {
+    .swipper-container {
+        width: 90%;
+        
+    }
+}
+@media screen and (max-width: 576px) {
+    .swipper-container {
+        width: 100%;
+        
+    }
+    .testimonial-section {
+        margin-top:calc(30% + 100px);
+    }
+}

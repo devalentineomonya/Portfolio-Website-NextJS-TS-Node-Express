@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dosis:wght@200..800&family=Inter:wght@100..900&display=swap');
+
+:root {
+    --color-primary: #e9204f;
+    --color-secondary: #8e54e9;
+    --color-white: #ffffff;
+    --color-orange: #ff6f69;
+    --color-green: #7bc043;
+    --color-snow: #eff2f7;
+    --color-zumthor: #eaf1ff;
+    --color-white-smoke: #f8f8f8;
+    --color-gainsboro: #dddddd;
+    --color-silver: #c3c3c3;
+    --color-dim-gray: #454545;
+    --color-gray: #767676;
+    --color-suva-grey: #efefef;
+    --color-matterhorn: #795548;
+    --color-night-rider: #2d2d2d;
+    --color-eclipse: #3c3c3c;
+    --color-blue-violet: #716aa0;
+    --color-medium-slate-blue: #b588fb;
+    --color-soft-nero: #333333;
+    --color-nero: #141414;
+    --color-black: #000000;
+    --color-hr-dv-orange: #f74a05;
+    --color-deep-cerise: #e51681;
+    --color-zinnwaldite: #eabeab;
+    --color-silver-tree: #53b596;
+    --color-medium-purple: #9657f6;
+    --color-purple: #8e54e9;
+    --color-curious-blue: #7486f6;
+}
+
+* {
+    padding: 0 0;
+    margin: 0 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Caveat', 'Dosis', 'Arial', 'sans-serif';
+
+}

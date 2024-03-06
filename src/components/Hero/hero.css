@@ -1,0 +1,143 @@
+
+
+.hero-section {
+    top: -100px;
+    z-index: 1;
+    height: calc(120vh + 160px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+    background-repeat: no-repeat;
+    
+}
+@keyframes zoomBackground {
+    0% {
+        background-size: 110%;
+    }
+
+    50% {
+        background-size: 105%;
+    }
+
+    100% {
+        background-size: 100%;
+    }
+}
+
+.hero-section::before {
+    position: absolute;
+    content: "";
+    height: 40vh;
+    width: 100%;
+    background-color: var(--color-white);
+    bottom: 0;
+    clip-path: polygon(88.64% 86.17%, 100% 22.77%, 100% 103.08%, 0% 107.05%, 0.00% -11.79%);
+
+}
+
+.hero-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    top: -80px;
+}
+.hero-text-container p{
+    display: flex;
+    column-gap: 20px;
+    text-align: center;
+}
+
+.hero-text-container p:first-child {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.hero-text-container h1 {
+    font-size: 120px;
+    font-weight: 800;
+    font-family: 'Dosis';
+    margin: 15px 0;
+}
+
+.hero-text-container p:nth-child(3) {
+    display: flex;
+    column-gap: 20px;
+    font-size: 25px;
+    margin-bottom: 60px;
+}
+
+.hero-text-container a {
+
+    padding: 18px 25px;
+    background-color: var(--color-primary);
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--color-white);
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 992px) {
+    .hero-text-container h1 {
+        font-size: 80px;
+    }
+
+    .hero-section::before {
+        height: 30vh;
+        clip-path: polygon(72.14% 68.07%, 100% 22.77%, 100% 103.08%, 0% 107.05%, 0% -11.79%);
+    }
+    .hero-section{
+        background-repeat: no-repeat;
+        height: calc(80vh + 160px);
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .hero-text-container h1 {
+        font-size: 50px;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    .hero-text-container p:nth-child(3) {
+        font-size: 18px;
+        column-gap: 10px;
+    }
+
+    .hero-section::before {
+        height: 10vh;
+        clip-path: polygon(81.30% 94.74%, 100% 22.77%, 100% 103.08%, 0% 107.05%, 0% 25.35%);
+    }
+    .hero-section{
+        background-repeat: no-repeat;
+        height: calc(35vh + 160px);
+    }
+    .hero-text-container {
+        top:30px;
+    }
+}
+
+
+@media screen and (max-width: 380px) {
+    .hero-text-container h1 {
+        font-size: 40px;
+    }
+
+    .hero-text-container p:first-child {
+        font-size: 18px;
+    }
+
+    .hero-text-container p:nth-child(3) {
+        font-size: 20px;
+    }
+
+    .hero-text-container a {
+        padding: 18px 10px;
+    }
+   
+}

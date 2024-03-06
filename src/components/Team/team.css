@@ -1,0 +1,28 @@
+.team-section{
+    margin-top: 100px;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.team-card-container{
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    
+  
+}
+.team-cards{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+}
+@media screen and (max-width:992px) {
+    .team-cards{
+        width: 100%;
+    }
+    
+}

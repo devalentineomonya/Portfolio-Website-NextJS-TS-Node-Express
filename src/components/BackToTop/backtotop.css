@@ -1,0 +1,32 @@
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.back-to-top-icon {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.back-to-top-icon img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+
+}

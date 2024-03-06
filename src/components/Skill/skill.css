@@ -1,0 +1,25 @@
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.skills-details {
+    display: flex;
+    justify-content: space-between;
+}
+.skills-details p{
+    font-weight: 600;
+}
+.skill-level {
+    position: relative;
+    height: 5px;
+    background-color: var( --color-silver);
+}
+
+.skill-level .skills-level-bar {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: var(--color-primary);
+}
