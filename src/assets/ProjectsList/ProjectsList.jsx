@@ -18,35 +18,6 @@ let ProjectsList = [
     technology: "ReactJs",
     link: "http://reactjs.com",
   },
-  {
-    name: "Project Name",
-    image: image1,
-    technology: "ReactJs",
-    link: "http://reactjs.com",
-  },
-  {
-    name: "Project Name",
-    image: image1,
-    technology: "ReactJs",
-    link: "http://reactjs.com",
-  },
-  {
-    name: "Project Name",
-    image: image1,
-    technology: "ReactJs",
-    link: "http://reactjs.com",
-  },
-  {
-    name: "Project Name",
-    image: image1,
-    technology: "ReactJs",
-    link: "http://reactjs.com",
-  },
-  {
-    name: "Project Name",
-    image: image1,
-    technology: "ReactJs",
-    link: "http://reactjs.com",
-  },
+  
 ];
 export default ProjectsList;
