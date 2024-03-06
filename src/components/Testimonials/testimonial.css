@@ -21,6 +21,9 @@
     }
 }
 @media screen and (max-width: 576px) {
+    .testimonial-section {
+        margin-top: 150px;
+    }
     .swipper-container {
         width: 100%;
         
