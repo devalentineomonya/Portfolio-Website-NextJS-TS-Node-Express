@@ -6,16 +6,34 @@ import Partner from "../Partner/Partner";
 import "./partners.css"; // Assuming this file contains additional styles
 
 const Partners = () => {
-  const oveWriteStyles = `
+  const overrideStyles = `
     .owl-carousel .owl-item img {
       width: unset;
     }
   `;
 
+  // Define the number of items to display based on the screen width
+  const getItemsPerScreen = () => {
+    if (window.innerWidth < 768) {
+      return 1; // Show 1 item on smaller screens
+    } else if (window.innerWidth < 992) {
+      return 2; // Show 2 items on medium screens
+    } else {
+      return 4; // Show 4 items on larger screens
+    }
+  };
+
   return (
     <div className="partner-section">
-      <style>{oveWriteStyles}</style>
-      <OwlCarousel className="owl-theme" style={{ width: "80%" }} loop margin={40} items={4}>
+      <style>{overrideStyles}</style>
+      <OwlCarousel
+        className="owl-theme"
+        style={{ width: "80%" }}
+        loop
+        margin={40}
+        items={getItemsPerScreen()}
+        responsive={{ 0: { items: 1 }, 992: { items: 2 }, 1200: { items: 4 } }}
+      >
         {PartnersList.map((partner, i) => (
           <Partner key={i} partner={partner} />
         ))}
@@ -25,3 +43,4 @@ const Partners = () => {
 };
 
 export default Partners;
+
