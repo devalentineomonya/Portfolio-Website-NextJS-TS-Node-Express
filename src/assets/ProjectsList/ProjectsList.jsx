@@ -1,4 +1,4 @@
-import image1 from "../images/10.png";
+import image1 from "../images/notAvailable.jpeg";
 let ProjectsList = [
   {
     name: "Project Name",
