@@ -85,7 +85,7 @@
 .nav-hamburger-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     height: 100%;
     position: relative;
 }
@@ -103,15 +103,15 @@
 .nav-hamburger span {
     background-color: var(--color-silver);
     height: 2px;
-    width: 50px;
+    width: 45px;
     display: block;
     transition: 0.3s;
 }
 
 .nav-hamburger span:nth-child(2) {
-    transform: translateX(20px);
-    margin: 18px 0;
-    width: 25px;
+    transform: translateX(24px);
+    margin: 15px 0;
+    width: 20px;
     align-self: flex-end;
 }
 
