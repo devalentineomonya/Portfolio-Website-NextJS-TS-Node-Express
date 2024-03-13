@@ -26,7 +26,7 @@
     }
 }
 
-.hero-section::before {
+/* .hero-section::before {
     position: absolute;
     content: "";
     height: 40vh;
@@ -35,7 +35,7 @@
     bottom: 0;
     clip-path: polygon(88.64% 86.17%, 100% 22.77%, 100% 103.08%, 0% 107.05%, 0.00% -11.79%);
 
-}
+} */
 
 .hero-text-container {
     display: flex;
