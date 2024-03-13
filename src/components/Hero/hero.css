@@ -3,7 +3,7 @@
 .hero-section {
     top: -100px;
     z-index: 1;
-    height: calc(120vh + 160px);
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
