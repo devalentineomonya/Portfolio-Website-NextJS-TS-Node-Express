@@ -38,7 +38,7 @@ const Hero = () => {
             <span>FrontEnd</span> -<span>Backend</span>-<span>Mobile Apps</span>
           </p>
           <div className="hero-button">
-            <a href="#">Download Resume</a>
+            <a href="https://1drv.ms/b/s!AmD6S1sK2c1egZ1vdo_4RUcKxn1C6w?e=6F4SjL" target="_blank">Download Resume</a>
           </div>
         </div>
       </div>
