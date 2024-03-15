@@ -1,13 +1,30 @@
-import React from "react";
+import React, {useState} from "react";
 import ContactForm from "../ContactForm/ContactForm";
 import "./contact.css";
 import emailLogo from "../../assets/images/email.png";
 import telephoneLogo from "../../assets/images/telephone.png";
-const Contact = () => {
-    const currentYear = new Date().getFullYear();
-    const today = new Date();
-    const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    const dayName = dayNames[today.getDay()];
+import { scrollToSection } from "../../Utils/ScrollUtils/ScrollUtils";
+const Contact = ({ activeTab, setActiveTab }) => {
+  
+  
+  const handleTabClick = (tabName, event) => {
+    event.preventDefault();
+    setActiveTab(tabName);
+    scrollToSection(tabName);
+  };
+
+  const currentYear = new Date().getFullYear();
+  const today = new Date();
+  const dayNames = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  const dayName = dayNames[today.getDay()];
   return (
     <div className="contact-section" id="contact">
       <div className="contact-form">
@@ -21,19 +38,19 @@ const Contact = () => {
             </h1>
             <ul>
               <li>
-                <a href="#">Home</a>
+                <a onClick={() => handleTabClick("home", event)}>Home</a>
               </li>
               <li>
-                <a href="#about">About</a>
+                <a onClick={() => handleTabClick("about", event)}>About</a>
               </li>
               <li>
-                <a href="#services">Services</a>
+                <a onClick={() => handleTabClick("services", event)}>Services</a>
               </li>
               <li>
-                <a href="#projects">Projects</a>
+                <a onClick={() => handleTabClick("projects", event)}>Projects</a>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <a onClick={() => handleTabClick("contact", event)}>Contact</a>
               </li>
             </ul>
           </div>

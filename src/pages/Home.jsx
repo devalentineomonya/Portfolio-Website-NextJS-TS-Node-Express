@@ -1,4 +1,3 @@
-import React, { useContext } from "react";
 import Hero from "../components/Hero/Hero";
 import Services from "../components/Servces/Services";
 import ServicesContextProvider from "../Context/ServicesContext";
@@ -7,12 +6,21 @@ import CounterContextProvider from "../Context/CounterContext";
 import SkillsContextProvider from "../Context/SkillsContext";
 import Testimonial from "../components/Testimonials/Testimonial";
 import SwipperContextProvider from "../Context/SwipperContext";
-import Team  from "../components/Team/Team";
+import Team from "../components/Team/Team";
 import Partners from "../components/Partners/Partners";
 import LatestProjects from "../components/LatestProjects/LatestProjects";
 import Contact from "../components/Contact/Contact";
 import Projects from "../components/Projects/Projects";
-const Home = () => {
+import { scrollToSection } from "../Utils/ScrollUtils/ScrollUtils";
+import React, { useEffect } from "react";
+
+const Home = ({ activeTab, setActiveTab }) => {
+  const hash = window.location.hash.substr(1);
+  useEffect(() => {
+    scrollToSection(hash);
+    setActiveTab(hash);
+  }, [hash]);
+
   return (
     <>
       <Hero />
@@ -30,14 +38,14 @@ const Home = () => {
       <SwipperContextProvider>
         <Testimonial />
       </SwipperContextProvider>
-      <Projects/>
+      <Projects />
 
-      <Team/>
+      <Team />
 
-      <Partners/>
+      <Partners />
 
-      <LatestProjects/>
-      <Contact/>
+      <LatestProjects />
+      <Contact activeTab={activeTab} setActiveTab={setActiveTab} />
     </>
   );
 };

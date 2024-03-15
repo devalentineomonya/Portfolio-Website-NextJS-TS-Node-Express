@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
+import {scrollToSection} from "../../Utils/ScrollUtils/ScrollUtils";
 import "./navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ activeTab, setActiveTab }) => {
   const [stickyNavbar, setStickyNavbar] = useState(false);
   const [sideMenu, setSideMenu] = useState("closed");
   const [cross, setCross] = useState("normal");
-  const [activeTab, setActiveTab] = useState("home");
 
   useEffect(() => {
     const scrollHandler = () => {
@@ -24,27 +24,6 @@ const Navbar = () => {
     setSideMenu((prevState) => (prevState === "closed" ? "open" : "closed"));
     setCross((prevState) => (prevState === "crossed" ? "normal" : "crossed"));
   };
-
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (sectionId !== "home") {
-      if (section) {
-        window.scrollTo({
-          top: section.offsetTop - 100,
-          behavior: "smooth"
-        });
-      } else {
-        console.error(`Element with ID "${sectionId}" not found.`);
-      }
-    } else {
-      window.scrollTo({
-        top: 100,
-        behavior: "smooth"
-      });
-    }
-  };
-  
-  
 
   const handleTabClick = (tabName, event) => {
     event.preventDefault();
