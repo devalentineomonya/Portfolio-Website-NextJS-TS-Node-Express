@@ -5,6 +5,9 @@ import emailLogo from "../../assets/images/email.png";
 import telephoneLogo from "../../assets/images/telephone.png";
 const Contact = () => {
     const currentYear = new Date().getFullYear();
+    const today = new Date();
+    const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const dayName = dayNames[today.getDay()];
   return (
     <div className="contact-section" id="contact">
       <div className="contact-form">
@@ -54,6 +57,7 @@ const Contact = () => {
           </div>
         </div>
         <p>&copy;CopyRight @ DevalentineOmonya {currentYear}</p>
+        <p>Have a blessed {dayName}</p>
       </div>
     </div>
   );
