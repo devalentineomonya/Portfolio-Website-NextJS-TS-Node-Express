@@ -18,14 +18,15 @@ const Hero = () => {
   }, []);
 
   return (
-    <div id="home"
+    <div
+      id="home"
       className="hero-section"
       style={{
         top: "-100px",
         zIndex: "1",
-        background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${sliderImage})`,       
+        background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${sliderImage})`,
         transition: "0.4s",
-        animation: "zoomBackground 8s infinite",        
+        animation: "zoomBackground 8s infinite",
       }}
     >
       <div className="hero-content">
@@ -38,8 +39,12 @@ const Hero = () => {
             <span>FrontEnd</span> -<span>Backend</span>-<span>Mobile Apps</span>
           </p>
           <div className="hero-button">
-      <a href="https://1drv.ms/b/s!AmD6S1sK2c1egZ101PCxsR-KkcDtug?e=KsjvFV" target="_blank">Download Resume</a>
-
+            <a
+              href="https://1drv.ms/b/s!AmD6S1sK2c1egZ101PCxsR-KkcDtug?e=KsjvFV"
+              target="_blank"
+            >
+              Download Resume
+            </a>
           </div>
         </div>
       </div>
