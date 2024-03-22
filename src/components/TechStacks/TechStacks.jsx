@@ -1,21 +1,21 @@
 import React, { useContext } from "react";
-import "./services.css";
-import Service from "../Service/Service";
+import "./techstacks.css";
+import TechStack from "../TechStack/TechStack";
 import { ServicesContext } from "../../Context/ServicesContext";
 import HeadLine from "../HeadLine/HeadLine";
 
-const Services = () => {
+const TechStacks = () => {
   const { servicesList } = useContext(ServicesContext);
   return (
     <div className="services-section" >
-    <HeadLine id="services" number={"01"} description={"What i do as a service"} name={"Services"} />
+    <HeadLine id="services" number={"01"} description={"What i do as a service"} name={"Tech Stack"} />
       <div className="services-container">
         {servicesList.map((service, i) => (
-          <Service key={i} name={service.name} image={service.image} description={service.description} />
+          <TechStack key={i} name={service.name} image={service.image} description={service.description} />
         ))}
       </div>
     </div>
   );
 };
 
-export default Services;
+export default TechStacks;

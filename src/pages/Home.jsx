@@ -1,5 +1,5 @@
 import Hero from "../components/Hero/Hero";
-import Services from "../components/Servces/Services";
+import TechStacks from "../components/TechStacks/TechStacks";
 import ServicesContextProvider from "../Context/ServicesContext";
 import About from "../components/About/About";
 import CounterContextProvider from "../Context/CounterContext";
@@ -26,7 +26,7 @@ const Home = ({ activeTab, setActiveTab }) => {
       <Hero />
 
       <ServicesContextProvider>
-        <Services />
+        <TechStacks />
       </ServicesContextProvider>
 
       <CounterContextProvider>

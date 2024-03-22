@@ -3,8 +3,8 @@ import "./carditem.css";
 
 const CardItem = ({ cardContent }) => {
   const handleClick = () => {
-    if (cardContent.link) {
-      window.open(cardContent.link, "_blank"); // Open link in a new tab
+    if (cardContent.live_link) {
+      window.open(cardContent.live_link, "_blank"); 
     }
   };
 

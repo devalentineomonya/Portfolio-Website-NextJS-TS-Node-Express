@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import chevron_right from "../../assets/images/chevron.png";
-import "./service.css";
-const Service = (props) => {
+import "./techstack.css";
+const TechStack = (props) => {
   const [isActive, setIsActive] = useState(false);
 
   const toggleAccordion = () => {
@@ -25,4 +25,4 @@ const Service = (props) => {
   );
 };
 
-export default Service;
+export default TechStack;
