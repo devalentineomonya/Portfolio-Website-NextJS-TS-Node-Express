@@ -44,7 +44,10 @@
     transition: all 0.6s ease-in-out;
     
 }
-
+.service-description p{
+    font-size:20px;
+    letter-spacing: 3px;line-height:2rem;
+}
 .services-card.active .service-description {
     max-height: 200px;
     transition: all 0.6s ease-in-out;

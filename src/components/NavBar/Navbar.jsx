@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {scrollToSection} from "../../Utils/ScrollUtils/ScrollUtils";
+import { scrollToSection } from "../../Utils/ScrollUtils/ScrollUtils";
 import "./navbar.css";
 
 const Navbar = ({ activeTab, setActiveTab }) => {
@@ -34,7 +34,10 @@ const Navbar = ({ activeTab, setActiveTab }) => {
   return (
     <div className={`navbar ${stickyNavbar ? "navbar-sticky" : ""}`}>
       <div className="logo">
-        <h1 className="logo-title">
+        <h1
+          className="logo-title"
+          onClick={(event) => handleTabClick("home", event)}
+        >
           Devalentine<span>.</span>
         </h1>
       </div>
@@ -49,20 +52,18 @@ const Navbar = ({ activeTab, setActiveTab }) => {
             </a>
           </li>
           <li
-            className={`nav-item ${activeTab === "services" ? "active" : ""}`}
+            className={`nav-item ${activeTab === "techstack" ? "active" : ""}`}
           >
             <a
               className="nav-link"
-            
-              onClick={() => handleTabClick("services", event)}
+              onClick={() => handleTabClick("techstack", event)}
             >
-              Services
+              Tech Stack
             </a>
           </li>
           <li className={`nav-item ${activeTab === "about" ? "active" : ""}`}>
             <a
               className="nav-link"
-             
               onClick={() => handleTabClick("about", event)}
             >
               About
@@ -73,7 +74,6 @@ const Navbar = ({ activeTab, setActiveTab }) => {
           >
             <a
               className="nav-link"
-              
               onClick={() => handleTabClick("projects", event)}
             >
               Projects
@@ -82,7 +82,6 @@ const Navbar = ({ activeTab, setActiveTab }) => {
           <li className={`nav-item ${activeTab === "contact" ? "active" : ""}`}>
             <a
               className="nav-link"
-              
               onClick={() => handleTabClick("contact", event)}
             >
               Contacts

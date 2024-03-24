@@ -44,7 +44,7 @@ const Contact = ({ activeTab, setActiveTab }) => {
                 <a onClick={() => handleTabClick("about", event)}>About</a>
               </li>
               <li>
-                <a onClick={() => handleTabClick("services", event)}>Services</a>
+                <a onClick={() => handleTabClick("techstack", event)}>Tech Stack</a>
               </li>
               <li>
                 <a onClick={() => handleTabClick("projects", event)}>Projects</a>

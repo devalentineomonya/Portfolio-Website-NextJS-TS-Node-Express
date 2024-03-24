@@ -24,9 +24,9 @@ const Hero = () => {
       style={{
         top: "-100px",
         zIndex: "1",
-        background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${sliderImage})`,
+        background: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${sliderImage})`,
         transition: "0.4s",
-        animation: "zoomBackground 8s infinite",
+        animation: "zoomBackground 8s infinite linear",
       }}
     >
       <div className="hero-content">
