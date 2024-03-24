@@ -12,10 +12,13 @@ import LatestProjects from "../components/LatestProjects/LatestProjects";
 import Contact from "../components/Contact/Contact";
 import Projects from "../components/Projects/Projects";
 import { scrollToSection } from "../Utils/ScrollUtils/ScrollUtils";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import ProjectPopup from "../components/ProjectPopup/ProjectPopup";
 
 const Home = ({ activeTab, setActiveTab }) => {
   const hash = window.location.hash.substr(1);
+  const[togglePopup, setTogglePopup] = useState(false);
+  const [projectID, setProjectID] = useState(null);
   useEffect(() => {
     scrollToSection(hash);
     setActiveTab(hash);
@@ -38,7 +41,7 @@ const Home = ({ activeTab, setActiveTab }) => {
       <SwipperContextProvider>
         <Testimonial />
       </SwipperContextProvider>
-      <Projects />
+      <Projects setTogglePopup={setTogglePopup} setProjectID={setProjectID}/>
 
       <Team />
 
@@ -46,6 +49,7 @@ const Home = ({ activeTab, setActiveTab }) => {
 
       <LatestProjects />
       <Contact activeTab={activeTab} setActiveTab={setActiveTab} />
+      <ProjectPopup togglePopup={togglePopup} setTogglePopup={setTogglePopup} projectID={projectID}/>
     </>
   );
 };

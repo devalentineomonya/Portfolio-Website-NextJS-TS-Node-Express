@@ -8,7 +8,7 @@ const TechStacks = () => {
   const { servicesList } = useContext(ServicesContext);
   return (
     <div className="services-section" >
-    <HeadLine id="services" number={"01"} description={"What i do as a service"} name={"Tech Stack"} />
+    <HeadLine id="services" number={"01"} description={"Teh Stacks I Use"} name={"Tech Stack"} />
       <div className="services-container">
         {servicesList.map((service, i) => (
           <TechStack key={i} name={service.name} image={service.image} description={service.description} />

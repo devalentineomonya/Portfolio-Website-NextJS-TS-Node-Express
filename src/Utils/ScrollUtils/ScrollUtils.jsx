@@ -6,7 +6,7 @@ export const scrollToSection = (sectionId) => {
     if (section) {
       window.scrollTo({
         top: section.offsetTop - 100,
-        behavior: "smooth",
+  behavior: "smooth",
       });
     } else {
       console.error(`Element with ID "${sectionId}" not found.`);
