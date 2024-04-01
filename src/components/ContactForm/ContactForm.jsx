@@ -20,7 +20,7 @@ const ContactForm = () => {
       ...formData,
       [name]: value,
     });
-    // Clearing error if the user types something after error is shown
+   
     setErrors({
       ...errors,
       [name]: "",
