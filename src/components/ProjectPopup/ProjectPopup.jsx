@@ -23,7 +23,7 @@ const ProjectPopup = ({ togglePopup, setTogglePopup, projectID }) => {
           <div className="popup-grid">
             <div className="popup-left-section">
               <div className="project-image">
-                <img src={project.image} alt={project.name} />
+                <img src={project.image2} alt={project.name} />
               </div>
             </div>
             <div className="popup-right-section">

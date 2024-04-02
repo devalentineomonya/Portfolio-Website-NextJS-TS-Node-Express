@@ -16,6 +16,9 @@ const ProjectCard = ({ projectInfo, setTogglePopup,setProjectID }) => {
         </div>
       </div>
       <div className="card-overlay">
+        <div className="click-me-text">
+          <span>Click Project Name for more</span>
+        </div>
         <div className="project-technology">
           <p>{projectInfo.technology}</p>
         </div>

@@ -1,10 +1,12 @@
 .project-card-container {
-    width: 350px;
-    height: 300px;
+    width: 400px;
+    height: 250px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 5px;
+    overflow: hidden;
 
 }
 
@@ -44,6 +46,15 @@
     cursor: pointer;
     opacity: 0;
     transition: all 0.3s ease-in-out;
+}
+
+.click-me-text {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #ff4500;
+    font-weight: 600;
+    font-size: 18px;
 }
 
 .card-overlay:hover {

@@ -1,12 +1,14 @@
 import image1 from "../images/notAvailable.jpeg";
 import DevalWeatherApp from "../images/devalWeatherApp.png";
+import DevalWeatherApp2 from "../images/devalWeatherApp2.png";
 let ProjectsList = [
   {
     id:1,
     name: "DevalWeather App",
     image: DevalWeatherApp,
+    image2: DevalWeatherApp2,
     technology: "ReactJS | OpenWeather API",
-    description:"Plan your adventures with confidence thanks to the React Weather App! This user-friendly app provides hyperlocal weather forecasts for any location, giving you a detailed picture for the next five days in three-hour increments. Powered by open-source data, the app delivers accurate and up-to-date information on temperature, humidity, wind speed, and atmospheric pressure. Whether you're planning a hike, checking conditions at the beach, or just curious about the afternoon commute, the React Weather App has you covered. Effortless navigation allows you to quickly switch between locations, making it ideal for travelers and busy professionals. The app's intuitive interface presents weather data in a clear and organized way, ensuring you can grasp the information at a glance.",
+    description:"The React Weather App provides hyperlocal, 5-day forecasts in 3-hour increments for any location. Access temperature, humidity, wind speed, and pressure data. Ideal for travelers and professionals, this app offers effortless navigation and a clear, intuitive interface for informed decision-making",
     live_link: "https://devalentineomonya.github.io/ReactJS-Weather-App/",
     github_link:"https://github.com/devalentineomonya/ReactJS-Weather-App"
   },
