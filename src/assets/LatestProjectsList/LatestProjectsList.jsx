@@ -6,8 +6,8 @@ let LatestProjectsList = [
     image: devalWeatherApp,
     name: "DevalWeather App",
     date: "Apr 1, 2024",
-    technology: "PHP",
-    link: "https://devalentineomonya.github.io/ReactJS-Weather-App/",
+    technology: "React JS",
+    link: "https://deval-weather-app.vercel.app/",
   },
   {
     image: teamImage,

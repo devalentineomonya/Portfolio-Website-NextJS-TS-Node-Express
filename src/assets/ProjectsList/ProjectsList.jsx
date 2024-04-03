@@ -9,7 +9,7 @@ let ProjectsList = [
     image2: DevalWeatherApp2,
     technology: "ReactJS | OpenWeather API",
     description:"The React Weather App provides hyperlocal, 5-day forecasts in 3-hour increments for any location. Access temperature, humidity, wind speed, and pressure data. Ideal for travelers and professionals, this app offers effortless navigation and a clear, intuitive interface for informed decision-making",
-    live_link: "https://devalentineomonya.github.io/ReactJS-Weather-App/",
+    live_link: "https://deval-weather-app.vercel.app/",
     github_link:"https://github.com/devalentineomonya/ReactJS-Weather-App"
   },
   {
