@@ -42,7 +42,7 @@ const ContactForm = () => {
     }
 
     const formDataToSend = new FormData(event.target);
-    formDataToSend.append("access_key", "46e71153-727d-43b2-853b-6525fc87bc7f");
+    formDataToSend.append("access_key", import.meta.env.VITE_W3FORMS_KEY);
 
     const object = Object.fromEntries(formDataToSend);
     const json = JSON.stringify(object);
