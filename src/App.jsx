@@ -9,10 +9,10 @@ function App() {
   const [activeTab, setActiveTab] = useState("home");
   return (
     <>
-     <Navbar  activeTab={activeTab} setActiveTab={setActiveTab} />
-   <Home activeTab={activeTab} setActiveTab={setActiveTab} />
-   <SocialLinks/>
-   <BackToTop/>
+      <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
+      <Home activeTab={activeTab} setActiveTab={setActiveTab} />
+      <SocialLinks />
+      <BackToTop />
     </>
   );
 }
