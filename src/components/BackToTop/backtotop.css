@@ -11,6 +11,7 @@
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease-in-out;
+    z-index: 1020;
 
 }
 .back-to-top.hidden {
