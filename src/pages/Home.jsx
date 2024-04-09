@@ -48,7 +48,7 @@ const Home = ({ activeTab, setActiveTab }) => {
       <Partners />
 
       <LatestProjects />
-      <Contact activeTab={activeTab} setActiveTab={setActiveTab} />
+      <Contact setActiveTab={setActiveTab} />
       <ProjectPopup togglePopup={togglePopup} setTogglePopup={setTogglePopup} projectID={projectID}/>
     </>
   );

@@ -4,7 +4,7 @@ import "./contact.css";
 import emailLogo from "../../assets/images/email.png";
 import telephoneLogo from "../../assets/images/telephone.png";
 import { scrollToSection } from "../../Utils/ScrollUtils/ScrollUtils";
-const Contact = ({ activeTab, setActiveTab }) => {
+const Contact = ({setActiveTab }) => {
   
   
   const handleTabClick = (tabName, event) => {
