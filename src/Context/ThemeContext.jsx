@@ -1,4 +1,3 @@
-// ThemeContext.js
 import React, { createContext, useContext, useState, useEffect } from "react";
 
 const ThemeContext = createContext();
@@ -8,12 +7,16 @@ export const useTheme = () => {
 };
 
 export const ThemeProvider = ({ children }) => {
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(true);
 
   useEffect(() => {
     const selectedTheme = localStorage.getItem("selectedTheme");
-    setToggle(selectedTheme === "dark");
+    console.log("Selected theme from localStorage:", selectedTheme);
+    setToggle(selectedTheme === "dark"? true :  false);
+    toggleTheme();
   }, []);
+
+  console.log("Current toggle state:", toggle);
 
   const toggleTheme = () => {
     const newTheme = !toggle ? "dark" : "light";
@@ -21,6 +24,8 @@ export const ThemeProvider = ({ children }) => {
     localStorage.setItem("selectedTheme", newTheme);
     setToggle(!toggle);
   };
+
+ 
 
   return (
     <ThemeContext.Provider value={{ toggle, toggleTheme }}>
