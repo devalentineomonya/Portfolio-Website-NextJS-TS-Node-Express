@@ -1,28 +1,31 @@
 import React, { useState } from "react";
-import chevron_right from "../../assets/images/chevron.png";
 import "./techstack.css";
-const TechStack = (props) => {
+import { BsChevronRight } from "react-icons/bs";
+const TechStacks = ({techstack}) => {
   const [isActive, setIsActive] = useState(false);
 
   const toggleAccordion = () => {
     setIsActive(!isActive);
   };
   return (
-    <div className={`services-card ${isActive ? 'active' : ''}`} onClick={toggleAccordion}>
+    <div
+      className={`techstacks-card ${isActive ? "active" : ""}`}
+      onClick={toggleAccordion}
+    >
       <div className="card-content">
-        <div className="service-icon">
-          <img src={props.image} alt="" />
+        <div className="techstack-icon">
+          {techstack.icon}
         </div>
-        <div className="service-name">
-          <img src={chevron_right} alt="" />
-          <p>{props.name}</p>
+        <div className="techstack-name">
+          <BsChevronRight className="chevron"  size={35}/>
+          <p>{techstack.name}</p>
         </div>
       </div>
-      <div className="service-description">
-        <p>{props.description}</p>
+      <div className="techstack-description">
+        <p>{techstack.description}</p>
       </div>
     </div>
   );
 };
 
-export default TechStack;
+export default TechStacks;

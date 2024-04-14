@@ -1,16 +1,19 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import ContactForm from "../ContactForm/ContactForm";
 import "./contact.css";
 import emailLogo from "../../assets/images/email.png";
 import telephoneLogo from "../../assets/images/telephone.png";
 import { scrollToSection } from "../../Utils/ScrollUtils/ScrollUtils";
-const Contact = ({setActiveTab }) => {
-  
-  
+const Contact = ({ setActiveTab }) => {
   const handleTabClick = (tabName, event) => {
     event.preventDefault();
-    setActiveTab(tabName);
-    scrollToSection(tabName);
+    setTimeout(() => {
+      setActiveTab(tabName);
+      scrollToSection(tabName);
+      setTimeout(() => {
+        scrollToSection(tabName);
+      }, 50);
+    }, 50);
   };
 
   const currentYear = new Date().getFullYear();
@@ -44,10 +47,14 @@ const Contact = ({setActiveTab }) => {
                 <a onClick={() => handleTabClick("about", event)}>About</a>
               </li>
               <li>
-                <a onClick={() => handleTabClick("techstack", event)}>Tech Stack</a>
+                <a onClick={() => handleTabClick("techstack", event)}>
+                  Tech Stack
+                </a>
               </li>
               <li>
-                <a onClick={() => handleTabClick("projects", event)}>Projects</a>
+                <a onClick={() => handleTabClick("projects", event)}>
+                  Projects
+                </a>
               </li>
               <li>
                 <a onClick={() => handleTabClick("contact", event)}>Contact</a>

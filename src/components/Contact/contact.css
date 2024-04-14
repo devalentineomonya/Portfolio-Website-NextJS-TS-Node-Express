@@ -1,7 +1,7 @@
 .contact-section {
     margin-top: 200px;
     display: flex;
-    background-color: var(--color-black);
+    background-color: var(--color-bg-contact);
     position: relative;
     bottom: 0;
     height: 100vh;
@@ -26,7 +26,7 @@
 .contact-form {
     position: relative;
     padding: 0 5% 0 5%;
-    background-color: var(  --color-nero);
+    background-color: var(--bg-stack-card);
 }
 .contact-form::before {
     content: "";
@@ -35,7 +35,7 @@
     position: absolute;
     top: -100px;
     left: 0;
-    background-color: var(--color-nero);
+    background-color: var(--bg-stack-card);
     z-index: 2;
    clip-path: polygon(0 100%, 35% 0, 100% 60px, 100% 100%);
 
@@ -61,7 +61,7 @@
     font-family: "Dosis";
     font-weight: 30px;
     border-bottom: 2px solid var(--color-primary);
-    color: #fff;
+    color:var(--color-text-primary);
 }
 
 .contact-quick-links ul li {
@@ -75,7 +75,7 @@
     font-family: "Dosis";
     font-weight: 800;
     font-size: 20px;
-    color: #cbcbcb;
+    color: var(--color-quick-links-text);
     cursor: pointer;
 }
 
@@ -107,7 +107,7 @@
 .contact-links p{
     margin-top: 50px;
     text-align: center;
-    color: #808080;
+    color:var(--color-contact-greeting-text);
     font-size: 20px;
 
 }

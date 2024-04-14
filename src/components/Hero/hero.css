@@ -26,7 +26,7 @@
     content: "";
     height: 50px;
     width: 100%;
-    background-color: var(--color-white);
+    background-color: var(--color-bg-primary);
     bottom: -50px;
     transform: skewY(-3deg);
 }
@@ -70,7 +70,7 @@
     background-color: var(--color-primary);
     text-decoration: none;
     font-size: 20px;
-    color: var(--color-white);
+    color: #fff;
     border-radius: 10px;
 }
 

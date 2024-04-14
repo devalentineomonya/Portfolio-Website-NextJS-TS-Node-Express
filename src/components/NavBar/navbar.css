@@ -14,8 +14,8 @@
 }
 
 .navbar-sticky {
-    background-color:var(--color-white);
-    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.2);
+    background-color:var(--color-bg-primary);
+    box-shadow: 0px 5px 6px var(--var-navbar-shadow);
     height: 90px;
     transition: 0.3s;
     position: fixed;
@@ -38,7 +38,7 @@
 }
 
 .navbar .logo .logo-title span {
-    color: var(--color-black);
+    color: var(--color-text-primary);
 }
 
 .navbar .nav-container {
@@ -61,7 +61,7 @@
 }
 
 .navbar .nav-container .nav-item .nav-link {
-    color: var(--color-white);
+    color: var(--color-navbar);
     font-weight: 700;
     font-size: 18px;
     text-decoration: none;
@@ -70,7 +70,7 @@
 
 }
 .navbar-sticky .nav-container .nav-item .nav-link{
-    color: var(--color-black);
+    color: var(--color-navbar-sticky);
 }
 
 .navbar .nav-container .nav-item .nav-link:hover {
@@ -151,7 +151,6 @@
         width: 100%;
         opacity: 0;
         position: fixed;
-       
         bottom: 0;
         top: 0;
         display: block;
@@ -162,7 +161,7 @@
     .navbar .nav-container ul {
         display: flex;
         flex-direction: column;
-        background-color: #000;
+        background-color: var(--color-bg-primary);
         width: 280px;
         align-items: flex-start;
         height: 100%;
@@ -185,7 +184,7 @@
 
     .navbar .nav-container ul .nav-item .nav-link,
     .navbar-sticky .nav-container ul .nav-item .nav-link {
-        color: var(--color-white);
+        color: var(--color-text-primary);
         font-weight: 500;
         padding-left: 20px;
     }
@@ -208,7 +207,7 @@
     }
 
     .cross span {
-        background-color: var(--color-white);
+        background-color: var(--color-bg-primary);
         transition: 0.3s;
     }
 

@@ -8,7 +8,6 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-const element = <div></div>;
 
 const SocialLinks = () => {
   const [isSticky, setIsSticky] = useState(false);

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import chevronUp from "../../assets/images/chevronup.png";
 import "./backtotop.css";
+import { BsChevronUp } from "react-icons/bs";
 
 const backToTopHandler = () => {
   window.scrollTo({
@@ -31,7 +32,7 @@ const BackToTop = () => {
   return (
     <div className={`back-to-top ${iScrolled ? "hidden" : ""}`} onClick={backToTopHandler}>
       <div className="back-to-top-icon">
-        <img src={chevronUp} alt="" />
+        <BsChevronUp className="chevron-top"/>
       </div>
     </div>
   );

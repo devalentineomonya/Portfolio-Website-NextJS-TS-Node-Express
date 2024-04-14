@@ -23,10 +23,10 @@
 .section-title .title-name {
     font-size: 40px;
     font-weight: 800;
-    color: var(--color-black);
+    color: var(--color-text-primary);
     margin-top: 40px;
-    border-top: 1px solid var(--color-black);
-    border-bottom: 1px solid var(--color-black);
+    border-top: 1px solid var(--color-text-primary);
+    border-bottom: 1px solid var(--color-text-primary);
     padding: 6px;
 }
 
@@ -34,6 +34,7 @@
     font-size: 24px;
     font-weight: 300;
     margin: -10px 0;
+    color: var(--color-text-primary);
 }
 
 @media screen and (max-width: 576px) {

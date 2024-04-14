@@ -1,6 +1,5 @@
 export const scrollToSection = (sectionId) => {
   const section = document.getElementById(sectionId);
-
   if (sectionId !== "home" && sectionId !== "") {
     if (section) {
       window.scrollTo({

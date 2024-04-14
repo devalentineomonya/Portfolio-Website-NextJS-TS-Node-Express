@@ -37,6 +37,9 @@
     font-family: 'Inter';
     font-weight: 600;
 }
+.counter-item h1{
+    color: var(--color-text-primary);
+}
 
 @media screen and (max-width: 576px) {
     .counter-item {

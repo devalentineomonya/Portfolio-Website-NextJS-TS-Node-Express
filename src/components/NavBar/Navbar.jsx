@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { scrollToSection } from "../../Utils/ScrollUtils/ScrollUtils";
 import "./navbar.css";
+import ModeToggler from "../ModeToggler/ModeToggler";
 
-const Navbar = ({ activeTab, setActiveTab }) => {
+const Navbar = ({ activeTab, setActiveTab, sideMenu, setSideMenu }) => {
   const [stickyNavbar, setStickyNavbar] = useState(false);
-  const [sideMenu, setSideMenu] = useState("closed");
+
   const [cross, setCross] = useState("normal");
 
   useEffect(() => {
@@ -27,8 +28,13 @@ const Navbar = ({ activeTab, setActiveTab }) => {
 
   const handleTabClick = (tabName, event) => {
     event.preventDefault();
-    setActiveTab(tabName);
-    scrollToSection(tabName);
+    setTimeout(() => {
+      setActiveTab(tabName);
+      scrollToSection(tabName);
+      setTimeout(() => {
+        scrollToSection(tabName);
+      }, 50);
+    }, 50);
   };
 
   return (
@@ -86,6 +92,11 @@ const Navbar = ({ activeTab, setActiveTab }) => {
             >
               Contacts
             </a>
+          </li>
+          <li className="nav-item ">
+            <div className="nav-link">
+              <ModeToggler />
+            </div>
           </li>
         </ul>
       </nav>
