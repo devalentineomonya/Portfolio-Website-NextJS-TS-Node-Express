@@ -1,13 +1,22 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./about.css";
 import { CounterContext } from "../../Context/CounterContext";
 import Counter from "../Counter/Counter";
 import Skill from "../Skill/Skill";
 import { SkillsContext } from "../../Context/SkillsContext";
 import HeadLine from "../HeadLine/HeadLine";
+import { useTheme } from "../../Context/ThemeContext";
+import lightSlider from "../../assets/images/lightSlider3.jpg";
+import darkSlider from "../../assets/images/darkSlider3.jpg";
 const About = () => {
   const { CountsList } = useContext(CounterContext);
   const { SkillsList } = useContext(SkillsContext);
+  const [bgImage, setBgImage] = useState(lightSlider);
+  const {toggle, setToggle} = useTheme(); 
+  useEffect(() => {
+    setBgImage(!toggle ? darkSlider : lightSlider);
+  }, [toggle]);
+
   return (
     <div className="about-section">
       <HeadLine
@@ -17,7 +26,12 @@ const About = () => {
         name={"About"}
       />
       <div className="about-content">
-        <div className="counts-section">
+        <div
+          className="counts-section"
+          style={{
+            background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bgImage})`,
+          }}
+        >
           <div className="counter-container">
             {CountsList.map((count, i) => (
               <Counter key={i} name={count.name} value={count.value} />

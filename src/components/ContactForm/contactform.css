@@ -14,10 +14,12 @@
 
 .contact-title .section-title .title-name {
     color: var(--color-text-primary);
-    border-top: 1px solid var(--color-bg-primary);
-    border-bottom: 1px solid var(--color-bg-primary);
+    border-top: 1px solid var(--color-text-primary);
+    border-bottom: 1px solid var(--color-text-primary);
 }
-
+.contact-title .title-section p{
+    color:var(--color-quick-links-text);
+}
 .contact-title p {
     color: #c9c6c6;
     text-align: center;

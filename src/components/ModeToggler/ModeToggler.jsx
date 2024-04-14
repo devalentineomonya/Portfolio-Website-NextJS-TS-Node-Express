@@ -1,32 +1,16 @@
-import React, { useState, useEffect } from "react";
+// ModeToggler.js
+import React from "react";
+import { FaSun, FaMoon } from "react-icons/fa";
+
 import "./modetoggler.css";
-import { FaSun } from "react-icons/fa6";
-import { FaMoon } from "react-icons/fa";
+import { useTheme } from "../../Context/ThemeContext";
 
 const ModeToggler = () => {
-  const [toggle, setToggle] = useState(false);
-
-  useEffect(() => {
-    // Set the initial theme when the component mounts
-    if (toggle) setDarkTheme();
-    else setLightTheme();
-  }, [toggle]);
-
-  const triggerToggle = () => {
-    setToggle(!toggle);
-  };
-
-  const setDarkTheme = () => {
-    document.querySelector("body").setAttribute("data-theme", "dark");
-  };
-
-  const setLightTheme = () => {
-    document.querySelector("body").setAttribute("data-theme", "light");
-  };
+  const { toggle, toggleTheme } = useTheme();
 
   return (
     <div
-      onClick={triggerToggle}
+      onClick={toggleTheme}
       className={`wrg-toggle ${toggle ? "wrg-toggle--checked" : ""}`}
     >
       <div className="wrg-toggle-container">
@@ -47,7 +31,7 @@ const ModeToggler = () => {
         type="checkbox"
         aria-label="Toggle Button"
         checked={toggle}
-        onChange={triggerToggle}
+        onChange={toggleTheme}
       />
     </div>
   );

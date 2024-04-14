@@ -2,7 +2,6 @@ import React from "react";
 import "./projectpopup.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import image1 from "../../assets/images/slider1.jpg";
 import ProjectsList from "../../assets/ProjectsList/ProjectsList";
 
 const ProjectPopup = ({ togglePopup, setTogglePopup, projectID }) => {

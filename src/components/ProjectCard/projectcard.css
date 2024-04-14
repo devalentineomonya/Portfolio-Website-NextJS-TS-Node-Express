@@ -45,7 +45,7 @@
     padding: 0 0 20px 40px;
     cursor: pointer;
     opacity: 0;
-    transition: all 0.3s ease-in-out;
+   
 }
 
 .click-me-text {
@@ -72,7 +72,7 @@
     font-size: 30px;
     font-weight: 600;
     font-family: "Dosis";
-    transition: all 0.3s ease-in-out;
+
 }
 
 .card-overlay .project-link a:hover {

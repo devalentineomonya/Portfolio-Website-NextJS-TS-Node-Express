@@ -10,7 +10,6 @@
     align-items: center;
     z-index: 1300;
     scale: 0;
-    transition: all 0.3s ease-in-out;
 }
 
 .popup-overlay.open {
@@ -81,7 +80,7 @@
     font-family: "Dosis";
     margin-bottom: 10px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+
 }
 .popup-text h1:hover{
     color: var(--color-primary);

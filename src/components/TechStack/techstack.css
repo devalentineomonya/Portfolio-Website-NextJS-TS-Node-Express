@@ -17,7 +17,7 @@
     justify-content: flex-start;
     align-items: center;
     padding: 20px 0 20px 20px;
-    transition: all 0.3s ease-in-out;
+   
 
 }
 
@@ -30,19 +30,18 @@
     background-color: var(--color-primary);
 }
 .techstacks-card.active {
-    transition: all 0.3s ease-in-out;
+   
 }
 
 .techstacks-card {
     position: relative;
-    transition: all 0.3s ease-in-out;
+   
 }
 
 .techstack-description {
     position: relative;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.3s ease-in-out;
     color: var(--color-text-primary);
     
 }
@@ -53,7 +52,7 @@
 }
 .techstacks-card.active .techstack-description {
     max-height: 200px;
-    transition: all 0.3s ease-in-out;
+
 }
 
 .techstack-icon {
@@ -65,7 +64,7 @@
     position: relative;
     border-right: 2px solid var(--color-gainsboro);
     padding: 0 20px;
-    transition: all 0.3s ease-in-out;
+
 }
 
 .techstack-icon img {
@@ -76,14 +75,14 @@
 
 .active .techstack-name .chevron {
     transform: rotate(90deg);
-    transition: all 0.3s ease-in-out;
+
 }
 
 .techstack-name {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    transition: all 0.3s ease-in-out;
+
 }
 
 .techstack-name p {

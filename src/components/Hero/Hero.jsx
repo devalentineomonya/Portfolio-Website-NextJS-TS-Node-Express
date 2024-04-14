@@ -1,21 +1,39 @@
 import React, { useEffect, useState } from "react";
 import "./hero.css";
-import slider1 from "../../assets/images/slider1.jpg";
-import slider3 from "../../assets/images/slider3.jpg";
-import slider2 from "../../assets/images/slider2.jpg";
+import darkSlider3 from "../../assets/images/darkSlider3.jpg";
+import darkSlider2 from "../../assets/images/darkSlider2.jpg";
+import darkSlider1 from "../../assets/images/darkSlider1.jpg";
+import lightSlider3 from "../../assets/images/lightSlider3.jpg";
+import lightSlider2 from "../../assets/images/lightSlider2.jpg";
+import lightSlider1 from "../../assets/images/lightSlider1.jpg";
+import { useTheme } from "../../Context/ThemeContext";
 
 const Hero = () => {
-  const [sliderImage, setSliderImage] = useState(slider1);
-  const sliders = [slider1, slider2, slider3];
-  let index = 0;
+  const { toggle } = useTheme();
+  const darkSliders = [darkSlider1, darkSlider2, darkSlider3];
+  const lightSliders = [lightSlider1, lightSlider2, lightSlider3];
+  
+  const [currentSliderArray, setCurrentSliderArray] = useState(null);
+  
   useEffect(() => {
+    setCurrentSliderArray(toggle ? lightSliders : darkSliders);
+  }, [toggle]);
+  
+  const [sliderImage, setSliderImage] = useState(
+    toggle ? lightSliders[2] : darkSliders[2]
+  );
+  
+  useEffect(() => {
+    let index = 0;
     const intervalId = setInterval(() => {
-      setSliderImage(sliders[index]);
-      index = (index + 1) % sliders.length;
+      setSliderImage(currentSliderArray[index]);
+      index = (index + 1) % currentSliderArray.length;
     }, 8000);
-
+  
     return () => clearInterval(intervalId);
-  }, []);
+  }, [currentSliderArray]);
+  
+  console.log(sliderImage)
 
   return (
     <div
