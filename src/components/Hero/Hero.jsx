@@ -1,72 +1,33 @@
-import React, { useEffect, useState } from "react";
 import "./hero.css";
-import darkSlider3 from "../../assets/images/darkSlider3.jpg";
-import darkSlider2 from "../../assets/images/darkSlider2.jpg";
-import darkSlider1 from "../../assets/images/darkSlider1.jpg";
-import lightSlider3 from "../../assets/images/lightSlider3.jpg";
-import lightSlider2 from "../../assets/images/lightSlider2.jpg";
-import lightSlider1 from "../../assets/images/lightSlider1.jpg";
-import { useTheme } from "../../Context/ThemeContext";
+
+import HeroAmimation from "../HeroAmimation/HeroAmimation";
 
 const Hero = () => {
-  const { toggle } = useTheme();
-  const darkSliders = [darkSlider1, darkSlider2, darkSlider3];
-  const lightSliders = [lightSlider1, lightSlider2, lightSlider3];
-  
-  const [currentSliderArray, setCurrentSliderArray] = useState(null);
-  
-  useEffect(() => {
-    setCurrentSliderArray(toggle ? lightSliders : darkSliders);
-  }, [toggle]);
-  
-  const [sliderImage, setSliderImage] = useState(
-    toggle ? lightSliders[2] : darkSliders[2]
-  );
-  
-  useEffect(() => {
-    let index = 0;
-    const intervalId = setInterval(() => {
-      setSliderImage(currentSliderArray[index]);
-      index = (index + 1) % currentSliderArray.length;
-    }, 8000);
-  
-    return () => clearInterval(intervalId);
-  }, [currentSliderArray]);
-  
-  console.log(sliderImage)
-
   return (
-    <div
-      id="home"
-      className="hero-section"
-      style={{
-        top: "-100px",
-        zIndex: "1",
-        background: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${sliderImage})`,
-        transition: "0.4s",
-        animation: "zoomBackground 8s infinite linear",
-      }}
-    >
-      <div className="hero-content">
-        <div className="hero-text-container">
-          <p>
-            I am a <span>----</span> Software Engineer
-          </p>
-          <h1>Valentine Omonya</h1>
-          <p>
-            <span>FrontEnd</span> -<span>Backend</span>-<span>Mobile Apps</span>
-          </p>
-          <div className="hero-button">
-            <a
-              href="https://1drv.ms/b/s!AmD6S1sK2c1egZ101PCxsR-KkcDtug?e=KsjvFV"
-              target="_blank"
-            >
-              Download Resume
-            </a>
+    <HeroAmimation>
+      <div id="home">
+        <div className="hero-content">
+          <div className="hero-text-container">
+            <p>
+              I am a <span>----</span> Software Engineer
+            </p>
+            <h1>Valentine Omonya</h1>
+            <p>
+              <span>FrontEnd</span> -<span>Backend</span>-
+              <span>Mobile Apps</span>
+            </p>
+            <div className="hero-button">
+              <a
+                href="https://1drv.ms/b/s!AmD6S1sK2c1egZ101PCxsR-KkcDtug?e=KsjvFV"
+                target="_blank"
+              >
+                Download Resume
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </HeroAmimation>
   );
 };
 

@@ -4,15 +4,13 @@
     --color-primary: #e9204f;
     --color-bg-primary: #ffffff;
     --color-text-primary: #000000;
-    --color-navbar: #ffffff;
-    --color-navbar-sticky: #000000;
     --var-navbar-shadow: rgba(0, 0, 0, 0.2);
     --bg-stack-card: #eff2f7;
     --color-about-text: #333333;
-    --color-bg-contact:#f8f8f8;
+    --color-bg-contact: #f8f8f8;
     --color-contact-greeting-text: #808080;
-    --color-quick-links-text:#454545;
-    --color-contact-message-text:#1c1c1c;
+    --color-quick-links-text: #454545;
+    --color-contact-message-text: #1c1c1c;
 
 
 
@@ -23,8 +21,7 @@
     --color-dim-gray: #454545;
     --color-gray: #767676;
     --color-eclipse: #3c3c3c;
-    
-    --color-nero: 
+    --color-nero:
 }
 
 
@@ -32,15 +29,13 @@
 [data-theme="dark"] {
     --color-bg-primary: #000000;
     --color-text-primary: #ffffff;
-    --color-navbar: #ffffff;
-    --color-navbar-sticky: #ffffff;
     --var-navbar-shadow: rgba(255, 255, 255, 0.2);
-    --bg-stack-card:#212121;
-    --color-about-text:#f8f8f8;
-    --color-bg-contact:#141414;
-    --color-contact-greeting-text:#f8f8f8;
-    --color-quick-links-text:#cbcbcb;
-    --color-contact-message-text:#cbcbcb;
+    --bg-stack-card: #212121;
+    --color-about-text: #f8f8f8;
+    --color-bg-contact: #141414;
+    --color-contact-greeting-text: #f8f8f8;
+    --color-quick-links-text: #cbcbcb;
+    --color-contact-message-text: #cbcbcb;
 
 }
 

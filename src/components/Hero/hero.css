@@ -1,25 +1,15 @@
 .hero-section {
     top: -100px;
-    z-index: 1;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
     position: relative;
-    background-repeat: no-repeat;
-
+    z-index: 100;
+    color: var(--color-text-primary);
 }
 
-@keyframes zoomBackground {
-    0% {
-        background-size: 105%;
-    }
 
-    100% {
-        background-size: 100%;
-    }
-}
 
 .hero-section::before {
     position: absolute;
@@ -44,11 +34,14 @@
     display: flex;
     column-gap: 20px;
     text-align: center;
+    color: var(--color-text-primary);
+
 }
 
 .hero-text-container p:first-child {
     font-size: 24px;
     font-weight: 500;
+    color: var(--color-text-primary);
 }
 
 .hero-text-container h1 {
@@ -56,6 +49,7 @@
     font-weight: 800;
     font-family: 'Dosis';
     margin: 15px 0;
+    color: var(--color-text-primary);
 }
 
 .hero-text-container p:nth-child(3) {
@@ -63,6 +57,7 @@
     column-gap: 20px;
     font-size: 25px;
     margin-bottom: 60px;
+    color: var(--color-text-primary);
 }
 
 .hero-text-container a {

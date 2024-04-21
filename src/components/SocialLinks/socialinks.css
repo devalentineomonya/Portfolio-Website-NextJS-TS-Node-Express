@@ -1,4 +1,5 @@
-.social-links, .sticky {
+.social-links,
+.sticky {
     position: fixed;
     bottom: 50%;
     left: 2%;
@@ -16,12 +17,14 @@
 }
 
 .sticky {
-    background-color: #fff;
+    background-color: var(--color-bg-primary);
     padding: 20px 10px;
     border-radius: 50px;
 }
 
-
+.sticky .social-link {
+    color: var(--color-text-primary);
+}
 
 
 .social-link {
@@ -31,7 +34,7 @@
     flex-direction: column;
     row-gap: 30px;
     justify-content: space-between;
-    color: #fff;
+    color: var(--color-text-primary);
     font-size: 26px;
     position: sticky;
     margin-top: -10px;
@@ -87,12 +90,12 @@
 
     .social-links {
 
-        left: 5%;
+        left: 10%;
 
     }
 
     .sticky {
 
-        left: 5%;
+        left: 10%;
     }
 }
