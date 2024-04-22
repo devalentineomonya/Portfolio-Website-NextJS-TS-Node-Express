@@ -6,7 +6,7 @@ import HeadLine from "../HeadLine/HeadLine";
 const Team = () => {
   return (
     <div className="team-section">
-      <HeadLine number={"05"} description={"Who i have Worked With"} name={"Worked With"}/>
+      <HeadLine number={"05"} description={"Who i have Collaborated with"} name={"Collaborations"}/>
       <div className="team-card-container">
         <div className="team-cards">
           {TeamList.map((cardContent, i) => (

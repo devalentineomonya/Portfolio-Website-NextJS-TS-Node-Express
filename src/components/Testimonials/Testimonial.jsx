@@ -12,7 +12,7 @@ const Testimonial = () => {
   const SwipperList = useContext(SwipperContext);
   return (
     <div className="testimonial-section">
-      <HeadLine number={"03"} description={"Who i have worked for"} name={"Testimonials"}/>
+      <HeadLine number={"03"} description={"Who have seen my work"} name={"Testimonials"}/>
       <div className="swipper-container">
         <Swiper
           modules={[Navigation, A11y]}
