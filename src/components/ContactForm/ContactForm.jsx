@@ -38,7 +38,7 @@ const ContactForm = () => {
       setTimeout(() => {
         setErrors("");
       }, 5000);
-      return; // Prevent form submission if there are validation errors
+      return; 
     }
 
     const formDataToSend = new FormData(event.target);

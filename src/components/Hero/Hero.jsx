@@ -4,8 +4,8 @@ import HeroAmimation from "../HeroAmimation/HeroAmimation";
 
 const Hero = () => {
   return (
-    <HeroAmimation>
-      <div id="home">
+    <div id="home">
+      <HeroAmimation>
         <div className="hero-content">
           <div className="hero-text-container">
             <p>
@@ -26,8 +26,8 @@ const Hero = () => {
             </div>
           </div>
         </div>
-      </div>
-    </HeroAmimation>
+      </HeroAmimation>
+    </div>
   );
 };
 

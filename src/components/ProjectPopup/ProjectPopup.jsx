@@ -5,9 +5,9 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import ProjectsList from "../../assets/ProjectsList/ProjectsList";
 
 const ProjectPopup = ({ togglePopup, setTogglePopup, projectID }) => {
-  let project = null; // Initialize project as null
+  let project = null;
   
-  // Check if projectID is set before finding the project
+ 
   if (projectID) {
     project = ProjectsList.find((p) => p.id === projectID);
   }
@@ -18,7 +18,7 @@ const ProjectPopup = ({ togglePopup, setTogglePopup, projectID }) => {
         <div className="close-button " onClick={() => setTogglePopup(false)}>
           <FontAwesomeIcon icon={faPlus} />
         </div>
-        {project && ( // Render content only if project is found
+        {project && ( 
           <div className="popup-grid">
             <div className="popup-left-section">
               <div className="project-image">

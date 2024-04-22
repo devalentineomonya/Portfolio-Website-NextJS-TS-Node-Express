@@ -3,7 +3,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import PartnersList from "../../assets/PartnersList/PartnersList";
 import Partner from "../Partner/Partner";
-import "./partners.css"; // Assuming this file contains additional styles
+import "./partners.css"
 
 const Partners = () => {
   const overrideStyles = `
@@ -12,14 +12,14 @@ const Partners = () => {
     }
   `;
 
-  // Define the number of items to display based on the screen width
+
   const getItemsPerScreen = () => {
     if (window.innerWidth < 768) {
-      return 1; // Show 1 item on smaller screens
+      return 1; 
     } else if (window.innerWidth < 992) {
-      return 2; // Show 2 items on medium screens
+      return 2; 
     } else {
-      return 4; // Show 4 items on larger screens
+      return 4; 
     }
   };
 

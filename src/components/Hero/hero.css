@@ -26,8 +26,12 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    position: relative;
-    top: 50px;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    width: 100%;
+    height:fit-content;
+    transform:translate(-50% ,-50%);
 }
 
 .hero-text-container p {
@@ -90,9 +94,9 @@
     }
 
 
-    .hero-text-container {
+    /* .hero-text-container {
         top: 30px;
-    }
+    } */
 }
 
 

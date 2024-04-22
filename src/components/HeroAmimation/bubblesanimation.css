@@ -11,6 +11,8 @@
   }
   
   .bubbles-container .bubbles span {
+    display: flex;
+    flex-shrink: 0;
     position: relative;
     width: 30px;
     height: 30px;
