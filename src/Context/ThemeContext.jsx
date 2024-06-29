@@ -11,12 +11,10 @@ export const ThemeProvider = ({ children }) => {
 
   useEffect(() => {
     const selectedTheme = localStorage.getItem("selectedTheme");
-    console.log("Selected theme from localStorage:", selectedTheme);
     setToggle(selectedTheme === "dark"? true :  false);
     toggleTheme();
   }, []);
 
-  console.log("Current toggle state:", toggle);
 
   const toggleTheme = () => {
     const newTheme = !toggle ? "dark" : "light";
