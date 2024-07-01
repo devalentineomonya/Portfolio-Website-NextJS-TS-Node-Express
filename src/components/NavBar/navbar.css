@@ -1,5 +1,3 @@
-
-
 .navbar {
     display: flex;
     align-items: center;
@@ -7,22 +5,22 @@
     position: relative;
     padding: 5px 200px;
     height: 100px;
+
+}
+
+.navbar,
+.navbar-sticky {
     transition: 0.3s;
     z-index: 1080;
-    overflow:"hidden";
+    overflow: "hidden";
 }
 
 .navbar-sticky {
-    background-color:var(--color-bg-primary);
+    background-color: var(--color-bg-primary);
     box-shadow: 0px 5px 6px var(--var-navbar-shadow);
-    height: 90px;
-    transition: 0.3s;
+    height: 85px;
     position: fixed;
-    right: 0;
-    left:0;
-    z-index: 1080;
-   
-    overflow:"hidden";
+    width: 100%;
 }
 
 .navbar .logo {
@@ -60,7 +58,7 @@
 }
 
 .navbar .nav-container .nav-item .nav-link {
-    color:var(--color-text-primary);
+    color: var(--color-text-primary);
     font-weight: 700;
     font-size: 18px;
     text-decoration: none;
@@ -68,18 +66,16 @@
     transition: 0.3s;
 
 }
-.navbar-sticky .nav-container .nav-item .nav-link{
+
+.navbar-sticky .nav-container .nav-item .nav-link {
     color: var(--color-text-primary);
 }
 
-.navbar .nav-container .nav-item .nav-link:hover {
+.navbar .nav-container .nav-item .nav-link:hover,
+.navbar .nav-container .nav-item.active .nav-link  {
     color: var(--color-primary);
 }
 
-.navbar .nav-container .nav-item.active .nav-link{
-    color: var(--color-primary);
-
-}
 
 .nav-hamburger-container {
     display: flex;
@@ -169,13 +165,13 @@
         position: relative;
         left: -320px;
         transition: 0.3s;
-        justify-content:start;
+        justify-content: start;
 
 
     }
 
-    .navbar .nav-container ul .nav-item ,
-    .navbar-sticky .nav-container ul .nav-item{
+    .navbar .nav-container ul .nav-item,
+    .navbar-sticky .nav-container ul .nav-item {
         border-bottom: 2px solid #2a2a2a;
         padding-bottom: 10px;
         width: 100%;
@@ -190,14 +186,16 @@
 
     .navbar .nav-container.open,
     .navbar-sticky .nav-container.open {
-       opacity: 1;
+        opacity: 1;
         transition: 0.3s;
         left: 0;
     }
+
     .navbar .nav-container.open ul,
-    .navbar-sticky .nav-container.open ul{
+    .navbar-sticky .nav-container.open ul {
         left: 0;
     }
+
     .cross {
         margin-top: 40px;
         margin-left: 15px;

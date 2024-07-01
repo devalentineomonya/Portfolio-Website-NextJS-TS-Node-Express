@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import "./contactform.css";
 import HeadLine from "../HeadLine/HeadLine";
+import axios from "axios";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -44,17 +45,15 @@ const ContactForm = () => {
     const formDataToSend = new FormData(event.target);
     formDataToSend.append("access_key", import.meta.env.VITE_W3FORMS_KEY);
 
-    const object = Object.fromEntries(formDataToSend);
-    const json = JSON.stringify(object);
+    const jsonData = JSON.stringify(Object.fromEntries(formDataToSend));
 
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
+      const res = await axios.post("https://api.web3forms.com/submit", {
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: json,
+        body: jsonData,
       });
 
       const responseData = await res.json();

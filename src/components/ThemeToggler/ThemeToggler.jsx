@@ -1,10 +1,10 @@
 import React from "react";
 import { FaSun, FaMoon } from "react-icons/fa";
 
-import "./modetoggler.css";
+import "./themetoggler.css";
 import { useTheme } from "../../Context/ThemeContext";
 
-const ModeToggler = () => {
+const ThemeToggler = () => {
   const { toggle, toggleTheme } = useTheme();
 
   return (
@@ -36,4 +36,4 @@ const ModeToggler = () => {
   );
 };
 
-export default ModeToggler;
+export default ThemeToggler;

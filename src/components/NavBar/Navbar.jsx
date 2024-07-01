@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { scrollToSection } from "../../Utils/ScrollUtils/ScrollUtils";
 import "./navbar.css";
-import ModeToggler from "../ModeToggler/ModeToggler";
+import ThemeToggler from "../ThemeToggler/ThemeToggler";
 
 const Navbar = ({ activeTab, setActiveTab, sideMenu, setSideMenu }) => {
   const [stickyNavbar, setStickyNavbar] = useState(false);
@@ -95,7 +95,7 @@ const Navbar = ({ activeTab, setActiveTab, sideMenu, setSideMenu }) => {
           </li>
           <li className="nav-item ">
             <div className="nav-link">
-              <ModeToggler />
+              <ThemeToggler />
             </div>
           </li>
         </ul>

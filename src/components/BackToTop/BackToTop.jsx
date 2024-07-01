@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import chevronUp from "../../assets/images/chevronup.png";
 import "./backtotop.css";
 import { BsChevronUp } from "react-icons/bs";
 

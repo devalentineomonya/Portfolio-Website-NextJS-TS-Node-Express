@@ -41,23 +41,23 @@ const Contact = ({ setActiveTab }) => {
             </h1>
             <ul>
               <li>
-                <a onClick={() => handleTabClick("home", event)}>Home</a>
+                <a onClick={() => handleTabClick("home")}>Home</a>
               </li>
               <li>
-                <a onClick={() => handleTabClick("about", event)}>About</a>
+                <a onClick={() => handleTabClick("about")}>About</a>
               </li>
               <li>
-                <a onClick={() => handleTabClick("techstack", event)}>
+                <a onClick={() => handleTabClick("techstack")}>
                   Tech Stack
                 </a>
               </li>
               <li>
-                <a onClick={() => handleTabClick("projects", event)}>
+                <a onClick={() => handleTabClick("projects")}>
                   Projects
                 </a>
               </li>
               <li>
-                <a onClick={() => handleTabClick("contact", event)}>Contact</a>
+                <a onClick={() => handleTabClick("contact")}>Contact</a>
               </li>
             </ul>
           </div>

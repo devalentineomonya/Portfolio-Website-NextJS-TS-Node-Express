@@ -7,14 +7,14 @@ import SkillsContextProvider from "../Context/SkillsContext";
 import Testimonial from "../components/Testimonials/Testimonial";
 import SwipperContextProvider from "../Context/SwipperContext";
 import Team from "../components/Team/Team";
-import Partners from "../components/Partners/Partners";
+// import Partners from "../components/Partners/Partners";
 import LatestProjects from "../components/LatestProjects/LatestProjects";
 import Contact from "../components/Contact/Contact";
 import Projects from "../components/Projects/Projects";
 import React, {useState } from "react";
 import ProjectPopup from "../components/ProjectPopup/ProjectPopup";
 
-const Home = ({ activeTab, setActiveTab }) => {
+const Home = ({setActiveTab }) => {
   const[togglePopup, setTogglePopup] = useState(false);
   const [projectID, setProjectID] = useState(null);
 
@@ -22,7 +22,6 @@ const Home = ({ activeTab, setActiveTab }) => {
   return (
     <>
       <Hero />
-
       <ServicesContextProvider>
         <TechStacks />
       </ServicesContextProvider>
@@ -37,11 +36,8 @@ const Home = ({ activeTab, setActiveTab }) => {
         <Testimonial />
       </SwipperContextProvider>
       <Projects setTogglePopup={setTogglePopup} setProjectID={setProjectID}/>
-
       <Team />
-
-      <Partners />
-
+      {/* <Partners /> */}
       <LatestProjects />
       <Contact setActiveTab={setActiveTab} />
       <ProjectPopup togglePopup={togglePopup} setTogglePopup={setTogglePopup} projectID={projectID}/>

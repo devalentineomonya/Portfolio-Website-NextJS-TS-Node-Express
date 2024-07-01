@@ -2,8 +2,8 @@ import React from "react";
 import "./bubblesanimation.css"
 const HeroAmimation = ({ children }) => {
   return (
-    <div class="bubbles-container">
-      <div class="bubbles">
+    <div className="bubbles-container">
+      <div className="bubbles">
         <span style={{ "--i": 11 }}></span>
         <span style={{ "--i": 12 }}></span>
         <span style={{ "--i": 24 }}></span>

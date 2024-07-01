@@ -3,8 +3,8 @@
     grid-template-rows: 1fr;
     max-width: 400px;
     overflow: hidden;
-    cursor: pointer; 
-    border-radius: 3px; 
+    cursor: pointer;
+    border-radius: 3px;
 }
 
 .card-content {
@@ -17,7 +17,7 @@
     justify-content: flex-start;
     align-items: center;
     padding: 20px 0 20px 20px;
-   
+
 
 }
 
@@ -25,17 +25,15 @@
     color: var(--color-bg-primary);
     background-color: var(--color-primary);
 }
+
 .card-content:active {
     color: var(--color-bg-primary);
     background-color: var(--color-primary);
 }
-.techstacks-card.active {
-   
-}
 
 .techstacks-card {
     position: relative;
-   
+
 }
 
 .techstack-description {
@@ -43,15 +41,18 @@
     max-height: 0;
     overflow: hidden;
     color: var(--color-text-primary);
-    
+
 }
-.techstack-description p{
-    font-size:20px;
+
+.techstack-description p {
+    font-size: 20px;
     letter-spacing: 3px;
-    line-height:2rem;
+    line-height: 2rem;
 }
-.techstacks-card.active .techstack-description {
-    max-height: 200px;
+
+.techstacks-card.active
+.techstack-description {
+    max-height: 350px;
 
 }
 
@@ -90,9 +91,10 @@
     font-weight: 800;
     font-family: "Dosis";
 }
+
 @media screen and (max-width: 869px) {
     .techstacks-card {
         max-width: 100%;
     }
-    
+
 }

@@ -7,23 +7,21 @@ export const useTheme = () => {
 };
 
 export const ThemeProvider = ({ children }) => {
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(null);
+  const selectedTheme = localStorage.getItem("selectedTheme");
+
 
   useEffect(() => {
-    const selectedTheme = localStorage.getItem("selectedTheme");
-    setToggle(selectedTheme === "dark"? true :  false);
+    setToggle(selectedTheme === "dark" ? true : false);
     toggleTheme();
   }, []);
 
-
   const toggleTheme = () => {
-    const newTheme = !toggle ? "dark" : "light";
+    const newTheme = toggle ? "dark" : "light";
     document.querySelector("body").setAttribute("data-theme", newTheme);
     localStorage.setItem("selectedTheme", newTheme);
     setToggle(!toggle);
   };
-
- 
 
   return (
     <ThemeContext.Provider value={{ toggle, toggleTheme }}>
