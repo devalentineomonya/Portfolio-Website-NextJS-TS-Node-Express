@@ -11,12 +11,12 @@ const Hero = () => {
             <p>
               I am a <span>----</span> Software Engineer
             </p>
-            {/* <h1>Valentine Omonya</h1> */}
-            <div className="animated-text-container">
+            <h1>Valentine Omonya</h1>
+            {/* <div className="animated-text-container">
               <div className="animated-text-upper ">Valentine Omonya</div>
               <div className="animated-text-lower">Valentine Omonya</div>
               <div className="animated-text-inside">A passionate software engineer.</div>
-            </div>
+            </div> */}
             <p>
               <span>FrontEnd</span> -<span>Backend</span>-
               <span>Mobile Apps</span>
