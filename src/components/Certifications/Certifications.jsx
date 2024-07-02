@@ -2,10 +2,10 @@ import React from "react";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import PartnersList from "../../assets/PartnersList/PartnersList";
-import Partner from "../Partner/Partner";
-import "./partners.css"
+import Certification from "../Certification/Certification";
+import "./certifications.css"
 
-const Partners = () => {
+const Certifications = () => {
   const overrideStyles = `
     .owl-carousel .owl-item img {
       width: unset;
@@ -24,7 +24,7 @@ const Partners = () => {
   };
 
   return (
-    <div className="partner-section">
+    <div className="certifications-section">
       <style>{overrideStyles}</style>
       <OwlCarousel
         className="owl-theme"
@@ -35,12 +35,12 @@ const Partners = () => {
         responsive={{ 0: { items: 1 }, 992: { items: 2 }, 1200: { items: 4 } }}
       >
         {PartnersList.map((partner, i) => (
-          <Partner key={i} partner={partner} />
+          <Certification key={i} partner={partner} />
         ))}
       </OwlCarousel>
     </div>
   );
 };
 
-export default Partners;
+export default Certifications;
 

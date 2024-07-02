@@ -1,19 +1,19 @@
-.partner-image{
+.certification-image{
     cursor: grab;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.partner-image img{
+.certification-image img{
     transition: 0.4s ease-in-out;
     width: 150px;
 
 }
-.partner-image img:hover{
+.certification-image img:hover{
     transform: scale(1.1);
 }
 @media screen and (max-width:768px) {
-    .partner-image img{
+    .certification-image img{
         width: 100%;
     }
     
