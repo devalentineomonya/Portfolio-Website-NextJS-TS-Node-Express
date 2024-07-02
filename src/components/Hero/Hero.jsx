@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="hero-content">
           <div className="hero-text-container">
             <p>
-              I am a <span>----</span> Software Engineer
+              I am <span>---</span> Software Engineer
             </p>
             <h1>Valentine Omonya</h1>
             {/* <div className="animated-text-container">
@@ -18,8 +18,8 @@ const Hero = () => {
               <div className="animated-text-inside">A passionate software engineer.</div>
             </div> */}
             <p>
-              <span>FrontEnd</span> -<span>Backend</span>-
-              <span>Mobile Apps</span>
+              <span>Full Stack</span> -<span>Mobile Apps</span>-
+              <span>ML Engineer</span>
             </p>
             <div className="hero-button">
               <a
