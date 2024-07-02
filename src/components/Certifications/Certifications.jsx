@@ -34,8 +34,8 @@ const Certifications = () => {
         items={getItemsPerScreen()}
         responsive={{ 0: { items: 1 }, 992: { items: 2 }, 1200: { items: 4 } }}
       >
-        {PartnersList.map((partner, i) => (
-          <Certification key={i} partner={partner} />
+        {PartnersList.map((certification, i) => (
+          <Certification key={i} certification={certification} />
         ))}
       </OwlCarousel>
     </div>

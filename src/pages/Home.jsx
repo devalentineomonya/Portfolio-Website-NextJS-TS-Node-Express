@@ -7,7 +7,7 @@ import SkillsContextProvider from "../Context/SkillsContext";
 import Testimonial from "../components/Testimonials/Testimonial";
 import SwipperContextProvider from "../Context/SwipperContext";
 import Team from "../components/Team/Team";
-import Partners from "../components/Partners/Partners";
+import Certifications from "../components/Certifications/Certifications";
 import LatestProjects from "../components/LatestProjects/LatestProjects";
 import Contact from "../components/Contact/Contact";
 import Projects from "../components/Projects/Projects";
@@ -37,7 +37,7 @@ const Home = ({setActiveTab }) => {
       </SwipperContextProvider>
       <Projects setTogglePopup={setTogglePopup} setProjectID={setProjectID}/>
       <Team />
-      <Partners />
+      <Certifications />
       <LatestProjects />
       <Contact setActiveTab={setActiveTab} />
       <ProjectPopup togglePopup={togglePopup} setTogglePopup={setTogglePopup} projectID={projectID}/>
