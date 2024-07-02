@@ -1,10 +1,10 @@
-.team-section{
+.collaborators-section{
     margin-top: 100px;
     display:flex;
     justify-content: center;
     flex-direction: column;
 }
-.team-card-container{
+.collaborators-card-container{
     margin-top: 50px;
     display: flex;
     width: 100%;
@@ -12,7 +12,7 @@
     
   
 }
-.team-cards{
+.collaborators-cards{
     width: 80%;
     display: flex;
     flex-wrap: wrap;
@@ -21,7 +21,7 @@
     align-items: flex-start;
 }
 @media screen and (max-width:992px) {
-    .team-cards{
+    .collaborators-cards{
         width: 100%;
     }
     

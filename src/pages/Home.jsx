@@ -6,7 +6,7 @@ import CounterContextProvider from "../Context/CounterContext";
 import SkillsContextProvider from "../Context/SkillsContext";
 import Testimonial from "../components/Testimonials/Testimonial";
 import SwipperContextProvider from "../Context/SwipperContext";
-import Team from "../components/Team/Team";
+import Team from "../components/Colaborators/Collaborators";
 import Certifications from "../components/Certifications/Certifications";
 import LatestProjects from "../components/LatestProjects/LatestProjects";
 import Contact from "../components/Contact/Contact";

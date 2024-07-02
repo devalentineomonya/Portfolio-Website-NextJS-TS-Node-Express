@@ -1,14 +1,14 @@
 import React from "react";
-import "./team.css";
+import "./collaborators.css";
 import CardItem from "../CardItem/CardItem";
 import TeamList from "../../assets/TeamList/TeamList";
 import HeadLine from "../HeadLine/HeadLine";
-const Team = () => {
+const Collaborators = () => {
   return (
-    <div className="team-section">
+    <div className="collaborators-section">
       <HeadLine number={"05"} description={"Who i have Collaborated with"} name={"Collaborations"}/>
-      <div className="team-card-container">
-        <div className="team-cards">
+      <div className="collaborators-card-container">
+        <div className="collaborators-cards">
           {TeamList.map((cardContent, i) => (
             <CardItem key={i} cardContent={cardContent} />
           ))}
@@ -18,4 +18,4 @@ const Team = () => {
   );
 };
 
-export default Team;
+export default Collaborators;
