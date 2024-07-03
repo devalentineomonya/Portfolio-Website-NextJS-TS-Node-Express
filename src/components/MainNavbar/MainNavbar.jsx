@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { scrollToSection } from "../../Utils/ScrollUtils/ScrollUtils";
-import "./navbar.css";
+import "./mainavbar.css";
 import ThemeToggler from "../ThemeToggler/ThemeToggler";
 
-const Navbar = ({ activeTab, setActiveTab, sideMenu, setSideMenu }) => {
+const MainNavbar = ({ activeTab, setActiveTab, sideMenu, setSideMenu }) => {
   const [stickyNavbar, setStickyNavbar] = useState(false);
 
   const [cross, setCross] = useState("normal");
@@ -114,4 +114,4 @@ const Navbar = ({ activeTab, setActiveTab, sideMenu, setSideMenu }) => {
   );
 };
 
-export default Navbar;
+export default MainNavbar;

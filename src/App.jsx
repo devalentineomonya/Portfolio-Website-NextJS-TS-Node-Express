@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import { scrollToSection } from "./Utils/ScrollUtils/ScrollUtils";
 import { useDataContext } from "./Context/DataContext";
 import Loader from "./components/Loader/Loader";
-import Navbar from "./components/Navbar/Navbar.jsx";
+import MainNavbar from "./components/MainNavbar/MainNavbar";
 
 function App() {
   const [activeTab, setActiveTab] = useState("home");
@@ -31,7 +31,7 @@ function App() {
         <Loader />
       ) : (
         <>
-          <Navbar
+          <MainNavbar
             activeTab={activeTab}
             setActiveTab={setActiveTab}
             sideMenu={sideMenu}
