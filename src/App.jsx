@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import BackToTop from "./components/BackToTop/BackToTop";
-import Navbar from "./components/Navbar/Navbar";
+// import Navbar from "./components/Navbar/Navbar";
 import SocialLinks from "./components/SocialLinks/SocialLinks";
 import Home from "./pages/Home";
 import { scrollToSection } from "./Utils/ScrollUtils/ScrollUtils";
@@ -17,7 +17,7 @@ function App() {
   // console.table(data);
   useEffect(() => {
     if (!loading) {
-      const hash = window.location.hash.substr(1);
+      const hash = location.hash.substr(1);
       console.log(hash);
       setTimeout(() => {
         scrollToSection(hash);
@@ -31,12 +31,12 @@ function App() {
         <Loader />
       ) : (
         <>
-          <Navbar
+          {/* <Navbar
             activeTab={activeTab}
             setActiveTab={setActiveTab}
             sideMenu={sideMenu}
             setSideMenu={setSideMenu}
-          />
+          /> */}
           <Home activeTab={activeTab} setActiveTab={setActiveTab} />
           {sideMenu === "closed" && <SocialLinks />}
 
