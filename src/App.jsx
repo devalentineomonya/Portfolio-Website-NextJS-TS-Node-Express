@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import { scrollToSection } from "./Utils/ScrollUtils/ScrollUtils";
 import { useDataContext } from "./Context/DataContext";
 import Loader from "./components/Loader/Loader";
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar.jsx";
 
 function App() {
   const [activeTab, setActiveTab] = useState("home");
