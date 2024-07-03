@@ -8,9 +8,14 @@ const CardItem = ({ cardContent }) => {
     }
   };
 
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      handleClick();
+    }
+  };
   return (
     <div className="card-item">
-      <a onClick={handleClick} target="_blank" rel="noopener noreferrer">
+      <a onClick={()=>handleClick()} onKeyDown={()=>handleKeyDown()} target="_blank" rel="noopener noreferrer">
         <div className="card-item-content">
           <div className="card-item-image">
             <img src={cardContent.image} alt="" />

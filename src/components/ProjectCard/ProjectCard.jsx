@@ -7,7 +7,11 @@ const ProjectCard = ({ projectInfo, setTogglePopup,setProjectID }) => {
     setTogglePopup(true);
     setProjectID(projectInfo.id)
   }
-
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      openPopup(event);
+    }
+  };
   return (
     <div className="project-card-container">
       <div className="project-card-content">
@@ -28,6 +32,7 @@ const ProjectCard = ({ projectInfo, setTogglePopup,setProjectID }) => {
             target="_blank"
             href={projectInfo.live_link}
             onClick={openPopup}
+            onKeyDown={handleKeyDown}
           >
             {projectInfo.name}
           </a>

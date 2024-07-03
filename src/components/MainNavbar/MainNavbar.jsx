@@ -37,6 +37,12 @@ const MainNavbar = ({ activeTab, setActiveTab, sideMenu, setSideMenu }) => {
     }, 50);
   };
 
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      handleTabClick(tabName, event)
+    }
+  };
+
   return (
     <div className={`navbar ${stickyNavbar ? "navbar-sticky" : ""}`}>
       <div className="logo">
@@ -53,6 +59,7 @@ const MainNavbar = ({ activeTab, setActiveTab, sideMenu, setSideMenu }) => {
             <a
               className="nav-link"
               onClick={(event) => handleTabClick("home", event)}
+              onKeyDown={(event)=>handleKeyDown("home", event)}
             >
               Home
             </a>
@@ -63,6 +70,7 @@ const MainNavbar = ({ activeTab, setActiveTab, sideMenu, setSideMenu }) => {
             <a
               className="nav-link"
               onClick={() => handleTabClick("techstack", event)}
+              onKeyDown={() => handleKeyDown("techstack",event)}
             >
               Tech Stack
             </a>
@@ -71,6 +79,7 @@ const MainNavbar = ({ activeTab, setActiveTab, sideMenu, setSideMenu }) => {
             <a
               className="nav-link"
               onClick={() => handleTabClick("about", event)}
+              onKeyDown={() => handleKeyDown("about", event)}
             >
               About
             </a>
@@ -81,6 +90,7 @@ const MainNavbar = ({ activeTab, setActiveTab, sideMenu, setSideMenu }) => {
             <a
               className="nav-link"
               onClick={() => handleTabClick("projects", event)}
+              onKeyDown={()=>handleKeyDown("projects",event)}
             >
               Projects
             </a>
@@ -89,6 +99,7 @@ const MainNavbar = ({ activeTab, setActiveTab, sideMenu, setSideMenu }) => {
             <a
               className="nav-link"
               onClick={() => handleTabClick("contact", event)}
+              onKeyDown={()=>handleKeyDown("contact", event)}
             >
               Contacts
             </a>

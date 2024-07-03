@@ -4,6 +4,7 @@ import "./contact.css";
 import emailLogo from "../../assets/images/email.png";
 import telephoneLogo from "../../assets/images/telephone.png";
 import { scrollToSection } from "../../Utils/ScrollUtils/ScrollUtils";
+
 const Contact = ({ setActiveTab }) => {
   const handleTabClick = (tabName, event) => {
     event.preventDefault();
@@ -15,6 +16,13 @@ const Contact = ({ setActiveTab }) => {
       }, 50);
     }, 50);
   };
+
+   const handleKeyDown = (tabName, event) => {
+    if (event.key === "Enter") {
+      handleTabClick(tabName, event);
+    }
+  };
+
 
   const currentYear = new Date().getFullYear();
   const today = new Date();
@@ -28,6 +36,7 @@ const Contact = ({ setActiveTab }) => {
     "Saturday",
   ];
   const dayName = dayNames[today.getDay()];
+
   return (
     <div className="contact-section" id="contact">
       <div className="contact-form">
@@ -41,23 +50,49 @@ const Contact = ({ setActiveTab }) => {
             </h1>
             <ul>
               <li>
-                <a onClick={() => handleTabClick("home")}>Home</a>
+                <a
+                  onClick={(event) => handleTabClick("home", event)}
+                  onKeyDown={(event) => handleKeyDown("home", event)}
+                  tabIndex={0}
+                >
+                  Home
+                </a>
               </li>
               <li>
-                <a onClick={() => handleTabClick("about")}>About</a>
+                <a
+                  onClick={(event) => handleTabClick("about", event)}
+                  onKeyDown={(event) => handleKeyDown("about", event)}
+                  tabIndex={0}
+                >
+                  About
+                </a>
               </li>
               <li>
-                <a onClick={() => handleTabClick("techstack")}>
+                <a
+                  onClick={(event) => handleTabClick("techstack", event)}
+                  onKeyDown={(event) => handleKeyDown("techstack", event)}
+                  tabIndex={0}
+                >
                   Tech Stack
                 </a>
               </li>
               <li>
-                <a onClick={() => handleTabClick("projects")}>
+                <a
+                  onClick={(event) => handleTabClick("projects", event)}
+                  onKeyDown={(event) => handleKeyDown("projects", event)}
+                  tabIndex={0}
+                >
                   Projects
                 </a>
               </li>
               <li>
-                <a onClick={() => handleTabClick("contact")}>Contact</a>
+                <a
+                  onClick={(event) => handleTabClick("contact", event)}
+                  onKeyDown={(event) => handleKeyDown("contact", event)}
+                  tabIndex={0}
+                >
+                  Contact
+                </a>
               </li>
             </ul>
           </div>

@@ -7,10 +7,17 @@ const TechStacks = ({techstack}) => {
   const toggleAccordion = () => {
     setIsActive(!isActive);
   };
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      toggleAccordion();
+    }
+  };
   return (
     <div
       className={`techstacks-card ${isActive ? "active" : ""}`}
       onClick={toggleAccordion}
+      onKeyDown={handleKeyDown}
     >
       <div className="card-content">
         <div className="techstack-icon">

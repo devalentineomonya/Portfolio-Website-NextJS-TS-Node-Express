@@ -12,10 +12,16 @@ const ProjectPopup = ({ togglePopup, setTogglePopup, projectID }) => {
     project = ProjectsList.find((p) => p.id === projectID);
   }
 
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      setTogglePopup(false)
+    }
+  };
   return (
     <dialog className={`popup-overlay  ${togglePopup ? "open" : null}`}>
       <div className="popup-content">
-        <div className="close-button " onClick={() => setTogglePopup(false)}>
+        <div className="close-button " onClick={() => setTogglePopup(false)} onKeyDown={handleKeyDown}>
           <FontAwesomeIcon icon={faPlus} />
         </div>
         {project && ( 

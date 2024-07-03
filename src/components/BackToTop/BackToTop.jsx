@@ -9,6 +9,12 @@ const backToTopHandler = () => {
   });
 };
 
+const handleKeyDown = (event) => {
+  if (event.key === "Enter") {
+    backToTopHandler();
+  }
+};
+
 const BackToTop = () => {
   const [iScrolled, setIscrolled] = useState(false);
   
@@ -29,7 +35,7 @@ const BackToTop = () => {
   }, []);
 
   return (
-    <div className={`back-to-top ${iScrolled ? "hidden" : ""}`} onClick={backToTopHandler}>
+    <div className={`back-to-top ${iScrolled ? "hidden" : ""}`} onClick={backToTopHandler} onKeyDown={handleKeyDown}>
       <div className="back-to-top-icon">
         <BsChevronUp className="chevron-top"/>
       </div>

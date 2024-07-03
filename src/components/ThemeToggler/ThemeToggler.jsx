@@ -6,10 +6,16 @@ import { useTheme } from "../../Context/ThemeContext";
 
 const ThemeToggler = () => {
   const { toggle, toggleTheme } = useTheme();
-
+  
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      toggleTheme();
+    }
+  };
   return (
     <div
       onClick={toggleTheme}
+      onKeyDown={handleKeyDown}
       className={`wrg-toggle ${toggle ? "wrg-toggle--checked" : ""}`}
     >
       <div className="wrg-toggle-container">
