@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import BackToTop from "./components/BackToTop/BackToTop";
-// import Navbar from "./components/Navbar/Navbar";
 import SocialLinks from "./components/SocialLinks/SocialLinks";
 import Home from "./pages/Home";
 import { scrollToSection } from "./Utils/ScrollUtils/ScrollUtils";
 import { useDataContext } from "./Context/DataContext";
 import Loader from "./components/Loader/Loader";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   const [activeTab, setActiveTab] = useState("home");
@@ -31,12 +31,12 @@ function App() {
         <Loader />
       ) : (
         <>
-          {/* <Navbar
+          <Navbar
             activeTab={activeTab}
             setActiveTab={setActiveTab}
             sideMenu={sideMenu}
             setSideMenu={setSideMenu}
-          /> */}
+          />
           <Home activeTab={activeTab} setActiveTab={setActiveTab} />
           {sideMenu === "closed" && <SocialLinks />}
 
