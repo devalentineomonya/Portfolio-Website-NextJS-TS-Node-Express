@@ -1,18 +1,18 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./about.css";
 import { CounterContext } from "../../Context/CounterContext";
-import Counter from "../Counter/Counter";
 import Skill from "../Skill/Skill";
 import { SkillsContext } from "../../Context/SkillsContext";
 import HeadLine from "../HeadLine/HeadLine";
 import { useTheme } from "../../Context/ThemeContext";
 import lightSlider from "../../assets/images/lightSlider3.jpg";
 import darkSlider from "../../assets/images/darkSlider3.jpg";
+import Statistics from "../Statistics/Statistics";
 const About = () => {
   const { CountsList } = useContext(CounterContext);
   const { SkillsList } = useContext(SkillsContext);
   const [bgImage, setBgImage] = useState(lightSlider);
-  const {toggle, setToggle} = useTheme(); 
+  const {toggle} = useTheme(); 
   useEffect(() => {
     setBgImage(!toggle ? darkSlider : lightSlider);
   }, [toggle]);
@@ -34,7 +34,7 @@ const About = () => {
         >
           <div className="counter-container">
             {CountsList.map((count, i) => (
-              <Counter key={i} name={count.name} value={count.value} />
+              <Statistics key={i} name={count.name} value={count.value} />
             ))}
           </div>
         </div>

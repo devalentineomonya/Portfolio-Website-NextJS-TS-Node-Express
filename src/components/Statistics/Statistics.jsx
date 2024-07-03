@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
-import "./counter.css";
-const Counter = (props) => {
+import "./statistics.css";
+const Statistics = (props) => {
   const [counterOn, setCounterOn] = useState(false);
   return (
     <div className="counter-item">
@@ -17,4 +17,4 @@ const Counter = (props) => {
   );
 };
 
-export default Counter;
+export default Statistics;
