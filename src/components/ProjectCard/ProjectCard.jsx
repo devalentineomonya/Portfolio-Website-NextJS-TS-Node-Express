@@ -1,7 +1,7 @@
 import React from "react";
 import "./projectcard.css";
 
-const ProjectCard = ({ projectInfo, setTogglePopup,setProjectID }) => {
+const ProjectCard = ({ projectInfo=null, setTogglePopup,setProjectID }) => {
   function openPopup(e) {
     e.preventDefault(); 
     setTogglePopup(true);
@@ -16,7 +16,7 @@ const ProjectCard = ({ projectInfo, setTogglePopup,setProjectID }) => {
     <div className="project-card-container">
       <div className="project-card-content">
         <div className="project-card-image">
-          <img src={projectInfo.image} alt={projectInfo.name} />
+          <img src={projectInfo?.image} alt={projectInfo?.name} />
         </div>
       </div>
       <div className="card-overlay">
@@ -24,17 +24,17 @@ const ProjectCard = ({ projectInfo, setTogglePopup,setProjectID }) => {
           <span>Click on the Project Name for more info</span>
         </div>
         <div className="project-technology">
-          <p>{projectInfo.technology}</p>
+          <p>{projectInfo?.technology}</p>
         </div>
 
         <div className="project-link">
           <a
             target="_blank"
-            href={projectInfo.live_link}
+            href={projectInfo?.live_link}
             onClick={openPopup}
             onKeyDown={handleKeyDown}
           >
-            {projectInfo.name}
+            {projectInfo?.name}
           </a>
         </div>
       </div>
