@@ -1,10 +1,10 @@
 import React from "react";
 import "./carditem.css";
 
-const CardItem = ({ cardContent }) => {
+const CardItem = ({ cardContent=null }) => {
   const handleClick = () => {
-    if (cardContent.live_link) {
-      window.open(cardContent.live_link, "_blank"); 
+    if (cardContent?.live_link) {
+      window.open(cardContent?.live_link, "_blank"); 
     }
   };
 
@@ -18,16 +18,16 @@ const CardItem = ({ cardContent }) => {
       <a onClick={()=>handleClick()} onKeyDown={()=>handleKeyDown()} target="_blank" rel="noopener noreferrer">
         <div className="card-item-content">
           <div className="card-item-image">
-            <img src={cardContent.image} alt="" />
+            <img src={cardContent?.image} alt="" />
           </div>
           <div className="card-item-text">
             <p>
-              {cardContent.role || cardContent.date}
-              {cardContent.technology && <span></span>}
-              {cardContent.technology || ""}
+              {cardContent?.role || cardContent?.date}
+              {cardContent?.technology && <span></span>}
+              {cardContent?.technology || ""}
             </p>
 
-            <h3>{cardContent.name}</h3>
+            <h3>{cardContent?.name}</h3>
           </div>
         </div>
       </a>
