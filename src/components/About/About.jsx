@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./about.css";
 import { CounterContext } from "../../Context/CounterContext";
-import Skill from "../Skill/Skill";
+import Skill from "../Languages/Languages";
 import HeadLine from "../HeadLine/HeadLine";
 import { useTheme } from "../../Context/ThemeContext";
 import lightSlider from "../../assets/images/lightSlider3.jpg";

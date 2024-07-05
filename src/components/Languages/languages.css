@@ -1,23 +1,23 @@
-.skills-container {
+.languages-container {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
 }
 
-.skills-details {
+.languages-details {
     display: flex;
     justify-content: space-between;
 }
-.skills-details p{
+.languages-details p{
     font-weight: 600;
 }
-.skill-level {
+.language-level {
     position: relative;
     height: 5px;
     background-color: var( --color-silver);
 }
 
-.skill-level .skills-level-bar {
+.skill-level .languages-level-bar {
     position: absolute;
     width: 50%;
     height: 100%;

@@ -6,7 +6,7 @@ const DataContext = createContext(null);
 const DataContextProvider = ({ children }) => {
   const [data, setData] = useState({
     projects: "",
-    skills: "",
+    stacks: "",
     languages: "",
     partners: "",
     testimonials: "",
@@ -37,7 +37,7 @@ const DataContextProvider = ({ children }) => {
   useEffect(() => {
     const endpoints = [
       "projects/list",
-      "skills/list",
+      "stacks/list",
       "languages/list",
       "partners/list",
       "testimonials/list",

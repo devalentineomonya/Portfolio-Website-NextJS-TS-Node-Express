@@ -16,18 +16,18 @@ const Home = ({ setActiveTab }) => {
   const [togglePopup, setTogglePopup] = useState(false);
   const [projectID, setProjectID] = useState(null);
   const { data } = useDataContext();
-
+console.log(data)
 
   return (
     <>
       <Hero />
-      <TechStacks TechStacksList={data.skills} />
+      <TechStacks TechStacksList={data.stacks} />
       <CounterContextProvider>
         <About SkillsList={data.languages} />
       </CounterContextProvider>
       <Testimonial SwipperList={data.testimonials} />
       <Projects setTogglePopup={setTogglePopup} setProjectID={setProjectID} ProjectsList={data.projects} />
-      <Collaborators />
+      <Collaborators Collaborators={data.collaborators} />
       {/* <Certifications /> */}
       <LatestProjects />
       <Contact setActiveTab={setActiveTab} />
