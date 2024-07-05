@@ -1,17 +1,14 @@
 import React from "react";
 import "./skill.css";
 
-const Skills = (props) => {
-  const skillLevel = props.value + "%";
-
+const Skills = ({ name = "", value = 0 }) => {
   return (
     <div className="skills-container">
       <div className="skills-details">
-        <p>{props.name}</p>
-        <p></p>
+        <p>{name}</p>
       </div>
       <div className="skill-level">
-        <div className="skills-level-bar" style={{ width: skillLevel }}></div>
+        <div className="skills-level-bar" style={{ width: `${value}%` }}></div>
       </div>
     </div>
   );

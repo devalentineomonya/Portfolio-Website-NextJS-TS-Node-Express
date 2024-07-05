@@ -7,40 +7,42 @@ import SkillsContextProvider from "../Context/SkillsContext";
 import Testimonial from "../components/Testimonials/Testimonial";
 import SwipperContextProvider from "../Context/SwipperContext";
 import Team from "../components/Colaborators/Collaborators";
-import Certifications from "../components/Certifications/Certifications";
+// import Certifications from "../components/Certifications/Certifications";
 import LatestProjects from "../components/LatestProjects/LatestProjects";
 import Contact from "../components/Contact/Contact";
 import Projects from "../components/Projects/Projects";
-import React, {useState } from "react";
+import React, { useState } from "react";
 import ProjectPopup from "../components/ProjectPopup/ProjectPopup";
+import { useDataContext } from "../Context/DataContext";
 
-const Home = ({setActiveTab }) => {
-  const[togglePopup, setTogglePopup] = useState(false);
+const Home = ({ setActiveTab }) => {
+  const [togglePopup, setTogglePopup] = useState(false);
   const [projectID, setProjectID] = useState(null);
-
+  const { data } = useDataContext();
 
   return (
     <>
       <Hero />
-      <ServicesContextProvider>
-        <TechStacks />
-      </ServicesContextProvider>
+      <TechStacks TechStacksList={data.skills} />
+
 
       <CounterContextProvider>
-        <SkillsContextProvider>
-          <About />
-        </SkillsContextProvider>
+          <About SkillsList={data.languages} />
       </CounterContextProvider>
 
       <SwipperContextProvider>
         <Testimonial />
       </SwipperContextProvider>
-      <Projects setTogglePopup={setTogglePopup} setProjectID={setProjectID}/>
+      <Projects setTogglePopup={setTogglePopup} setProjectID={setProjectID} />
       <Team />
-      <Certifications />
+      {/* <Certifications /> */}
       <LatestProjects />
       <Contact setActiveTab={setActiveTab} />
-      <ProjectPopup togglePopup={togglePopup} setTogglePopup={setTogglePopup} projectID={projectID}/>
+      <ProjectPopup
+        togglePopup={togglePopup}
+        setTogglePopup={setTogglePopup}
+        projectID={projectID}
+      />
     </>
   );
 };

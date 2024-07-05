@@ -14,13 +14,10 @@ function App() {
   const { loading, setLoading } = useDataContext();
   const {data,error} = useDataContext();
 
-  // console.table(data);
   useEffect(() => {
     if (!loading) {
       const hash = location.hash.substr(1);
-      console.log(hash);
       setTimeout(() => {
-        scrollToSection(hash);
         setActiveTab(hash);
       }, 1000);
     }

@@ -2,10 +2,8 @@ import React, { useContext } from "react";
 import "./techstacks.css";
 import TechStack from "../TechStack/TechStack";
 import HeadLine from "../HeadLine/HeadLine";
-import { TechStacksContext } from "../../Context/TechStacksContext";
-
-const TechStacks = () => {
-const {TechStacksList} = useContext(TechStacksContext)
+import TechStackItems from "../../assets/TechStacksList/TechStacksList";
+const TechStacks = ({TechStacksList=TechStackItems}) => {
   return (
     <div className="techstacks-section" >
     <HeadLine id="techstack" number={"01"} description={"Tech Stacks I Use"} name={"Tech Stack"} />

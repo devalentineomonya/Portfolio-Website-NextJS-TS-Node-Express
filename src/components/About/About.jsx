@@ -2,15 +2,16 @@ import React, { useContext, useEffect, useState } from "react";
 import "./about.css";
 import { CounterContext } from "../../Context/CounterContext";
 import Skill from "../Skill/Skill";
-import { SkillsContext } from "../../Context/SkillsContext";
 import HeadLine from "../HeadLine/HeadLine";
 import { useTheme } from "../../Context/ThemeContext";
 import lightSlider from "../../assets/images/lightSlider3.jpg";
 import darkSlider from "../../assets/images/darkSlider3.jpg";
 import Statistics from "../Statistics/Statistics";
-const About = () => {
+import SkillItems from "../../assets/SkillsList/SkillsList";
+const About = ({SkillsList=SkillItems}) => {
+
+  console.log(SkillsList)
   const { CountsList } = useContext(CounterContext);
-  const { SkillsList } = useContext(SkillsContext);
   const [bgImage, setBgImage] = useState(lightSlider);
   const {toggle} = useTheme(); 
   useEffect(() => {
@@ -51,7 +52,7 @@ const About = () => {
           </p>
           <div className="skills-section">
             {SkillsList.map((skill, i) => (
-              <Skill key={i} name={skill.name} value={skill.value} />
+              <Skill key={i} name={skill.name} value={skill.percentage} />
             ))}
           </div>
         </div>
