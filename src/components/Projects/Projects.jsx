@@ -1,9 +1,9 @@
 import React from "react";
 import ProjectCard from "../ProjectCard/ProjectCard";
-import ProjectsList from "../../assets/ProjectsList/ProjectsList";
+import ProjectItems from "../../assets/ProjectsList/ProjectsList";
 import "./projects.css";
 import HeadLine from "../HeadLine/HeadLine";
-const Projects = ({setTogglePopup, setProjectID}) => {
+const Projects = ({setTogglePopup, setProjectID, ProjectsList=ProjectItems}) => {
   return (
     <div className="projects-section">
       <HeadLine id="projects" number={"04"} description={"What i have done"} name={"Projects"}  />

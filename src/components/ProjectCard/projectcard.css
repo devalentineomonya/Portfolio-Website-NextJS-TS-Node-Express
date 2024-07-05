@@ -65,7 +65,16 @@
 .project-technology p {
     font-size: 16px;
     color: #e0e0e0;
+    display:flex;
+    align-items: center;
 }
+.project-technology p span{
+    column-gap: 5px;
+    display:flex;
+    align-items: center;
+}
+
+
 
 .card-overlay .project-link a {
     color: #fff;
