@@ -31,7 +31,7 @@ const Home = ({ setActiveTab }) => {
       </CounterContextProvider>
 
       <SwipperContextProvider>
-        <Testimonial />
+        <Testimonial  SwipperList={data.testimonials} />
       </SwipperContextProvider>
       <Projects setTogglePopup={setTogglePopup} setProjectID={setProjectID} />
       <Team />

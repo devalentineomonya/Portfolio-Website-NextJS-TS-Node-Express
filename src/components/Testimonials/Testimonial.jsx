@@ -3,13 +3,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Swipper from "../Swipper/Swipper";
 import "swiper/css";
 import "swiper/swiper-bundle.css";
-import { SwipperContext } from "../../Context/SwipperContext";
-import React, { useContext } from "react";
 import "./testimonial.css";
 import HeadLine from "../HeadLine/HeadLine";
+import SwipperItems from "../../assets/SwipperList/SwipperList";
 
-const Testimonial = () => {
-  const SwipperList = useContext(SwipperContext);
+const Testimonial = ({SwipperList=SwipperItems}) => {
   return (
     <div className="testimonial-section">
       <HeadLine number={"03"} description={"Who have seen my work"} name={"Testimonials"}/>
