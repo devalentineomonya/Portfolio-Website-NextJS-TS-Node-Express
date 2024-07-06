@@ -17,7 +17,6 @@ const ProjectCard = ({ projectInfo = null, setTogglePopup, setProjectID }) => {
   const imageSource = import.meta.env.DEV
     ? "http://localhost:8080/api/images"
     : `${import.meta.env.VITE_API_ENDPOINT}/images`;
-console.log(projectInfo)
   return (
     <div className="project-card-container">
       <div className="project-card-content">

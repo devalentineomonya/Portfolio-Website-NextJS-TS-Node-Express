@@ -2,9 +2,10 @@ import React from "react";
 import "./carditem.css";
 
 const CardItem = ({ cardContent=null }) => {
-  const handleClick = () => {
-    if (cardContent?.live_link) {
-      window.open(cardContent?.live_link, "_blank"); 
+  const handleClick = (e) => {
+    e.preventDefault();
+    if (cardContent?.live_link || cardContent?.githubLink) {
+      window.open(cardContent?.live_link || cardContent?.githubLink, "_blank"); 
     }
   };
 

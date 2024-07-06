@@ -8,7 +8,8 @@ const DataContextProvider = ({ children }) => {
     projects: "",
     stacks: "",
     languages: "",
-    partners: "",
+    certificates: "",
+    collaborators:"",
     testimonials: "",
   });
   const [error, setError] = useState(null);
@@ -39,7 +40,8 @@ const DataContextProvider = ({ children }) => {
       "projects/list",
       "stacks/list",
       "languages/list",
-      "partners/list",
+      "certificates/list",
+      "collaborators/list",
       "testimonials/list",
     ];
     Promise.all(endpoints.map((endpoint) => fetchData(endpoint)))

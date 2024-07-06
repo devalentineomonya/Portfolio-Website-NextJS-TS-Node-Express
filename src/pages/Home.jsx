@@ -4,7 +4,7 @@ import About from "../components/About/About";
 import CounterContextProvider from "../Context/CounterContext";
 import Testimonial from "../components/Testimonials/Testimonial";
 import Collaborators from "../components/Collaborators/Collaborators";
-// import Certifications from "../components/Certifications/Certifications";
+import Certifications from "../components/Certifications/Certifications";
 import LatestProjects from "../components/LatestProjects/LatestProjects";
 import Contact from "../components/Contact/Contact";
 import Projects from "../components/Projects/Projects";
@@ -16,19 +16,21 @@ const Home = ({ setActiveTab }) => {
   const [togglePopup, setTogglePopup] = useState(false);
   const [projectID, setProjectID] = useState(null);
   const { data } = useDataContext();
-console.log(data)
+  console.dir(data)
 
   return (
     <>
       <Hero />
       <TechStacks TechStacksList={data.stacks} />
       <CounterContextProvider>
-        <About SkillsList={data.languages} />
+        <About languages={data.languages} />
       </CounterContextProvider>
-      <Testimonial SwipperList={data.testimonials} />
+      
+      <Testimonial testimonials={data.testimonials} />
       <Projects setTogglePopup={setTogglePopup} setProjectID={setProjectID} ProjectsList={data.projects} />
-      <Collaborators Collaborators={data.collaborators} />
-      {/* <Certifications /> */}
+      <Collaborators collaborators={data.collaborators} />
+      <Certifications certifications={data.certifications}/>
+
       <LatestProjects />
       <Contact setActiveTab={setActiveTab} />
       <ProjectPopup

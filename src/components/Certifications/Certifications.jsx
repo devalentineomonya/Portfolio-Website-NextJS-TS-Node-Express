@@ -5,7 +5,7 @@ import PartnersList from "../../assets/PartnersList/PartnersList";
 import Certification from "../Certification/Certification";
 import "./certifications.css"
 
-const Certifications = () => {
+const Certifications = ({certifications=PartnersList}) => {
   const overrideStyles = `
     .owl-carousel .owl-item img {
       width: unset;
@@ -34,7 +34,7 @@ const Certifications = () => {
         items={getItemsPerScreen()}
         responsive={{ 0: { items: 1 }, 992: { items: 2 }, 1200: { items: 4 } }}
       >
-        {PartnersList.map((certification, i) => (
+        {certifications.map((certification, i) => (
           <Certification key={i} certification={certification} />
         ))}
       </OwlCarousel>

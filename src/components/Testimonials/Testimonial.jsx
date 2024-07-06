@@ -7,7 +7,7 @@ import "./testimonial.css";
 import HeadLine from "../HeadLine/HeadLine";
 import SwipperItems from "../../assets/SwipperList/SwipperList";
 
-const Testimonial = ({SwipperList=SwipperItems}) => {
+const Testimonial = ({testimonials=SwipperItems}) => {
   return (
     <div className="testimonial-section">
       <HeadLine number={"03"} description={"Who have seen my work"} name={"Testimonials"}/>
@@ -17,7 +17,7 @@ const Testimonial = ({SwipperList=SwipperItems}) => {
           slidesPerView={1}
           navigation
         >
-          {SwipperList.map((swipper, i) => (
+          {testimonials.map((testimonial, i) => (
             <SwiperSlide
               key={i}
               style={{
@@ -28,10 +28,10 @@ const Testimonial = ({SwipperList=SwipperItems}) => {
             >
               <Swipper
                 key={i}
-                image={swipper.image}
-                name={swipper.name}
-                position = {swipper.position}
-                description={swipper.description}
+                image={testimonial.image}
+                name={testimonial.name}
+                position = {testimonial.position}
+                description={testimonial.description}
               />
             </SwiperSlide>
           ))}

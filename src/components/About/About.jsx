@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./about.css";
-import { CounterContext } from "../../Context/CounterContext";
 import Skill from "../Languages/Languages";
 import HeadLine from "../HeadLine/HeadLine";
 import { useTheme } from "../../Context/ThemeContext";
@@ -8,10 +7,9 @@ import lightSlider from "../../assets/images/lightSlider3.jpg";
 import darkSlider from "../../assets/images/darkSlider3.jpg";
 import Statistics from "../Statistics/Statistics";
 import SkillItems from "../../assets/SkillsList/SkillsList";
-const About = ({SkillsList=SkillItems}) => {
+import CountsList from "../../assets/CountsList/CountsList";
+const About = ({languages=SkillItems}) => {
 
-  console.log(SkillsList)
-  const { CountsList } = useContext(CounterContext);
   const [bgImage, setBgImage] = useState(lightSlider);
   const {toggle} = useTheme(); 
   useEffect(() => {
@@ -51,8 +49,8 @@ const About = ({SkillsList=SkillItems}) => {
             valuable asset to any team.
           </p>
           <div className="skills-section">
-            {SkillsList.map((skill, i) => (
-              <Skill key={i} name={skill.name} value={skill.percentage} />
+            {languages.map((language, i) => (
+              <Skill key={i} name={language.name} value={language.percentage} />
             ))}
           </div>
         </div>
