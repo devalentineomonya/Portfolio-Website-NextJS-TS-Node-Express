@@ -1,4 +1,4 @@
-.testimonial-section {
+.testimonials-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,26 +9,26 @@
 }
 
 
-.swipper-container {
+.testimonials-container {
     margin-top: 50px;
     width: 60%;
 }
 
 @media screen and (max-width: 1200px) {
-    .swipper-container {
+    .testimonials-container {
         width: 90%;
         
     }
 }
 @media screen and (max-width: 576px) {
-    .testimonial-section {
+    .testimonials-section {
         margin-top: 150px;
     }
-    .swipper-container {
+    .testimonials-container {
         width: 100%;
         
     }
-    .testimonial-section {
+    .testimonials-section {
         margin-top:calc(30% + 100px);
     }
 }

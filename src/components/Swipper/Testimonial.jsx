@@ -1,12 +1,12 @@
 import React from 'react'
-import "./swipper.css"
-const Swipper = (props=null) => {
+import "./testimonial.css"
+const Testimonial = (props=null) => {
   return (
     <div className='sliding-content'>
-      <div className="swipper-image">
+      <div className="testimonial-image">
         <img src={props?.image} alt={props?.name} />
       </div>
-      <div className="swipper-text">
+      <div className="testimonial-text">
         <h2>{props?.name}</h2>
         <span>{props?.position}</span>
         <p>{props?.description}</p>
@@ -15,4 +15,4 @@ const Swipper = (props=null) => {
   )
 }
 
-export default Swipper
+export default Testimonial

@@ -2,7 +2,7 @@ import Hero from "../components/Hero/Hero";
 import TechStacks from "../components/TechStacks/TechStacks";
 import About from "../components/About/About";
 import CounterContextProvider from "../Context/CounterContext";
-import Testimonial from "../components/Testimonials/Testimonial";
+import Testimonial from "../components/Testimonials/Testimonials";
 import Collaborators from "../components/Collaborators/Collaborators";
 import Certifications from "../components/Certifications/Certifications";
 import LatestProjects from "../components/LatestProjects/LatestProjects";
