@@ -1,13 +1,13 @@
 import { Navigation, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Testimonial from "../Swipper/Testimonial";
+import Testimonial from "../Testimonial/Testimonial";
 import "swiper/css";
 import "swiper/swiper-bundle.css";
 import "./testimonials.css";
 import HeadLine from "../HeadLine/HeadLine";
 import SwipperItems from "../../assets/SwipperList/SwipperList";
 
-const Testimonials = ({testimonials=SwipperItems}) => {
+const Testimonials = ({testimonials}) => {
   return (
     <div className="testimonials-section">
       <HeadLine number={"03"} description={"Who has seen my work"} name={"Testimonials"}/>
