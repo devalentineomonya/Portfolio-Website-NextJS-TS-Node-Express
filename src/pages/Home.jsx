@@ -21,16 +21,15 @@ const Home = ({ setActiveTab }) => {
   return (
     <>
       <Hero />
-      <TechStacks TechStacksList={data.stacks} />
+      <TechStacks techStacks={data.stacks} />
       <CounterContextProvider>
         <About languages={data.languages} />
       </CounterContextProvider>
       
       <Testimonial testimonials={data.testimonials} />
-      <Projects setTogglePopup={setTogglePopup} setProjectID={setProjectID} ProjectsList={data.projects} />
+      <Projects setTogglePopup={setTogglePopup} setProjectID={setProjectID} projects={data.projects} />
       <Collaborators collaborators={data.collaborators} />
       <Certifications certifications={data.certifications}/>
-
       <LatestProjects />
       <Contact setActiveTab={setActiveTab} />
       <ProjectPopup

@@ -3,12 +3,12 @@ import "./techstacks.css";
 import TechStack from "../TechStack/TechStack";
 import HeadLine from "../HeadLine/HeadLine";
 import TechStackItems from "../../assets/TechStacksList/TechStacksList";
-const TechStacks = ({TechStacksList=TechStackItems}) => {
+const TechStacks = ({techStacks=TechStackItems}) => {
   return (
     <div className="techstacks-section" >
     <HeadLine id="techstack" number={"01"} description={"Tech Stacks I Use"} name={"Tech Stack"} />
       <div className="techstacks-container">
-        {TechStacksList.map((techstack, i) => (
+        {techStacks.map((techstack, i) => (
           <TechStack key={i} techstack={techstack} />
         ))}
       </div>

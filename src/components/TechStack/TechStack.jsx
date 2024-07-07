@@ -1,6 +1,14 @@
-import React, { useState } from "react";
+import React, { lazy, useState } from "react";
 import "./techstack.css";
 import { BsChevronRight } from "react-icons/bs";
+import { MdDesignServices } from "react-icons/md";
+import { IoIosColorPalette } from "react-icons/io";
+import { FaServer } from "react-icons/fa";
+import { PiMonitorFill } from "react-icons/pi";
+import { BsDatabaseFillGear } from "react-icons/bs";
+import { FaMobile } from "react-icons/fa";
+
+
 const TechStacks = ({techstack=null}) => {
   const [isActive, setIsActive] = useState(false);
 
@@ -13,6 +21,7 @@ const TechStacks = ({techstack=null}) => {
       toggleAccordion();
     }
   };
+  console.log(techstack.iconComponent)
   return (
     <div
       className={`techstacks-card ${isActive ? "active" : ""}`}
@@ -21,7 +30,7 @@ const TechStacks = ({techstack=null}) => {
     >
       <div className="card-content">
         <div className="techstack-icon">
-          {techstack?.icon}
+          {techstack?.iconComponent}
         </div>
         <div className="techstack-name">
           <BsChevronRight className="chevron"  size={35}/>
