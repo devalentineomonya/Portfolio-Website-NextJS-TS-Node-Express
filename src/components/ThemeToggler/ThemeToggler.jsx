@@ -13,7 +13,6 @@ const ThemeToggler = () => {
     }
   };
 
-  console.log(toggle);
   return (
     <div
       onClick={() => setToggle((prev) => !prev)}
