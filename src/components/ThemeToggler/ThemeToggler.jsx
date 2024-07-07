@@ -5,18 +5,20 @@ import "./themetoggler.css";
 import { useTheme } from "../../Context/ThemeContext";
 
 const ThemeToggler = () => {
-  const { toggle, toggleTheme } = useTheme();
+  const { toggle, setToggle } = useTheme();
   
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
-      toggleTheme();
+      setToggle(!toggle);
     }
   };
+
+  console.log(toggle)
   return (
     <div
-      onClick={toggleTheme}
-      onKeyDown={handleKeyDown}
-      className={`wrg-toggle ${toggle ? "wrg-toggle--checked" : ""}`}
+      onClick={()=>toggleTheme()}
+      onKeyDown={()=>handleKeyDown()}
+      className={`wrg-toggle ${toggle ? "" : "wrg-toggle--checked"}`}
     >
       <div className="wrg-toggle-container">
         <div className="wrg-toggle-check">
