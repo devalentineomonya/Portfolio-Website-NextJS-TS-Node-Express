@@ -7,7 +7,6 @@ if (import.meta.env.PROD) {
   disableReactDevTools();
 }
 
-console.log(import.meta.env.PROD)
 ReactDOM.createRoot(document.getElementById("root")).render(
   <ThemeProvider>
     <DataContextProvider>
