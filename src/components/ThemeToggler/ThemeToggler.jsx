@@ -6,19 +6,19 @@ import { useTheme } from "../../Context/ThemeContext";
 
 const ThemeToggler = () => {
   const { toggle, setToggle } = useTheme();
-  
+
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
       setToggle(!toggle);
     }
   };
 
-  console.log(toggle)
+  console.log(toggle);
   return (
     <div
-      onClick={()=>toggleTheme()}
-      onKeyDown={()=>handleKeyDown()}
-      className={`wrg-toggle ${toggle ? "" : "wrg-toggle--checked"}`}
+      onClick={() => setToggle((prev) => !prev)}
+      onKeyDown={() => handleKeyDown()}
+      className={`wrg-toggle ${toggle ? "wrg-toggle--checked" : ""}`}
     >
       <div className="wrg-toggle-container">
         <div className="wrg-toggle-check">
@@ -38,7 +38,7 @@ const ThemeToggler = () => {
         type="checkbox"
         aria-label="Toggle Button"
         checked={toggle}
-        onChange={toggleTheme}
+        onChange={() => setToggle((prev) => !prev)}
       />
     </div>
   );
