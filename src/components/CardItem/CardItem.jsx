@@ -24,8 +24,8 @@ const CardItem = ({ cardContent=null }) => {
           <div className="card-item-text">
             <p>
               {cardContent?.role || cardContent?.date}
-              {cardContent?.technology && <span></span>}
-              {cardContent?.technology || ""}
+              {cardContent?.technologies && <span></span>}
+              {cardContent?.technologies?.join(". ") || ""}
             </p>
 
             <h3>{cardContent?.name}</h3>

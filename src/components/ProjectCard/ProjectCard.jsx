@@ -33,9 +33,8 @@ const ProjectCard = ({ projectInfo = null, setTogglePopup, setProjectID }) => {
         </div>
         <div className="project-technology">
           <p>
-            {projectInfo?.technologies?.map((technology, i) => (
-              <span key={i}>{technology}<BsDot/></span> 
-            ))}
+            {projectInfo?.technologies?.join('. ')
+            }
           </p>
         </div>
 
