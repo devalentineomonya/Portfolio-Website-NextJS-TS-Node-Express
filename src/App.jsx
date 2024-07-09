@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     if (!loading) {
-      const hash = location.hash.substr(1);
+      const hash = location.hash.substring(1);
       setTimeout(() => {
         setActiveTab(hash);
       }, 1000);
