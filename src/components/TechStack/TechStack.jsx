@@ -21,7 +21,7 @@ const TechStacks = ({techstack=null}) => {
       toggleAccordion();
     }
   };
-  console.log(techstack.iconComponent)
+  console.log(techstack.iconName)
   return (
     <div
       className={`techstacks-card ${isActive ? "active" : ""}`}
@@ -30,7 +30,7 @@ const TechStacks = ({techstack=null}) => {
     >
       <div className="card-content">
         <div className="techstack-icon">
-          {techstack?.iconComponent}
+          {'<'}`{techstack?.iconName}`{'/>'}
         </div>
         <div className="techstack-name">
           <BsChevronRight className="chevron"  size={35}/>
