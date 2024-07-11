@@ -1,12 +1,11 @@
 import React from "react";
 import "./projectcard.css";
-import { BsDot } from "react-icons/bs";
 
 const ProjectCard = ({ projectInfo = null, setTogglePopup, setProjectID }) => {
   function openPopup(e) {
     e.preventDefault();
     setTogglePopup(true);
-    setProjectID(projectInfo.id);
+    setProjectID(projectInfo._id);
   }
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {

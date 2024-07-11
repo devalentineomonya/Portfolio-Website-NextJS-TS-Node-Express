@@ -16,7 +16,7 @@ const Home = ({ setActiveTab }) => {
   const [togglePopup, setTogglePopup] = useState(false);
   const [projectID, setProjectID] = useState(null);
   const { data } = useDataContext();
-  console.dir(data)
+  console.dir(data);
 
   return (
     <>
@@ -25,14 +25,19 @@ const Home = ({ setActiveTab }) => {
       <CounterContextProvider>
         <About languages={data.languages} />
       </CounterContextProvider>
-      
+
       <Testimonial testimonials={data.testimonials} />
-      <Projects setTogglePopup={setTogglePopup} setProjectID={setProjectID} projects={data.projects} />
+      <Projects
+        setTogglePopup={setTogglePopup}
+        setProjectID={setProjectID}
+        projects={data.projects}
+      />
       <Collaborators collaborators={data.collaborators} />
-      <Certifications certifications={data.certifications}/>
+      <Certifications certifications={data.certifications} />
       <LatestProjects />
       <Contact setActiveTab={setActiveTab} />
       <ProjectPopup
+        projects={data.projects}
         togglePopup={togglePopup}
         setTogglePopup={setTogglePopup}
         projectID={projectID}

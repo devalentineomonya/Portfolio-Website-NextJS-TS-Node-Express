@@ -15,3 +15,21 @@
     column-gap: 40px;
     row-gap: 50px;
 }
+.load-more-button{
+ width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 20px;
+
+}
+.load-more-button button{
+    padding: 10px 30px;
+    border:none;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color:var(--color-contact-message-text);
+    color:var( --color-bg-contact) ;
+
+}
