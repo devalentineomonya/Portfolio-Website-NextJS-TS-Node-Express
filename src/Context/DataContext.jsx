@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import axios from "axios";
+import { apiEndpoint } from "../Utils/EndPoints/Endpoints";
 
 const DataContext = createContext(null);
 
@@ -15,10 +16,8 @@ const DataContextProvider = ({ children }) => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const apiEndpoint = import.meta.env.DEV
-    ? "http://localhost:8080/api"
-    : import.meta.env.VITE_API_ENDPOINT;
 
+ 
   const fetchData = async (endpoint) => {
     const dataKey = endpoint.split("/")[0];
 

@@ -2,6 +2,7 @@ import React from "react";
 import "./projectpopup.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { imageSource } from "../../Utils/EndPoints/Endpoints";
 
 const ProjectPopup = ({ togglePopup, setTogglePopup, projectID ,projects}) => {
   let project = null;
@@ -27,7 +28,7 @@ console.log(projects);
           <div className="popup-grid">
             <div className="popup-left-section">
               <div className="project-image">
-                <img src={`${project.image2}`} alt={project.name} />
+                <img src={`${imageSource}/${project.image2}`} alt={project.name} />
               </div>
             </div>
             <div className="popup-right-section">
