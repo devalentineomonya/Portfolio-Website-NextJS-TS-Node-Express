@@ -1,6 +1,5 @@
 import React from "react";
 import "./projectcard.css";
-import { imageSource } from "../../Utils/EndPoints/Endpoints";
 
 const ProjectCard = ({ projectInfo = null, setTogglePopup, setProjectID }) => {
   function openPopup(e) {
@@ -14,6 +13,9 @@ const ProjectCard = ({ projectInfo = null, setTogglePopup, setProjectID }) => {
     }
   };
 
+  const imageSource = import.meta.env.DEV
+    ? "http://localhost:8080/api/images"
+    : `${import.meta.env.VITE_API_ENDPOINT}/images`;
   return (
     <div className="project-card-container">
       <div className="project-card-content">

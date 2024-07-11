@@ -2,7 +2,6 @@ import React from "react";
 import "./projectpopup.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import { imageSource } from "../../Utils/EndPoints/Endpoints";
 
 const ProjectPopup = ({ togglePopup, setTogglePopup, projectID ,projects}) => {
   let project = null;
@@ -11,13 +10,18 @@ const ProjectPopup = ({ togglePopup, setTogglePopup, projectID ,projects}) => {
   if (projectID) {
     project = projects.find((p) => p._id === projectID);
   }
-console.log(projects);
 
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
       setTogglePopup(false)
     }
   };
+
+  const imageSource = import.meta.env.DEV
+  ? "http://localhost:8080/api/images"
+  : `${import.meta.env.VITE_API_ENDPOINT}/images`;
+
+
   return (
     <dialog className={`popup-overlay  ${togglePopup ? "open" : null}`}>
       <div className="popup-content">
@@ -28,7 +32,7 @@ console.log(projects);
           <div className="popup-grid">
             <div className="popup-left-section">
               <div className="project-image">
-                <img src={`${imageSource}/${project.image2}`} alt={project.name} />
+                <img src={`${imageSource}${project.image2}`} alt={project.name} />
               </div>
             </div>
             <div className="popup-right-section">

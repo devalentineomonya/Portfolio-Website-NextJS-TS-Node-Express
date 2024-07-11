@@ -33,7 +33,7 @@ const Home = ({ setActiveTab }) => {
         projects={data.projects}
       />
       <Collaborators collaborators={data.collaborators} />
-      <Certifications certifications={data.certifications} />
+      <Certifications certifications={data.certificates} />
       <LatestProjects />
       <Contact setActiveTab={setActiveTab} />
       <ProjectPopup

@@ -5,7 +5,7 @@ import PartnersList from "../../assets/PartnersList/PartnersList";
 import Certification from "../Certification/Certification";
 import "./certifications.css"
 
-const Certifications = ({certifications=PartnersList}) => {
+const Certifications = ({certifications}) => {
   const overrideStyles = `
     .owl-carousel .owl-item img {
       width: unset;
@@ -22,6 +22,7 @@ const Certifications = ({certifications=PartnersList}) => {
       return 4; 
     }
   };
+  console.log("Certificate = >"+certifications)
 
   return (
     <div className="certifications-section">

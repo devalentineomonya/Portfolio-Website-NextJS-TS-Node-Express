@@ -1,20 +1,25 @@
-.certification-image{
+.certification-image {
     cursor: grab;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
-.certification-image img{
+
+.certification-image img {
     transition: 0.4s ease-in-out;
-    width: 150px;
+    width: 200px;
+    height: 150px;
 
 }
-.certification-image img:hover{
+
+.certification-image img:hover {
     transform: scale(1.1);
 }
+
 @media screen and (max-width:768px) {
-    .certification-image img{
+    .certification-image img {
         width: 100%;
     }
-    
+
 }
