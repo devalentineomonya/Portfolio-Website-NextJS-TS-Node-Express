@@ -21,6 +21,7 @@
     "react-countup": "^6.5.2",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
+    "react-medium-image-zoom": "^5.2.7",
     "react-owl-carousel": "^2.3.3",
     "react-scroll-trigger": "^0.6.14",
     "swiper": "^11.1.1"
