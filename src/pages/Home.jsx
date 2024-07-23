@@ -16,13 +16,18 @@ import Loader from "../components/Loader/Loader";
 const Home = ({ setActiveTab }) => {
   const [togglePopup, setTogglePopup] = useState(false);
   const [projectID, setProjectID] = useState(null);
-  const { data, loading } = useDataContext();
-
+  const { data, loading, error } = useDataContext();
+  console.log(data, error);
   return (
     <>
       <Hero />
       {loading ? (
         <Loader />
+      ) : error ? (
+        <h1 className="fetch-error">
+          OOPS .... The following error Occurred while Fetching Data from the backend ,
+          {error}
+        </h1>
       ) : (
         <>
           {/* <TechStacks techStacks={data.stacks} />
