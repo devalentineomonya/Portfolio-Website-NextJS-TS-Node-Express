@@ -11,8 +11,7 @@ import MainNavbar from "./components/MainNavbar/MainNavbar";
 function App() {
   const [activeTab, setActiveTab] = useState("home");
   const [sideMenu, setSideMenu] = useState("closed");
-  const { loading, setLoading } = useDataContext();
-  const {data,error} = useDataContext();
+  const { loading } = useDataContext();
 
   useEffect(() => {
     if (!loading) {
@@ -24,9 +23,7 @@ function App() {
   }, [loading]);
   return (
     <>
-      {loading ? (
-        <Loader />
-      ) : (
+     
         <>
           <MainNavbar
             activeTab={activeTab}
@@ -39,7 +36,7 @@ function App() {
 
           <BackToTop />
         </>
-      )}
+    
     </>
   );
 }
