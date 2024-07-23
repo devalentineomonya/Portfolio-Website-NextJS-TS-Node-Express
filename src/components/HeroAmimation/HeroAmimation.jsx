@@ -1,85 +1,18 @@
 import React from "react";
-import "./bubblesanimation.css"
+import "./bubblesanimation.css";
 const HeroAmimation = ({ children }) => {
+  const bubbleValue = [
+    11, 12, 24, 10, 14, 23, 18, 16, 19, 20, 22, 25, 21, 15, 13, 26, 17, 13, 20,
+    11, 12, 24, 10, 14, 23, 18, 16, 19, 20, 22, 25, 21, 15, 13, 26, 17, 13, 20,
+    11, 12, 24, 10, 14, 23, 18, 16, 19, 20, 22, 25, 21, 15, 13, 26, 17, 13, 20,
+    11, 12, 24, 10, 14, 23, 18, 16, 19, 20, 22, 25, 21, 15, 13, 26, 17, 13, 20,
+  ];
   return (
     <div className="bubbles-container">
       <div className="bubbles">
-        <span style={{ "--i": 11 }}></span>
-        <span style={{ "--i": 12 }}></span>
-        <span style={{ "--i": 24 }}></span>
-        <span style={{ "--i": 10 }}></span>
-        <span style={{ "--i": 14 }}></span>
-        <span style={{ "--i": 23 }}></span>
-        <span style={{ "--i": 18 }}></span>
-        <span style={{ "--i": 16 }}></span>
-        <span style={{ "--i": 19 }}></span>
-        <span style={{ "--i": 20 }}></span>
-        <span style={{ "--i": 22 }}></span>
-        <span style={{ "--i": 25 }}></span>
-        <span style={{ "--i": 21 }}></span>
-        <span style={{ "--i": 15 }}></span>
-        <span style={{ "--i": 13 }}></span>
-        <span style={{ "--i": 26 }}></span>
-        <span style={{ "--i": 17 }}></span>
-        <span style={{ "--i": 13 }}></span>
-        <span style={{ "--i": 20 }}></span>
-        <span style={{ "--i": 11 }}></span>
-        <span style={{ "--i": 12 }}></span>
-        <span style={{ "--i": 24 }}></span>
-        <span style={{ "--i": 10 }}></span>
-        <span style={{ "--i": 14 }}></span>
-        <span style={{ "--i": 23 }}></span>
-        <span style={{ "--i": 18 }}></span>
-        <span style={{ "--i": 16 }}></span>
-        <span style={{ "--i": 19 }}></span>
-        <span style={{ "--i": 20 }}></span>
-        <span style={{ "--i": 22 }}></span>
-        <span style={{ "--i": 25 }}></span>
-        <span style={{ "--i": 21 }}></span>
-        <span style={{ "--i": 15 }}></span>
-        <span style={{ "--i": 13 }}></span>
-        <span style={{ "--i": 26 }}></span>
-        <span style={{ "--i": 17 }}></span>
-        <span style={{ "--i": 13 }}></span>
-        <span style={{ "--i": 20 }}></span>
-        <span style={{ "--i": 11 }}></span>
-        <span style={{ "--i": 12 }}></span>
-        <span style={{ "--i": 24 }}></span>
-        <span style={{ "--i": 10 }}></span>
-        <span style={{ "--i": 14 }}></span>
-        <span style={{ "--i": 23 }}></span>
-        <span style={{ "--i": 18 }}></span>
-        <span style={{ "--i": 16 }}></span>
-        <span style={{ "--i": 19 }}></span>
-        <span style={{ "--i": 20 }}></span>
-        <span style={{ "--i": 22 }}></span>
-        <span style={{ "--i": 25 }}></span>
-        <span style={{ "--i": 21 }}></span>
-        <span style={{ "--i": 15 }}></span>
-        <span style={{ "--i": 13 }}></span>
-        <span style={{ "--i": 26 }}></span>
-        <span style={{ "--i": 17 }}></span>
-        <span style={{ "--i": 13 }}></span>
-        <span style={{ "--i": 20 }}></span>
-        <span style={{ "--i": 11 }}></span>
-        <span style={{ "--i": 12 }}></span>
-        <span style={{ "--i": 24 }}></span>
-        <span style={{ "--i": 10 }}></span>
-        <span style={{ "--i": 14 }}></span>
-        <span style={{ "--i": 23 }}></span>
-        <span style={{ "--i": 18 }}></span>
-        <span style={{ "--i": 16 }}></span>
-        <span style={{ "--i": 19 }}></span>
-        <span style={{ "--i": 20 }}></span>
-        <span style={{ "--i": 22 }}></span>
-        <span style={{ "--i": 25 }}></span>
-        <span style={{ "--i": 21 }}></span>
-        <span style={{ "--i": 15 }}></span>
-        <span style={{ "--i": 13 }}></span>
-        <span style={{ "--i": 26 }}></span>
-        <span style={{ "--i": 17 }}></span>
-        <span style={{ "--i": 13 }}></span>
-        <span style={{ "--i": 20 }}></span>
+        {bubbleValue.map((value, i) => (
+          <span style={{ "--i": value }} key={`${i}-${value}`}></span>
+        ))}
       </div>
       {children}
     </div>
