@@ -50,7 +50,7 @@ const About = ({languages=SkillItems}) => {
           </p>
           <div className="skills-section">
             {languages.map((language, i) => (
-              <Skill key={i} name={language.name} value={language.percentage} />
+              <Skill key={i} name={language.name} value={language.value} />
             ))}
           </div>
         </div>

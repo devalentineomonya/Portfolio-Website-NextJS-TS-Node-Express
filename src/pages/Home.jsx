@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useDataContext } from "../Context/DataContext";
+import { useState } from "react";
+// import { useDataContext } from "../Context/DataContext";
 import Hero from "../components/Hero/Hero";
 import Loader from "../components/Loader/Loader";
 import TechStacks from "../components/TechStacks/TechStacks";
@@ -12,47 +12,53 @@ import LatestProjects from "../components/LatestProjects/LatestProjects";
 import Contact from "../components/Contact/Contact";
 import Projects from "../components/Projects/Projects";
 import ProjectPopup from "../components/ProjectPopup/ProjectPopup";
+import TechStacksList from "../assets/TechStacksList/TechStacksList";
+import SkillsList from "../assets/SkillsList/SkillsList";
+import SwipperList from "../assets/SwipperList/SwipperList";
+import ProjectsList from "../assets/ProjectsList/ProjectsList";
+import TeamList from "../assets/TeamList/TeamList";
+
 
 const Home = ({ setActiveTab }) => {
   const [togglePopup, setTogglePopup] = useState(false);
   const [projectID, setProjectID] = useState(null);
-  const { data, loading, error } = useDataContext();
-  console.log(data, error);
+  // const { data, loading, error } = useDataContext();
+
   return (
     <>
       <Hero />
-      {loading ? (
+      {/* {loading ? (
         <Loader />
       ) : error ? (
         <h1 className="fetch-error">
           OOPS .... The following error Occurred while Fetching Data from the backend ,
           {error}
         </h1>
-      ) : (
+      ) : ( */}
         <>
-          <TechStacks techStacks={data.stacks} />
+          <TechStacks techStacks={/*data.stacks*/ TechStacksList} />
           <CounterContextProvider>
-            <About languages={data.languages} />
+            <About languages={/*data.languages*/ SkillsList}  />
           </CounterContextProvider>
 
-          <Testimonial testimonials={data.testimonials} />
+          <Testimonial testimonials={/*data.testimonials*/ SwipperList} />
           <Projects
             setTogglePopup={setTogglePopup}
             setProjectID={setProjectID}
-            projects={data.projects}
+            projects={/*data.projects*/ ProjectsList}
           />
-          <Collaborators collaborators={data.collaborators} />
-          <Certifications certifications={data.certificates} />
+          <Collaborators collaborators={/*data.collaborators*/ TeamList} />
+         {/* <Certifications certifications=data.certificates certifi} />  */}
           <LatestProjects />
           <Contact setActiveTab={setActiveTab} />
           <ProjectPopup
-            projects={data.projects}
+            projects={/*data.projects*/ ProjectsList}
             togglePopup={togglePopup}
             setTogglePopup={setTogglePopup}
             projectID={projectID}
           />
         </>
-      )}
+      {/* )} */}
     </>
   );
 };

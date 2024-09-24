@@ -9,7 +9,7 @@ import { BsDatabaseFillGear } from "react-icons/bs";
 import { FaMobile } from "react-icons/fa";
 
 
-const TechStacks = ({techstack=null}) => {
+const TechStacks = ({techstack}) => {
   const [isActive, setIsActive] = useState(false);
 
   const toggleAccordion = () => {
@@ -21,7 +21,7 @@ const TechStacks = ({techstack=null}) => {
       toggleAccordion();
     }
   };
-  console.log(techstack.iconName)
+  console.log(techstack.icon)
   return (
     <div
       className={`techstacks-card ${isActive ? "active" : ""}`}
@@ -30,7 +30,7 @@ const TechStacks = ({techstack=null}) => {
     >
       <div className="card-content">
         <div className="techstack-icon">
-          {'<'}`{techstack?.iconName}`{'/>'}
+          {techstack?.icon}
         </div>
         <div className="techstack-name">
           <BsChevronRight className="chevron"  size={35}/>

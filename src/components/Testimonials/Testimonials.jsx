@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/swiper-bundle.css";
 import "./testimonials.css";
 import HeadLine from "../HeadLine/HeadLine";
-import SwipperItems from "../../assets/SwipperList/SwipperList";
+
 
 const Testimonials = ({testimonials}) => {
   return (
