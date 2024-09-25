@@ -1,0 +1,10 @@
+.cardContent:hover path{
+    color: white;
+
+}
+
+
+.cardContent:active path{
+    color: white;
+
+}

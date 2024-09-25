@@ -72,7 +72,7 @@
 }
 
 .socialLinkMenu {
-    @apply flex relative justify-center items-center w-[280px] h-[280px];
+    @apply flex relative justify-center items-center;
     
 }
 
@@ -82,7 +82,7 @@
 }
 
 .socialLinkMenu li {
-    @apply absolute left-0 duration-500;
+    @apply absolute left-0 duration-500 z-30;
     transform: rotate(calc(360deg/8 * var(--i)));
     transform-origin: 140px;
     list-style: none;
@@ -93,7 +93,7 @@
 
 
 .socialLinkMenu li a {
-    @apply relative w-16 h-16 bg-white flex justify-center items-center rounded-full duration-500;
+    @apply relative w-16 h-16 bg-white flex justify-center items-center rounded-full duration-500 z-30;
     color: var(--clr);
     transform: rotate(calc(360deg/-8 * var(--i)));
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);

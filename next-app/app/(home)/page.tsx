@@ -1,7 +1,11 @@
-import Hero from "./components/Hero";
+import Hero from "./components/hero/Hero";
+import TechStacks from "./components/techStacks/TechStacks";
 
 export default function Home() {
   return (
-  <Hero/>
+    <>
+      <Hero />
+      <TechStacks />
+    </>
   );
 }

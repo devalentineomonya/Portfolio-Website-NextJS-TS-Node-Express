@@ -35,16 +35,16 @@ const Navbar: FC = () => {
 
   return (
     <header
-      className={`flex justify-center bg-transparent py-1 w-full h-24 relative ${
+      className={`flex justify-center py-1 w-full h-20 md:h-24 relative  z-30 ${
         stickyNavbar
-          ? "shadow-[0px_5px_6px] shadow-navbar h-20 sticky top-0 z-30 bg-bg-primary"
-          : ""
+          ? "shadow-[0px_5px_6px] shadow-navbar h-16 md:h-20 sticky top-0 bg-bg-primary"
+          : " bg-transparent"
       }`}
     >
-      <div className="max-w-9xl w-full flex justify-between md:justify-start items-center px-8 md:px-2">
+      <div className="max-w-9xl w-full flex justify-between md:justify-start items-center px-4 md:px-2">
         {/* Logo */}
         <div className="w-1/6 md:z-40">
-          <h1 className="text-primary text-5xl font-semibold font-caveat">
+          <h1 className="text-primary text-2xl md:text-5xl font-semibold font-caveat">
             <Link href="#">
               Devalentine<span className="text-primary">.</span>
             </Link>
@@ -66,6 +66,7 @@ const Navbar: FC = () => {
           >
             {navbarItems?.map((navItem) => (
               <NavbarItem
+              setShowSideMenu={setShowSideMenu}
                 key={navItem.sectionName}
                 setActiveTab={setActiveTab}
                 isActive={activeTab === navItem.sectionName}
@@ -111,15 +112,18 @@ const NavbarItem = ({
   name,
   setActiveTab,
   sectionName,
+  setShowSideMenu
 }: {
   isActive: boolean;
   setActiveTab: (sectionName: string) => void;
   name: string;
+  setShowSideMenu:(prev:boolean)=>void
   sectionName: string;
 }) => {
   const handleTabClick = (event: MouseEvent, sectionName: string) => {
     event.preventDefault();
     setTimeout(() => {
+      setShowSideMenu(false)
       setActiveTab(sectionName);
       scrollToSection(sectionName);
     }, 50);
