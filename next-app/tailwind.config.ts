@@ -31,6 +31,7 @@ const config: Config = {
       fontFamily: {
         grotesk: ["Space Grotesk", "ui-sans-serif", "system-ui"],
         caveat: ["Caveat", "ui-sans-serif", "system-ui"],
+        dosis:["Dosis", "ui-sans-serif", "system-ui"],
       },
     },
   },
