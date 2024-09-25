@@ -1,5 +1,5 @@
 .heroTextContainer {
-    @apply text-[40px] sm:text-[80px] md:text-[100px] lg:text-[120px] font-bold font-grotesk text-white;
+    @apply text-[40px] sm:text-[80px] md:text-[100px] lg:text-[120px] font-bold font-grotesk text-white whitespace-nowrap;
 
     color: var(--color-text-primary);
     text-shadow: 1px 1px 1px #919191,
@@ -20,16 +20,12 @@
 
 .words::after {
     @apply content-[""] absolute z-20 inset-0 h-fit;
-    /* background: linear-gradient(#212121 10%,
-            transparent 30%,
-            transparent 70%,
-            #212121 90%); */
+
 }
 
 
 .word {
     @apply flex h-full pl-2 text-primary text-lg sm:text-2xl md:text-4xl;
-
     animation: spin_4991 4s infinite;
 }
 
@@ -73,4 +69,37 @@
         -webkit-transform: translateY(-400%);
         transform: translateY(-400%);
     }
+}
+
+.socialLinkMenu {
+    @apply flex relative justify-center items-center w-[280px] h-[280px];
+    
+}
+
+.socialLinksToggle {
+    @apply shadow-[0_3px_4px_rgba(0,_0,_0,_0.15)] transition-[0.5s];
+    @apply relative h-16 w-16 rounded-full bg-white flex justify-center items-center font-[2em] text-[#333] cursor-pointer;
+}
+
+.socialLinkMenu li {
+    @apply absolute left-0 duration-500;
+    transform: rotate(calc(360deg/8 * var(--i)));
+    transform-origin: 140px;
+    list-style: none;
+    transition-duration: calc(0.05s * var(--i));
+    list-style: none;
+
+}
+
+
+.socialLinkMenu li a {
+    @apply relative w-16 h-16 bg-white flex justify-center items-center rounded-full duration-500;
+    color: var(--clr);
+    transform: rotate(calc(360deg/-8 * var(--i)));
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+}
+
+.socialLinkMenu li:hover a {
+    @apply shadow-[0_0_0_2px_var(--clr),_0_0_0_8px_#fff];
+
 }

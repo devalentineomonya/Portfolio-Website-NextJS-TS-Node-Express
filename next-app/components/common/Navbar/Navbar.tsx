@@ -8,7 +8,7 @@ import styles from "./navbar.module.css";
 const Navbar: FC = () => {
   const [stickyNavbar, setStickyNavbar] = useState(false);
   const [activeTab, setActiveTab] = useState("home");
-  const [showSideMenu, setShowSideMenu] = useState(true);
+  const [showSideMenu, setShowSideMenu] = useState(false);
 
   // Sticky navbar effect on scroll
   useEffect(() => {
@@ -61,7 +61,7 @@ const Navbar: FC = () => {
         >
           <ul
             className={`w-72  flex justify-start flex-col md:bg-transparent bg-bg-primary items-start h-full pt-5 gap-y-3 z-30 md:z-auto relative transition-all ease-linear duration-300 delay-500 ${
-              showSideMenu ? "left-0 " : "-left-96"
+              showSideMenu ? "left-0 " : "-left-[1200px]"
             }  md:justify-end md:static md:pt-0 md:gap-y-0 md:items-center md:w-full mg:bg-transparent md:flex-row gap-x-10 2xl:px-0 px-4`}
           >
             {navbarItems?.map((navItem) => (
