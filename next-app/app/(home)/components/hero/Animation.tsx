@@ -11,7 +11,7 @@ const Animation = ({ children }:{children:React.ReactNode}) => {
     <div className="relative w-full h-full overflow-hidden">
       <div className="relative flex">
         {bubbleValue.map((value, i) => (
-          <span style={{ "--i": value } as React.CSSProperties} key={`${value + i}`} className={styles.bubblesSpan}></span>
+          <span style={{ "--i": value } as React.CSSProperties} key={`${value * Math.random() * 1000000 + i - 4 }`} className={styles.bubblesSpan}></span>
         ))}
       </div>
       {children}

@@ -1,7 +1,8 @@
 .heroTextContainer {
-    @apply text-[40px] sm:text-[80px] md:text-[100px] lg:text-[120px] font-bold font-grotesk text-white whitespace-nowrap;
+    @apply cursor-default transition-all ease-in-out duration-300 relative text-[40px] sm:text-[80px] md:text-[100px] lg:text-[120px] font-bold font-grotesk text-white whitespace-nowrap;
 
     color: var(--color-text-primary);
+
     text-shadow: 1px 1px 1px #919191,
         1px 2px 1px #919191,
         1px 3px 1px #919191,
@@ -16,6 +17,63 @@
         1px 22px 10px rgba(16, 16, 16, 0.2),
         1px 25px 35px rgba(16, 16, 16, 0.2),
         1px 30px 60px rgba(16, 16, 16, 0.4);
+
+}
+
+
+.heroTextContainer:after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-137deg, #f84233 0%, #d81956 100%);
+}
+
+.heroTextContainer:hover {
+    text-shadow: none;
+    background: linear-gradient(to right, #f84233 0, #fff 10%, #d81956 20%);
+    background-position: 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s infinite linear;
+    animation-fill-mode: forwards;
+}
+
+.heroTextContainer:hover .heroTextContainer:before {
+    animation: scale 3s infinite linear;
+}
+
+@keyframes scale {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0%;
+    }
+
+}
+
+@keyframes shine {
+    0% {
+        background-position: 0;
+    }
+
+    60% {
+        background-position: 870px;
+    }
+
+    100% {
+        background-position: 88px;
+    }
+
 }
 
 .words::after {
@@ -26,10 +84,10 @@
 
 .word {
     @apply flex h-full pl-2 text-primary text-lg sm:text-2xl md:text-4xl;
-    animation: spin_4991 4s infinite;
+    animation: spin 4s infinite;
 }
 
-@keyframes spin_4991 {
+@keyframes spin {
     10% {
         -webkit-transform: translateY(-102%);
         transform: translateY(-102%);
@@ -73,7 +131,7 @@
 
 .socialLinkMenu {
     @apply flex relative justify-center items-center;
-    
+
 }
 
 .socialLinksToggle {

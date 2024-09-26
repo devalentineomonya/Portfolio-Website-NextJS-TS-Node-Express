@@ -21,17 +21,19 @@
 
 }
 
-.card-content:hover {
-    color: var(--color-bg-primary);
-    background-color: var(--color-primary);
+
+.cardContent:hover p path{
+    color: white;
+
 }
 
-.card-content:active {
-    color: var(--color-bg-primary);
-    background-color: var(--color-primary);
+
+.cardContent:active p path{
+    color: white;
+
 }
 
-.techstacks-card {
+.techstacks-card { 
     position: relative;
 
 }
