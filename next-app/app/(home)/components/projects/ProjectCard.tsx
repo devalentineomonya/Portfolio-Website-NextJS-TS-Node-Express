@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from "next/image";
-import React, { MouseEvent } from "react";
+import React from "react";
 
 interface ProjectCardProps {
   project: {
@@ -27,7 +27,7 @@ const ProjectCard = ({
   }
 
   return (
-    <div className="project-card-container w-[400px]  relative flex items-center justify-center overflow-hidden shadow-[0px_0px_2px_2px] shadow-navbar rounded-[5px] aspect-video">
+    <div className="project-card-container w-full  relative flex items-center justify-center overflow-hidden shadow-[0px_0px_2px_2px] shadow-navbar rounded-[5px] aspect-video">
       <div className="relative w-full h-full">
         <Image
           src={project.previewImage}
@@ -40,7 +40,7 @@ const ProjectCard = ({
           priority
         />
       </div>
-      <div className="bg-[rgba(0,0,0,0.6)] absolute w-[90%] h-[90%] flex items-center flex-col justify-between cursor-pointer">
+      <div className="bg-[rgba(0,0,0,0.8)] absolute w-[90%] h-[90%] opacity-0 hover:opacity-100 flex items-center flex-col justify-between cursor-pointer  transition-all ease-in-out duration-300">
         <p className=" text-white font-semibold text-2xl">
           {project?.name}
         </p>
@@ -54,7 +54,7 @@ const ProjectCard = ({
             <p className="z-[5]">Discover More</p>
           </button>
         </div>
-          <p className=" text-[#e0e0e0] flex justify-center flex-col font-medium">{project?.technologies?.join(", ")}</p>
+          <p className=" text-[#e0e0e0] flex justify-center flex-col font-medium">{project?.technologies?.join(" | ")}</p>
       </div>
     </div>
   );

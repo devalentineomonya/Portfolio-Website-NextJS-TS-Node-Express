@@ -3,3 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
+.odometer-value{
+    @apply font-dosis
+}

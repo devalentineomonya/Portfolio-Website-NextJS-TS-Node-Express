@@ -2,7 +2,7 @@ import {  PiPinterestLogo, PiXLogoFill } from "react-icons/pi"
 import { RiDribbbleFill, RiFacebookFill, RiInstagramFill, RiLinkedinFill, RiWhatsappFill, RiYoutubeFill,RiGithubFill } from "react-icons/ri"
 import { TbWorldWww } from "react-icons/tb";
 
-const socialLinks = [
+const socialLinksList = [
     {
         name:"Facebook",
         color:"#1877f2",
@@ -53,4 +53,4 @@ const socialLinks = [
     },
 
 ]
-export default socialLinks
+export default socialLinksList
