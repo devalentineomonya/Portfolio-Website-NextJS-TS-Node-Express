@@ -19,14 +19,13 @@ const SectionLayout = ({
 
 }:SectionLayoutProps) => {
   return (
-    <section className="w-full h-fit min-h-screen flex items-center justify-center flex-col">
+    <section className="w-full h-fit min-h-screen flex items-center justify-center flex-col" id={sectionId}>
       <SectionHeader
-        sectionId={sectionId}
         sectionNumber={sectionNumber}
         sectionDescription={sectionDescription}
         sectionName={sectionName}
       />
-      <div className={`w-full ${full ? "max-w-full" : "max-w-7xl"} `}>
+      <div className={`w-full ${full ? "max-w-[1600px]" : "max-w-7xl"} `}>
 
       {children}
       </div>

@@ -1,0 +1,30 @@
+.counterItem:first-child {
+    @apply border-r-gray-300 border-b-gray-300 border-r border-solid border-b;
+}
+
+.counterItem:nth-child(2) {
+    @apply border-b-gray-300 border-b border-solid;
+}
+
+.counterItem:nth-child(3) {
+    @apply border-r-gray-300 border-r border-solid;
+}
+
+@media screen and (max-width: 576px) {
+    .counterItem {
+        @apply p-5 first:border-b-gray-300 first:border-[none] first:border-b first:border-solid;
+    }
+
+    .counterItem:first-child {
+        @apply border-none;
+    }
+
+    .counterItem:nth-child(2) {
+        @apply border-none;
+    }
+
+    .counterItem:nth-child(3) {
+        @apply border-none;
+    }
+
+}
