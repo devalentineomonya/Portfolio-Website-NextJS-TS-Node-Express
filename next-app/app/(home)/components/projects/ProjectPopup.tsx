@@ -70,7 +70,7 @@ const ProjectPopup = ({
                 <Link
                   href={project.githubLink}
                   target="_blank"
-                  className="text-indigo-700 border border-indigo-600 hover:bg-indigo-700 hover:text-white hover:border-white py-2 px-6 gap-2 rounded inline-flex items-center gap-x-3 transition-all ease-in-out duration-300 "
+                  className="text-red-700 border border-red-600 hover:bg-red-700 hover:text-white hover:border-white py-2 px-6 gap-2 rounded inline-flex items-center gap-x-3 transition-all ease-in-out duration-300 "
                 >
                   <span>View Github</span>
                   <GoArrowUpRight size={24} />

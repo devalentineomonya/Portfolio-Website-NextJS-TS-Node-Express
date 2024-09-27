@@ -1,32 +1,37 @@
+"use client"
 import Image, { StaticImageData } from "next/image";
-import React from "react";
-
+import React, {useState} from "react";
+import ProjectPopup from "./ProjectPopup";
 interface ProjectCardProps {
   project: {
     id: number;
     name: string;
+    description:string;
     popupImage: StaticImageData;
     previewImage: StaticImageData;
     technologies: string[];
     liveLink: string;
     githubLink: string;
   };
-  setShowPopup: (prev: boolean) => void;
-  setProjectId: (id: number) => void;
 }
 
 const ProjectCard = ({
   project,
-  setShowPopup,
-  setProjectId,
 }: ProjectCardProps) => {
 
+
+
+  const [showPopup, setShowPopup] = useState(false);
   const openPopup = ()=> {
     setShowPopup(true);
-    setProjectId(project.id);
   }
-
   return (
+    <>
+        <ProjectPopup
+        project={project}
+        showPopup={showPopup}
+        setShowPopup={setShowPopup}
+      />
     <div className="project-card-container w-full  relative flex items-center justify-center overflow-hidden shadow-[0px_0px_2px_2px] shadow-navbar rounded-[5px] aspect-video">
       <div className="relative w-full h-full">
         <Image
@@ -57,6 +62,7 @@ const ProjectCard = ({
           <p className=" text-[#e0e0e0] flex justify-center flex-col font-medium">{project?.technologies?.join(" | ")}</p>
       </div>
     </div>
+    </>
   );
 };
 

@@ -10,7 +10,7 @@
     @apply border-r-gray-300 border-r border-solid;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 640px) {
     .counterItem {
         @apply p-5 first:border-b-gray-300 first:border-[none] first:border-b first:border-solid;
     }

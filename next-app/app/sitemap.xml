@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap-image/1.1">
+  <!-- Main site URL -->
+  <url>
+    <loc>https://devalentine.me/</loc>
+    <lastmod>2024-09-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Dedicated Pages -->
+  <url>
+    <loc>https://devalentine.me/about</loc>
+    <lastmod>2024-09-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devalentine.me/projects</loc>
+    <lastmod>2024-09-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devalentine.me/contact</loc>
+    <lastmod>2024-09-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devalentine.me/experience</loc>
+    <lastmod>2024-09-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devalentine.me/gallery</loc>
+    <lastmod>2024-09-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devalentine.me/404</loc>
+    <lastmod>2024-09-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Sections accessible via hash links -->
+  <url>
+    <loc>https://devalentine.me/#home</loc>
+    <lastmod>2024-09-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://devalentine.me/#techStack</loc>
+    <lastmod>2024-09-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://devalentine.me/#about</loc>
+    <lastmod>2024-09-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://devalentine.me/#projects</loc>
+    <lastmod>2024-09-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://devalentine.me/#contact</loc>
+    <lastmod>2024-09-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>

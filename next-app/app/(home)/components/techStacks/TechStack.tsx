@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import styles from "./techStack.module.css";
 import { BsChevronRight } from "react-icons/bs";
+import { sectionMetadata } from "@/assets/data/metaDatas";
+import {Metadata} from "next"
 
 interface TechStacksProps {
   techStack: {
@@ -10,6 +12,13 @@ interface TechStacksProps {
     description: string;
   };
 }
+
+const {title, description} = sectionMetadata.techStack;
+export const metadata: Metadata = {
+  title,
+  description
+}
+
 
 const TechStack = ({ techStack }: TechStacksProps) => {
   const [isActive, setIsActive] = useState(false);
@@ -23,7 +32,10 @@ const TechStack = ({ techStack }: TechStacksProps) => {
       toggleAccordion();
     }
   };
+
   return (
+    <>
+ 
     <div
       className={`grid grid-rows-1 max-w-full lg:max-w-[25rem] overflow-hidden cursor-pointer rounded-sm relative z-[1] `}
       onClick={toggleAccordion}
@@ -50,6 +62,7 @@ const TechStack = ({ techStack }: TechStacksProps) => {
         </p>
       </div>
     </div>
+    </>
   );
 };
 

@@ -1,11 +1,20 @@
 import Link from "next/link";
 import Animation from "./Animation";
 import styles from "./hero.module.css";
+import { sectionMetadata } from "@/assets/data/metaDatas";
+import {Metadata} from "next"
+
+const { title, description } = sectionMetadata.home;
+export const metadata: Metadata = {
+  title,
+  description
+}
 
 const Hero = () => {
 
-
   return (
+    <>
+ 
     <section className="w-full h-screen flex items-center justify-center flex-col -mt-24">
       <Animation>
         <div className="w-full h-screen" id="home">
@@ -42,6 +51,7 @@ const Hero = () => {
         </div>
       </Animation>
     </section>
+    </>
   );
 };
 

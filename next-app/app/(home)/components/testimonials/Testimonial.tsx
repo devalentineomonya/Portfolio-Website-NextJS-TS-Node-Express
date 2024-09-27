@@ -1,12 +1,20 @@
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
-
+import {Metadata} from "next"
+import { sectionMetadata } from '@/assets/data/metaDatas';
 interface TestimonialProps {
   image: StaticImageData;
   name: string;
   position: string;
   description: string;
 }
+
+const { title, description } = sectionMetadata.testimonials;
+export const metadata: Metadata = {
+  title,
+  description
+}
+
 
 const Testimonial: React.FC<TestimonialProps> = ({ image, name, position, description }) => {
   return (
