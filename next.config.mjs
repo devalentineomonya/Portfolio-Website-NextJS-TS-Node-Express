@@ -1,13 +1,12 @@
 import withPWA from 'next-pwa';
-
+import runtimeCaching from "next-pwa/cache.js"
 const withPWAConfig = withPWA({
   dest: 'public',
   register: true,
   skipWaiting: true,
   cacheOnFrontEndNav: true,
-  aggressiveFrontEndNavCaching: true,
+  runtimeCaching,
   reloadOnOnline: true,
-  swcMinify: true,
   disable: process.env.NODE_ENV === 'development',
   fallbacks: {
     document: '/offline',
@@ -18,6 +17,7 @@ const withPWAConfig = withPWA({
 /** @type {import('next').NextConfig} */
 const nextConfig = withPWAConfig({
   reactStrictMode: true,
+  swcMinify: true,
 });
 
 export default nextConfig;

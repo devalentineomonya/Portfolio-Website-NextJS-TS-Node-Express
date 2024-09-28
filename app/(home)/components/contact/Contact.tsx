@@ -21,7 +21,7 @@ const Contact = () => {
         sectionName="Contact"
         sectionNumber="06"
       >
-        <div className="w-full h-[500px]  flex justify-center items-center flex-col ">
+        <div className="w-full h-fit pb-12 min-h-[500px]  flex justify-center items-center flex-col ">
           <div>
             <h2 className="font-semibold text-3xl text-center ">
               Let make something
