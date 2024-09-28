@@ -5,6 +5,8 @@ import Navbar from "@/components/common/navbar/Navbar";
 import Footer from "@/components/common/footer/Footer";
 import SocialLinks from "@/components/common/socialLinks/SocialLinks";
 import Head from "next/head";
+import NetworkStatus from "@/components/common/NetworkStatus/NetworkStatus";
+import PWAInstallButton from "@/components/common/PWAInstallButton/PWAInstallButton";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -50,8 +52,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased font-grotesk`}
       >
+        <NetworkStatus/>
+
         <Navbar />
         <SocialLinks />
+        <PWAInstallButton/>
         {children}
         <Footer/>
       </body>
