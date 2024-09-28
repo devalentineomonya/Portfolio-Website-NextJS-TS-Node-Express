@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { CgChevronRight } from "react-icons/cg";
 import { useRouter, usePathname } from "next/navigation"; // usePathname gets the current path in Next.js 13+
-import styles from "./Dropdown.module.css";
+import styles from "./dropdown.module.css";
 
 // Define the type for the pages
 type Page = {
