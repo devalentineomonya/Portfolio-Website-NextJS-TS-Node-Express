@@ -1,8 +1,6 @@
 .select {
-    @apply relative min-w-48 w-fit cursor-pointer;
-    position: relative;
-    display: inline-block;
-    color: white;
+    @apply inline-flex text-white relative min-w-32 lg:min-w-48 w-fit cursor-pointer;
+
   }
   
   .selected {
@@ -16,10 +14,8 @@
   }
   
   .options {
-    @apply absolute flex flex-col bg-white shadow-md w-full left-0 mt-2 opacity-0 invisible;
+    @apply p-1 z-50 absolute flex flex-col bg-white shadow-md w-full left-0 mt-2 opacity-0 invisible;
     transition: opacity 300ms ease, visibility 0s linear 300ms;
-    z-index: 50;
-    padding: 5px;
     border-radius: 5px;
   }
   

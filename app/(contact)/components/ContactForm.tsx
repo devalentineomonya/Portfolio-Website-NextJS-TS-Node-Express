@@ -97,7 +97,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <div className="flex justify-center items-center w-full h-full">
-      <div className="bg-white h-full p-6 pr-0 w-full">
+      <div className="bg-white h-full pt-6 w-full">
         <form onSubmit={onSubmit} className="space-y-4">
           {errorMessage && (
             <small className="text-red-500 block text-center">{errorMessage}</small>

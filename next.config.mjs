@@ -5,9 +5,15 @@ const withPWAConfig = withPWA({
   register: true,
   skipWaiting: true,
   cacheOnFrontEndNav: true,
+  cacheStartUrl:true,
   runtimeCaching,
   reloadOnOnline: true,
+  buildExcludes: [/middleware-manifest\.json$/],
   disable: process.env.NODE_ENV === 'development',
+  modifyURLPrefix: {
+    'static/': '_next/static/',
+    '../public/': '/'
+  },
   fallbacks: {
     document: '/offline',
     image: '/fallback.png',

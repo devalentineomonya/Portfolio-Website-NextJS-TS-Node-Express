@@ -57,7 +57,7 @@ const About = () => {
               ))}
             </div>
           </div>
-          <div className="w-full md:w-1/2 px-8 md:px-0">
+          <div className="w-full md:w-1/2">
             <h3 className="text-3xl font-bold mb-2 text-black">
               Valentine Omonya
             </h3>

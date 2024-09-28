@@ -6,6 +6,7 @@
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
+  
   "icons": [
     {
       "src": "/icons/manifest-icon-192.png",
@@ -22,6 +23,12 @@
     {
       "src": "/icons/manifest-icon-512.png",
       "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icons/apple-icon-180.png",
+      "sizes": "180x180",
       "type": "image/png",
       "purpose": "any"
     }
@@ -43,6 +50,56 @@
       "sizes": "1280x800",
       "type": "image/png",
       "form_factor": "wide"
+    },
+    {
+      "src": "/icons/apple-splash-2208-1242.jpg",
+      "sizes": "2208x1242",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/apple-splash-750-1334.jpg",
+      "sizes": "750x1334",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/apple-splash-1242-2208.jpg",
+      "sizes": "1242x2208",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/apple-splash-2688-1242.jpg",
+      "sizes": "2688x1242",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/apple-splash-828-1792.jpg",
+      "sizes": "828x1792",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/apple-splash-2436-1125.jpg",
+      "sizes": "2436x1125",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/apple-splash-2778-1284.jpg",
+      "sizes": "2778x1284",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/apple-splash-2160-1620.jpg",
+      "sizes": "2160x1620",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/apple-splash-1668-2224.jpg",
+      "sizes": "1668x2224",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/apple-splash-2048-2732.jpg",
+      "sizes": "2048x2732",
+      "type": "image/png"
     }
   ]
 }

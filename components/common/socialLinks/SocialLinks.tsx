@@ -10,14 +10,12 @@ const SocialLinks = () => {
   const [scaleActive, setScaleActive] = useState(false);
 
   useEffect(() => {
-    // Check window height after component has mounted
+
     const handleResize = () => {
       setActive(window.innerHeight >= 768);
     };
 
-    handleResize(); // Call once when component mounts
-
-    // Add a listener for window resize
+    handleResize(); 
     window.addEventListener("resize", handleResize);
 
     return () => {

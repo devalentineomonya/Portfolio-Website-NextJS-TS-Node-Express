@@ -12,8 +12,8 @@ const Blogs = () => {
       sectionId="blogs"
       sectionNumber="05"
     >
-      <div className="flex flex-col items-center">
-        <div className="grid  md:grid-cols-2 lg:grid-cols-3 justify-center gap-x-4 lg:max-w-6xl">
+      <div className="flex flex-col lg:items-center w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-4 w-full lg:max-w-6xl">
           {blogsList.map((blog) => (
             <BlogCard key={blog.id} blog={blog} />
           ))}

@@ -44,12 +44,12 @@ const Navbar: FC = () => {
     >
       <div className="max-w-9xl w-full flex justify-between md:justify-start items-center px-4 md:px-2">
         {/* Logo */}
-        <div className="w-1/6 md:z-40">
+        <div className="w-fit md:z-40">
+            <Link href="/">
           <h1 className="text-primary text-2xl md:text-5xl font-semibold font-caveat">
-            <Link href="#home">
-              Devalentine<span className="text-primary">.</span>
-            </Link>
+              Deval<span className="hidden lg:inline">entine</span><span className="text-text-light-primary">.</span>
           </h1>
+            </Link>
         </div>
 
         {/* Navbar Links */}

@@ -16,7 +16,7 @@ interface BlogCardProps {
 
 const BlogCard = ({ blog }: BlogCardProps) => {
   return (
-    <div className=" w-full max-w-[360px]  md:h-[400px]">
+    <div className=" w-full md:h-[400px]">
       <div className="flex flex-col h-full">
         <div className={`relative w-full h-[300px] overflow-hidden bg-white ${styles.blogCardImageContainer}`}>
           <Image
@@ -25,7 +25,7 @@ const BlogCard = ({ blog }: BlogCardProps) => {
             layout="fill"
             quality={100}
             objectFit="cover"
-            className={`absolute inset-0 transition-all ease-in-out duration-400 hover:scale-110 cursor-pointer`}
+            className={`absolute inset-0 transition-all ease-in-out duration-400 hover:scale-110 cursor-pointer z-8`}
             placeholder="blur"
             priority
           />
