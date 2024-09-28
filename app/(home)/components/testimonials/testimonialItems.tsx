@@ -1,5 +1,5 @@
 import image1 from "@/assets/images/man.jpg"
-let testimonialItems = [
+const testimonialItems = [
   {
     image: image1,
     name: "John Doe",

@@ -10,6 +10,7 @@ const Counter = ({ value, name }: { value: number; name: string }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const container = counterContainerRef.current;
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
@@ -17,14 +18,14 @@ const Counter = ({ value, name }: { value: number; name: string }) => {
       },
       { threshold: 0.5 }
     );
-
-    if (counterContainerRef.current) {
-      observer.observe(counterContainerRef.current);
+  
+    if (container) {
+      observer.observe(container);
     }
-
+  
     return () => {
-      if (counterContainerRef.current) {
-        observer.unobserve(counterContainerRef.current);
+      if (container) {
+        observer.unobserve(container);
       }
     };
   }, []);

@@ -6,7 +6,7 @@ import defaultPopup from "@/assets/images/defaultPopup.png";
 //SUGGESTED DEXCRIPTION LWNGTH 43 WORDS 295 CHARACTERS 
 // __________________________________________________//
 
-let projectsList = [
+const projectsList = [
   {
     id: 1,
     name: "DevalShopping Cart",

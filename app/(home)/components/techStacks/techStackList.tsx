@@ -6,7 +6,7 @@ import { BsDatabaseFillGear } from "react-icons/bs";
 import { FaMobile } from "react-icons/fa";
 
 
-let techStackList = [
+const techStackList = [
   {
     name: "UI/UX Designer",
     icon:  <IoIosColorPalette size={50} />,

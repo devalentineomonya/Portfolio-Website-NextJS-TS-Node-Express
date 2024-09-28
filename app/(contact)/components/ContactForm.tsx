@@ -70,6 +70,7 @@ const ContactForm: React.FC = () => {
         }, 5000);
       }
     } catch (error) {
+      console.log(error)
       setErrorMessage("An error occurred while submitting the form.");
       setLoading(false);
       setTimeout(() => {
@@ -79,7 +80,7 @@ const ContactForm: React.FC = () => {
   };
 
   const validate = (data: FormData) => {
-    let errors: Errors = {};
+    const errors: Errors = {};
     if (!data.fullName.trim()) {
       errors.fullName = "Name is required *";
     }

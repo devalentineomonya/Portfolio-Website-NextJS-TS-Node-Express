@@ -1,5 +1,5 @@
-import {  PiPinterestLogo, PiXLogoFill } from "react-icons/pi"
-import { RiDribbbleFill, RiFacebookFill, RiInstagramFill, RiLinkedinFill, RiWhatsappFill, RiYoutubeFill,RiGithubFill } from "react-icons/ri"
+import {   PiXLogoFill } from "react-icons/pi"
+import {  RiFacebookFill, RiInstagramFill, RiLinkedinFill, RiWhatsappFill, RiYoutubeFill,RiGithubFill } from "react-icons/ri"
 import { TbWorldWww } from "react-icons/tb";
 
 const socialLinksList = [

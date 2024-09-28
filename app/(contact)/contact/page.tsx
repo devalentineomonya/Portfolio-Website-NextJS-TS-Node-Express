@@ -16,9 +16,9 @@ const page = () => {
         <div className=" mt-12 h-[500px] w-full max-w-7xl">
           <div className="h-full w-full flex ">
             <div className="h-full  w-[480px]  xl:pt-12">
-              <h2 className="text-5xl font-semibold text-gray-900 lg:max-w-[480px]">Let's work together</h2>
+              <h2 className="text-5xl font-semibold text-gray-900 lg:max-w-[480px]">Let&apos;s work together</h2>
               <p className="text-2xl font-light text-gray-800 mt-3 lg:max-w-[450px]">
-                We'd love to learn more about you and we can build something great
+                We&apos;d love to learn more about you and we can build something great
                 together.
               </p>
             </div>
