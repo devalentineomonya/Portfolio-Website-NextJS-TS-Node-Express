@@ -2,10 +2,8 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className='h-fit min-h-screen flex items-center justify-center'>
-
-        <div className='Coming Soon'></div>
-      
+    <div className="h-[calc(100vh-6rem)] flex items-center justify-center ">
+      <h1 className="text-5xl font-medium">Coming Soon</h1>
     </div>
   )
 }

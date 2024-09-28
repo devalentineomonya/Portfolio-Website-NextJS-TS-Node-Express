@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/common/navbar/Navbar";
 import Footer from "@/components/common/footer/Footer";
 import SocialLinks from "@/components/common/socialLinks/SocialLinks";
+import Head from "next/head";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -36,7 +37,15 @@ export default function RootLayout({
   return (
 
     <html lang="en">
-      
+      <Head>
+        <link rel="apple-touch-icon" sizes="192x192" href="/manifest-icon-192.maskable.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+        <link rel="manifest" href="/manifest.json"/>
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
+        <meta name="msapplication-TileColor" content="#da532c"/>
+        <meta name="theme-color" content="#ffffff"/>
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased font-grotesk`}
       >

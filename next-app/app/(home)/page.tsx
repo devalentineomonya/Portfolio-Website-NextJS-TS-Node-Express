@@ -19,7 +19,7 @@ keywords: "Valentine Omonya, Omonya, Valentine, valentine omonya, valentine muti
 
 export default function Home() {
   return (
-    <>
+    <main>
       <Hero />
       <TechStacks />
       <About />
@@ -27,6 +27,6 @@ export default function Home() {
       <Projects />
       <Blogs/>
       <Contact />
-    </>
+    </main>
   );
 }
