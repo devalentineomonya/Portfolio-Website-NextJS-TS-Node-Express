@@ -36,9 +36,9 @@ const Navbar: FC = () => {
 
   return (
     <header
-      className={`flex justify-center py-1 w-full h-20 md:h-24 relative  z-50 ${
+      className={`flex justify-center py-1 w-full h-16 md:h-20 relative  z-50 ${
         stickyNavbar
-          ? "shadow-[0px_5px_6px] shadow-navbar h-16 md:h-20 sticky top-0 bg-bg-primary"
+          ? "shadow-[0px_5px_6px] shadow-navbar h-14 md:h-16 sticky top-0 bg-bg-primary"
           : " bg-transparent"
       }`}
     >

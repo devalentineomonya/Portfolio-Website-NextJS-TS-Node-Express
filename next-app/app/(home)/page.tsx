@@ -1,10 +1,11 @@
-import About from "./components/about/About";
+import { Metadata } from "next";
 import Hero from "./components/hero/Hero";
+import About from "./components/about/About";
+import Blogs from "./components/blogs/Blogs";
+import Contact from "./components/contact/Contact";
 import Projects from "./components/projects/Projects";
 import TechStacks from "./components/techStacks/TechStacks";
 import Testimonials from "./components/testimonials/Testimonials";
-import Contact from "./components/contact/Contact";
-import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Valentine Omonya | Software Engineer",
@@ -24,6 +25,7 @@ export default function Home() {
       <About />
       <Testimonials />
       <Projects />
+      <Blogs/>
       <Contact />
     </>
   );

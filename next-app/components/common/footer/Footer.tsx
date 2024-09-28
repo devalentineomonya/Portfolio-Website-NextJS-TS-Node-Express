@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="flex justify-center items-center w-full h-auto text-gray-900 bg-white py-12 shadow-[0_11px_9.5px_4.5px_#dddddd]">
+    <footer className="flex justify-center items-center w-full h-auto text-gray-900 bg-white py-12 shadow-[0.5px_-4.5px_6px_-3.5px_#dddddd]">
       <div className="max-w-7xl w-full h-full flex flex-col md:flex-row justify-between items-start md:items-center md:gap-x-16 px-6 space-y-8 md:space-y-0">
         {/* About Section */}
         <div className="md:w-1/2 space-y-4">

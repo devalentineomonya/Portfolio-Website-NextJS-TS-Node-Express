@@ -19,7 +19,7 @@ const Contact = () => {
         sectionDescription="Question or message for me?"
         sectionId="contact"
         sectionName="Contact"
-        sectionNumber="07"
+        sectionNumber="06"
       >
         <div className="w-full h-[500px]  flex justify-center items-center flex-col ">
           <div>
