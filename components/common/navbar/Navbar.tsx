@@ -57,7 +57,7 @@ const Navbar: FC = () => {
           className={`flex-1 w-full  bg-black bg-opacity-50 transition-all ease-in-out duration-300 ${
             showSideMenu
               ? "opacity-100 left-0 delay-600 overflow-scroll"
-              : "opacity-0 -left-96"
+              : "opacity-0 -left-[1200px]"
           }  fixed bottom-0 top-0 block z-30 md:z-0 md:static md:opacity-100 md:bg-transparent`}
         >
           <ul

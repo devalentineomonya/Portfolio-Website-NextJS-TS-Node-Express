@@ -46,7 +46,7 @@ const PWAInstallButton = () => {
   if (isStandalone) return null; // Hide button if already installed
 
   return (
-    <div className="absolute top-1/2 right-5 transform -translate-y-1/2">
+    <div className="fixed z-30 top-1/2 right-5 transform -translate-y-1/2">
       {isInstallable && (
         <button 
           onClick={handleInstallClick} 
