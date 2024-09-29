@@ -67,7 +67,7 @@ const Hero = () => {
         </div>
         {/* </Animation> */}
         <div
-          className="absolute bottom-0 w-full h-72 md:h-464 lg:h-52"
+          className="absolute bottom-0 w-full h-[70px] sm:h-[105px] md:h-[135px] lg:-[182px] xl:h-[260px]"
           style={{
             background: `url(${heroWave.src})`,
             backgroundSize: "cover",
