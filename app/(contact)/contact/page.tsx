@@ -1,9 +1,9 @@
 import React from "react";
 import ContactCard from "../components/ContactCard";
 import { FaRegComment } from "react-icons/fa6";
-import { BsTelephone } from "react-icons/bs";
+import { BsGithub, BsTelephone } from "react-icons/bs";
 import { SlLocationPin } from "react-icons/sl";
-import ContactForm from "../components/ContactForm"
+import ContactForm from "../components/ContactForm";
 const page = () => {
   return (
     <div className="h-full pb-12 lg:h-[calc(100vh-6rem)] flex justify-center pt-12">
@@ -12,18 +12,21 @@ const page = () => {
           <ContactCard icon={<SlLocationPin />} content="Nairobi, Kenya" />
           <ContactCard icon={<BsTelephone />} content="+254-768-133-220" />
           <ContactCard icon={<FaRegComment />} content="valmosh254@gmail.com" />
+          <ContactCard icon={<BsGithub />} content="@devalentineomonya" />
         </div>
         <div className=" mt-12 h-fit pb-12 min-h-[500px]  w-full max-w-7xl">
           <div className="h-full w-full flex gap-x-4 flex-col lg:flex-row">
             <div className="h-full  lg:w-[480px]  xl:pt-12">
-              <h2 className="text-3xl text-wrap md:text-5xl font-semibold text-gray-900 lg:max-w-[480px]">Let&apos;s work together</h2>
+              <h2 className="text-3xl text-wrap md:text-5xl font-semibold text-gray-900 lg:max-w-[480px]">
+                Let&apos;s work together
+              </h2>
               <p className="text-lg text-wrap  md:text-2xl font-light text-gray-800 mt-3 lg:max-w-[450px]">
-                We&apos;d love to learn more about you and we can build something great
-                together.
+                We&apos;d love to learn more about you and we can build
+                something great together.
               </p>
-            </div> 
+            </div>
             <div className="h-full flex-1">
-                <ContactForm/>
+              <ContactForm />
             </div>
           </div>
         </div>

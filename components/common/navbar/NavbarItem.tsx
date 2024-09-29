@@ -8,6 +8,7 @@ interface NavbarItemProps {
   name: string;
   setShowSideMenu: (prev: boolean) => void;
   sectionName: string;
+  stickyNavbar:boolean
 }
 
 const NavbarItem: FC<NavbarItemProps> = ({
@@ -16,6 +17,7 @@ const NavbarItem: FC<NavbarItemProps> = ({
   setActiveTab,
   sectionName,
   setShowSideMenu,
+  stickyNavbar
 }) => {
   const router = useRouter(); 
   const pathname = usePathname();
@@ -39,11 +41,11 @@ const NavbarItem: FC<NavbarItemProps> = ({
   return (
     <li
       className={`border-b border-b-gray-600 w-full md:w-fit pb-5 md:pb-0 md:border-none ${
-        isActive ? "text-primary" : "text-dark-primary"
+        isActive ? "text-primary" : stickyNavbar ? "text-dark-primary" : "text-white"
       }`}
     >
       <button
-        className="text-xl font-semibold"
+        className="text-lg font-semibold"
         onClick={(e) => handleTabClick(e, sectionName)}
       >
         {name}

@@ -19,7 +19,7 @@ const SectionLayout = ({
 
 }:SectionLayoutProps) => {
   return (
-    <section className="w-full h-fit min-h-screen flex items-center justify-center flex-col" id={sectionId}>
+    <section className="w-full h-fit min-h-[70vh] flex items-center justify-center flex-col" id={sectionId}>
       <SectionHeader
         sectionNumber={sectionNumber}
         sectionDescription={sectionDescription}

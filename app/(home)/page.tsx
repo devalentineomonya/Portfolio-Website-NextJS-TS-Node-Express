@@ -21,12 +21,14 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <div className="px-4 lg:px-0">
       <TechStacks />
       <About />
       <Testimonials />
       <Projects />
       <Blogs/>
       <Contact />
+      </div>
     </>
   );
 }

@@ -67,6 +67,7 @@ const Navbar: FC = () => {
           >
             {navbarItems?.map((navItem) => (
               <NavbarItem
+              stickyNavbar={stickyNavbar}
                 setShowSideMenu={setShowSideMenu}
                 key={navItem.sectionName}
                 setActiveTab={setActiveTab}

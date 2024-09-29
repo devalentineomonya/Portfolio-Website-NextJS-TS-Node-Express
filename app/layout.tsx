@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "Explore the work of Valentine Omonya, a passionate Software Engineer specializing in web and mobile development. Discover innovative projects showcasing expertise in Python, JavaScript, PHP, and React, all crafted with a focus on user experience and creative problem-solving",
   creator: "Valentine Omonya",
   keywords:
-    "Valentine Omonya, Omonya, Valentine, valentine omonya, valentine mutinda, devalentine, devalentine omonya, devalenthcohen, deval enth cohen, devalenthcohen.inpynb.dev, deval enth cohen.ipynb.dev, devalenthcohen ipynb.dev, Software Engineer, Python, JavaScript, PHP, React, Web Development, Mobile Development, User Experience, Creative Problem-Solving",
+    "Valentine Omonya, Omonya, Valentine, valentine omonya, valentine mutinda, devalentine,Devalentine, devalentin.me, devalentine .me, devalentine me, devalentine omonya, devalenthcohen, deval enth cohen, devalenthcohen.inpynb.dev, deval enth cohen.ipynb.dev, devalenthcohen ipynb.dev, Software Engineer, Python, JavaScript, PHP, React, Web Development, Mobile Development, User Experience, Creative Problem-Solving",
   manifest: "/manifest.json",
 };
 
@@ -44,9 +44,7 @@ export default function RootLayout({
         <Navbar />
         <SocialLinks />
         <PWAInstallButton />
-        <main className="px-4 lg:px-0">
-        {children}
-        </main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
