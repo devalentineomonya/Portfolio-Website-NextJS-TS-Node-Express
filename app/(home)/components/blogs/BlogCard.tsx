@@ -16,9 +16,9 @@ interface BlogCardProps {
 
 const BlogCard = ({ blog }: BlogCardProps) => {
   return (
-    <div className=" w-full md:h-[400px]">
+    <div className=" w-full h-[450px] md:h-[400px]">
       <div className="flex flex-col h-full">
-        <div className={`relative w-full h-[300px] overflow-hidden bg-white ${styles.blogCardImageContainer}`}>
+        <div className={`relative w-full h-[350px] md:h-[300px] overflow-hidden bg-white ${styles.blogCardImageContainer}`}>
           <Image
             src={blog?.imageSmall}
             alt={blog?.title}

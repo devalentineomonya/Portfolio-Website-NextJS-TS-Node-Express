@@ -1,6 +1,6 @@
 .loaderContainer {
   position: fixed; 
-  top: 1px; 
+  top: 0; 
   left: 2px;
   right: 2px;
   height: 24px;
@@ -16,7 +16,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  animation: growRandom 3s ease-in-out infinite;
+  animation: growRandom 5s ease-in-out infinite;
 }
 
 .spinner {

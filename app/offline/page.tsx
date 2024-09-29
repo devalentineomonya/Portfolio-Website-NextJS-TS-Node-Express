@@ -30,7 +30,7 @@ export default function Offline() {
         internet connection and try reloading the app
       </p>
       <Link
-        href="*"
+        href="."
         className="text-red-700 border border-red-600 hover:bg-red-700 hover:text-white hover:border-white py-2 px-6 gap-2 rounded inline-flex items-center gap-x-1 transition-all ease-in-out duration-300 mt-4"
       >
         <span>Refresh</span>

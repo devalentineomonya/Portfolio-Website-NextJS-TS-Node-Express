@@ -47,7 +47,7 @@ const Navbar: FC = () => {
         <div className="w-fit md:z-40">
             <Link href="/">
           <h1 className="text-primary text-2xl md:text-5xl font-semibold font-caveat">
-              Deval<span className="hidden lg:inline">entine</span><span className="text-text-light-primary">.</span>
+              Deval<span className="inline md:hidden lg:inline">entine</span><span className="text-text-light-primary">.</span>
           </h1>
             </Link>
         </div>

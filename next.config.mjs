@@ -8,12 +8,7 @@ const withPWAConfig = withPWA({
   cacheStartUrl:true,
   runtimeCaching,
   reloadOnOnline: true,
-  buildExcludes: [/middleware-manifest\.json$/],
   disable: process.env.NODE_ENV === 'development',
-  modifyURLPrefix: {
-    'static/': '_next/static/',
-    '../public/': '/'
-  },
   fallbacks: {
     document: '/offline',
     image: '/fallback.png',
@@ -27,3 +22,10 @@ const nextConfig = withPWAConfig({
 });
 
 export default nextConfig;
+
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   /* config options here */
+// }
+ 
+// export default nextConfig
