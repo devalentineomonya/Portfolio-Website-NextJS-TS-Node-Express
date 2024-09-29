@@ -45,8 +45,9 @@ const Hero = () => {
                   <span className={styles.word}>Mobile Developer</span>
                 </p>
               </div>
-
-              <h1 className={styles.heroTextContainer}>Valentine</h1>
+              <div className="flex items-center justify-start ">
+                <h1 className={styles.heroTextContainer}>Valentine</h1>
+              </div>
               <div className="flex flex-col items-start">
                 <p className="flex gap-x-5 text-start text-lg sm:text-3xl font-medium cursor-default mt-8 md:mt-3 text-white">
                   <span>Full Stack</span> -<span>Mobile Apps</span>-
