@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from "react";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 interface FormData {
   fullName: string;
@@ -103,7 +104,7 @@ const ContactForm: React.FC = () => {
             <small className="text-red-500 block text-center">{errorMessage}</small>
           )}
           {successMessage && (
-            <small className="text-green-500 block text-center">{successMessage}</small>
+            toast.success("Thank you for your message. I'll be sure to respond soon.")
           )}
           <div>
             <input

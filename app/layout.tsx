@@ -7,6 +7,7 @@ import SocialLinks from "@/components/common/socialLinks/SocialLinks";
 import NetworkStatus from "@/components/common/NetworkStatus/NetworkStatus";
 import PWAInstallButton from "@/components/common/PWAInstallButton/PWAInstallButton";
 import RegisterWorker from "@/components/common/RegisterWorker/RegisterWorker";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -39,6 +40,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased font-grotesk`}
       >
+        <ToastContainer/>
         <NetworkStatus />
         {process.env.NODE_ENV === "production" && <RegisterWorker />}
         <Navbar />
