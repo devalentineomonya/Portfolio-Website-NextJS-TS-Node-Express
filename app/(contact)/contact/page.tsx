@@ -6,7 +6,7 @@ import { SlLocationPin } from "react-icons/sl";
 import ContactForm from "../components/ContactForm";
 const page = () => {
   return (
-    <div className="h-full pb-12 lg:h-[calc(100vh-6rem)] flex justify-center pt-12">
+    <div className="h-full pb-12 lg:h-[calc(100vh-6rem)] flex justify-center px-4 md:px-0 pt-12">
       <div className="h-full w-full max-w-8xl flex items-center flex-col">
         <div className="w-full flex items-center justify-center flex-col lg:flex-row gap-4 max-w-7xl">
           <ContactCard icon={<SlLocationPin />} content="Nairobi, Kenya" />
