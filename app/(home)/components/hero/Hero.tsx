@@ -18,7 +18,7 @@ const Hero = () => {
       <section
         className="w-full h-screen flex items-center justify-center flex-col -mt-24 relative"
         style={{
-          background: `${heroImage.src}`,
+          background: `url(${heroImage.src})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -27,7 +27,7 @@ const Hero = () => {
       >
         <Animation>
           <div
-            className="w-full h-screen flex items-center justify-start"
+            className="w-full h-screen flex items-center justify-center"
             id="home"
           >
             <div className="flex items-start justify-center flex-col h-full w-full max-w-8xl px-4 lg:p-0">
@@ -65,7 +65,7 @@ const Hero = () => {
         <div
           className="absolute bottom-0 w-full h-20"
           style={{
-            background: `${heroWave.src}`,
+            background: `url(${heroWave.src})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
