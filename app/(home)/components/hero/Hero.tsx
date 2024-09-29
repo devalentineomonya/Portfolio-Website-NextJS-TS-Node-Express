@@ -34,7 +34,8 @@ const Hero = () => {
             <div className="flex flex-col items-center">
               <div className="flex gap-x-5 text-start text-white text-lg sm:text-2xl font-medium cursor-default ">
                 <p className="flex items-center">
-                  I am a <span className="ml-2 h-[2px] w-10 bg-white inline-block "></span>
+                  I am a{" "}
+                  <span className="ml-2 h-[2px] w-10 bg-white inline-block "></span>
                 </p>
                 <p className={`overflow-hidden relative h-12 ${styles.words}`}>
                   <span className={styles.word}>Software Engineer</span>
@@ -46,26 +47,27 @@ const Hero = () => {
               </div>
 
               <h1 className={styles.heroTextContainer}>Valentine</h1>
+              <div className="flex flex-col items-start">
+                <p className="flex gap-x-5 text-start text-lg sm:text-3xl font-medium cursor-default mt-8 md:mt-3 text-white">
+                  <span>Full Stack</span> -<span>Mobile Apps</span>-
+                  <span>ML Engineer</span>
+                </p>
 
-              <p className="flex gap-x-5 text-center text-lg sm:text-3xl font-medium cursor-default mt-8 md:mt-3">
-                <span>Full Stack</span> -<span>Mobile Apps</span>-
-                <span>ML Engineer</span>
-              </p>
-
-              <Link
-                className="py-3 px-4 bg-primary font-xl text-white rounded-md mt-4 hover:bg-pink-600"
-                href="https://1drv.ms/b/s!AmD6S1sK2c1egZ101PCxsR-KkcDtug?e=KsjvFV"
-                target="_blank"
-              >
-                Read Resume
-              </Link>
+                <Link
+                  className="py-3 px-4 bg-primary font-xl text-white rounded-md mt-4 hover:bg-pink-600"
+                  href="https://1drv.ms/b/s!AmD6S1sK2c1egZ101PCxsR-KkcDtug?e=KsjvFV"
+                  target="_blank"
+                >
+                  Read Resume
+                </Link>
+              </div>
             </div>
           </div>
           <div className="flex-1 hidden lg:inline-flex"></div>
         </div>
         {/* </Animation> */}
         <div
-          className="absolute bottom-0 w-full h-52 md:h-48: lg:h-40"
+          className="absolute bottom-0 w-full h-72 md:h-464 lg:h-52"
           style={{
             background: `url(${heroWave.src})`,
             backgroundSize: "cover",
