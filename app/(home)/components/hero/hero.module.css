@@ -1,5 +1,5 @@
 .heroTextContainer {
-    @apply cursor-default transition-all ease-in-out duration-300 relative text-[40px] sm:text-[80px] md:text-[100px] lg:text-[120px] font-bold font-grotesk text-white whitespace-nowrap;
+    @apply cursor-default transition-all ease-in-out duration-300 relative text-start text-[40px] sm:text-[80px] md:text-[100px] lg:text-[120px] font-bold font-grotesk text-white whitespace-nowrap;
 
        text-shadow: 1px 1px 1px #c4c4c4,
         1px 2px 1px #c4c4c4,

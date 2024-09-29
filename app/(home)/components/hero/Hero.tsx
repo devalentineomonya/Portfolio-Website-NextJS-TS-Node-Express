@@ -33,7 +33,7 @@ const Hero = () => {
           <div className="flex items-center justify-center  h-full w-full max-w-8xl px-4 lg:p-0">
             <div className="flex flex-col items-center">
               <div className="flex w-full gap-x-5 text-start text-white text-lg sm:text-2xl font-medium cursor-default ">
-                <p className="flex items-start">
+                <p className="flex items-center justify-start">
                   I am a{" "}
                   <span className="ml-2 h-[2px] w-10 bg-white inline-block "></span>
                 </p>

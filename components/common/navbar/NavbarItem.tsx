@@ -41,7 +41,7 @@ const NavbarItem: FC<NavbarItemProps> = ({
   return (
     <li
       className={`border-b border-b-gray-600 w-full md:w-fit pb-5 md:pb-0 md:border-none ${
-        isActive ? "text-primary" : stickyNavbar ? "text-dark-primary" : "text-white"
+        isActive ? "text-primary" : stickyNavbar ? "text-dark-primary" : pathname === "/" ? "text-white" :"text-dark-primary"
       }`}
     >
       <button
