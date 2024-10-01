@@ -6,7 +6,7 @@ import defaultPopup from "@/assets/images/defaultPopup.png";
 //SUGGESTED DEXCRIPTION LWNGTH 43 WORDS 295 CHARACTERS 
 // __________________________________________________//
 
-const projectsList = [
+let projectsList = [
   {
     id: 1,
     name: "DevalShopping Cart",
@@ -16,7 +16,7 @@ const projectsList = [
     description:
       "DevalShopping Cart is a full-stack eCommerce app built with ReactJS, NodeJS, and Express. It offers user login, product browsing, a shopping cart, secure checkout, and order tracking. With an intuitive interface, it provides a smooth and efficient shopping experience.",
     liveLink: "https://devalshoppingcart.vercel.app/",
-    githubLink: "https://github.com/devalentineomonya/ReactJS-Weather-App",
+    githubLink: "https://github.com/devalentineomonya/React-Node-E-commerce-Application",
   },
 
   {
@@ -27,8 +27,8 @@ const projectsList = [
     technologies: ["NextJS", "TMDB Api"],
     description:
       "DevalCinemaz is a movie trailer platform built with NextJS and powered by the TMDB API. It lets users explore a vast collection of movies, view trailers, and access movie details like release dates, ratings, and overviews. With a responsive interface, users can browse through popular and upcoming films.",
-    liveLink: "http://devalcinemaz.vercel.app",
-    githubLink: "https://github.com/devalentineomonya",
+    liveLink: "https://devalcinemaz.vercel.app/",
+    githubLink: "https://github.com/devalentineomonya/DevalCinemaz-NexJS-Movies-Site-Stable-Version",
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const projectsList = [
     description:
       "DevalMotors is a vehicle booking platform built with NextJS, TypeScript, Hono, and NodeJS. It allows users to browse and book various vehicles, offering a streamlined experience for scheduling rides and managing reservations. With a user-friendly interface and real-time booking features, DevalMotors makes vehicle rentals quick and efficient.",
     liveLink: "http://devalmotors.vercel.app",
-    githubLink: "https://github.com/devalentineomonya",
+    githubLink: "https://github.com/devalentineomonya/Car-Rential-Website-Next-TS-Hono-React-Shadcn",
   },
   {
     id: 4,
@@ -61,7 +61,7 @@ const projectsList = [
     description:
       "254 Outfit E-Commerce is an online platform built with NextJS, Hono, TypeScript, and NodeJS, designed to help users find stylish outfits in Kenya. With a focus on local fashion, the website offers a wide range of clothing options, easy navigation, and a seamless shopping experience.",
     liveLink: "254outfitcommerce.vercel.app",
-    githubLink: "https://github.com/devalentineomonya/ReactJS-Weather-App",
+    githubLink: "https://github.com/devalentineomonya/Outfit-Ecommerce-Website",
   },
   {
     id: 6,
