@@ -1,5 +1,6 @@
 import Link from "next/link";
 // import Animation from "./Animation";
+import React from "react"
 import styles from "./hero.module.css";
 import { sectionMetadata } from "@/assets/data/metaDatas";
 import heroImage from "@/assets/images/hero-image.png";
