@@ -2,7 +2,7 @@ import React from 'react'
 
 const BlogCard = () => {
   return (
-    <div>
+    <div className="w-full max-h-[700px] h-full">
       
     </div>
   )
