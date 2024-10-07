@@ -1,11 +1,13 @@
-import React from 'react'
-
+import React from "react";
+import BlogCard from "../components/BlogCard";
 const page = () => {
   return (
-    <div className="h-[calc(100vh-6rem)] flex items-center justify-center ">
-      <h1 className="text-5xl font-medium">Coming Soon</h1>
+    <div className="flex items-start justify-center w-full">
+      <div className="h-full min-h-[calc(100vh-6rem)] flex items-center justify-center gap-y-4 max-w-5xl">
+        <BlogCard />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;
