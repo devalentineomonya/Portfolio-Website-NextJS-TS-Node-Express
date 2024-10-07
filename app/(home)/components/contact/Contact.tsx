@@ -7,46 +7,57 @@ import { Metadata } from "next";
 const { title, description } = sectionMetadata.contact;
 export const metadata: Metadata = {
   title,
-  description
-}
+  description,
+};
 
 const Contact = () => {
-
   return (
     <>
-
       <SectionLayout
         sectionDescription="Question or message for me?"
         sectionId="contact"
         sectionName="Contact"
         sectionNumber="06"
       >
-        <div className="w-full h-fit pb-12 min-h-[500px]  flex justify-center items-center flex-col ">
-          <div>
-            <h2 className="font-semibold text-3xl text-center ">
-              Let make something
-            </h2>
-            <h2 className="font-semibold text-3xl text-center mt-2">
-              amazing together
-            </h2>
+        <div className="bg-white text-slate-800">
+          <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
+            <div className="mx-auto max-w-3xl text-center">
+              <h1 className="bg-gradient-to-r from-green-300 via-red-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
+                Let make something.
+                <span className="sm:block"> amazing together. </span>
+              </h1>
+
+              <p className="mx-auto mt-4 max-w-xl sm:text-xl/relaxed">
+                &apos;m excited to explore project collaborations that leverage
+                the skills I&apos;ve developed. In addition to my full-time
+                coding work, I also take on freelance projects that challenge my
+                creativity and problem-solving abilities. If you have a project
+                idea in mind or need assistance with a specific task, I&apos;d
+                love to hear from you. Let&apos;s connect and see how we can
+                bring your vision to life! 😊
+              </p>
+
+              <div className="mt-8 flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/contact"
+                  target="_blank"
+                  className="block w-full rounded border border-red-600 bg-red-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+                >
+                  <span>Schedule A Meeting</span>
+                  <GoArrowUpRight size={24} />
+                </Link>
+
+                <Link
+                  href="/contact"
+                  target="_self"
+                  className="block w-full rounded border border-red-600 px-12 py-3 text-sm font-medium text-white hover:bg-red-600 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
+                >
+                  <span>Let talk</span>
+                  <GoArrowUpRight size={24} />
+                </Link>
+              </div>
+            </div>
           </div>
-          <p className="text-base  leading-relaxed tracking-wider font-medium text-center max-w-[700px] text-gray-800 mt-5">
-            &apos;m excited to explore project collaborations that leverage the
-            skills I&apos;ve developed. In addition to my full-time coding work,
-            I also take on freelance projects that challenge my creativity and
-            problem-solving abilities. If you have a project idea in mind or
-            need assistance with a specific task, I&apos;d love to hear from
-            you. Let&apos;s connect and see how we can bring your vision to
-            life! 😊
-          </p>
-          <Link
-            href="/contact"
-            target="_self"
-            className="text-red-700 border border-red-600 hover:bg-red-700 hover:text-white hover:border-white py-2 px-6 gap-2 rounded inline-flex items-center gap-x-3 transition-all ease-in-out duration-300 mt-4 "
-          >
-            <span>Let talk</span>
-            <GoArrowUpRight size={24} />
-          </Link>
         </div>
       </SectionLayout>
     </>
