@@ -20,7 +20,7 @@ const Contact = () => {
         sectionNumber="06"
       >
         <div className="bg-white text-slate-800">
-          <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
+          <div className="mx-auto max-w-screen-xl px-4 lg:flex lg:h-screen lg:items-center">
             <div className="mx-auto max-w-3xl text-center">
               <h1 className="bg-gradient-to-r from-green-300 via-red-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
                 Let make something.
@@ -41,7 +41,7 @@ const Contact = () => {
                 <Link
                   href="/contact"
                   target="_blank"
-                  className="block w-full rounded border border-red-600 bg-red-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+                  className="flex items-center gap-x-3 justify-center  w-full rounded border border-red-600 bg-red-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
                 >
                   <span>Schedule A Meeting</span>
                   <GoArrowUpRight size={24} />
@@ -50,7 +50,7 @@ const Contact = () => {
                 <Link
                   href="/contact"
                   target="_self"
-                  className="block w-full rounded border border-red-600 px-12 py-3 text-sm font-medium text-white hover:bg-red-600 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
+                  className="flex items-center gap-x-3 justify-center w-full rounded border border-red-600 px-12 py-3 text-sm font-medium text-white hover:bg-red-600 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
                 >
                   <span>Let talk</span>
                   <GoArrowUpRight size={24} />
