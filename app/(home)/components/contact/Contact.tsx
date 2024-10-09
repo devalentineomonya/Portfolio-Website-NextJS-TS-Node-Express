@@ -21,7 +21,7 @@ const Contact = () => {
       >
         <div className="bg-white text-slate-800">
           <div className="mx-auto max-w-screen-xl px-4 lg:flex lg:items-center">
-            <div className="mx-auto w-full max-w-8xl text-center">
+            <div className="mx-auto w-full py-12 max-w-8xl text-center">
               <h1 className="bg-gradient-to-r from-green-300 via-red-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
                 Let build something.
                 <span className="sm:block"> amazing together. </span>
