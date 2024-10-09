@@ -60,7 +60,7 @@ const projectsList = [
     technologies: ["NextJS","Hono", "TS", "Node"],
     description:
       "254 Outfit E-Commerce is an online platform built with NextJS, Hono, TypeScript, and NodeJS, designed to help users find stylish outfits in Kenya. With a focus on local fashion, the website offers a wide range of clothing options, easy navigation, and a seamless shopping experience.",
-    liveLink: "254outfitcommerce.vercel.app",
+    liveLink: "https://254outfitcommerce.vercel.app",
     githubLink: "https://github.com/devalentineomonya/Outfit-Ecommerce-Website",
   },
   {
