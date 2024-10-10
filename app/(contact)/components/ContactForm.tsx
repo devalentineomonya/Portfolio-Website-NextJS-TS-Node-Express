@@ -139,7 +139,7 @@ const ContactForm: React.FC = () => {
           <div>
             <textarea
               name="message"
-              className={`w-full p-3 border min-h-40 ${
+              className={`w-full p-3 border min-h-52 ${
                 errors.message ? "border-red-500" : "border-gray-300"
               } rounded-md focus:outline-none focus:ring-[1px] focus"border-none focus:ring-indigo-500 h-40`}
               value={formData.message}

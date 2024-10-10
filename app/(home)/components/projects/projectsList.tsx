@@ -24,7 +24,7 @@ const projectsList = [
     name: "DevalCinemaz",
     previewImage: defaultPreview,
     popupImage: defaultPopup,
-    technologies: ["NextJS", "TMDB Api"],
+    technologies: ["NextJS", "TMDB API", "Cleck Auth"],
     description:
       "DevalCinemaz is a movie trailer platform built with NextJS and powered by the TMDB API. It lets users explore a vast collection of movies, view trailers, and access movie details like release dates, ratings, and overviews. With a responsive interface, users can browse through popular and upcoming films.",
     liveLink: "https://devalcinemaz.vercel.app/",

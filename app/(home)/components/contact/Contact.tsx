@@ -22,7 +22,9 @@ const Contact = () => {
         <div className="bg-white text-slate-800">
           <div className="mx-auto max-w-screen-xl px-4 lg:flex lg:items-center">
             <div className="mx-auto w-full py-12 max-w-8xl text-center">
-              <h1 className="bg-gradient-to-r from-green-300 via-red-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
+              <h1 className="bg-gradient-to-r from-green-300 via-red-500
+               to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent 
+               sm:text-5xl">
                 Let build something.
                 <span className="sm:block"> amazing together. </span>
               </h1>
@@ -41,16 +43,21 @@ const Contact = () => {
                 <Link
                   href="/contact"
                   target="_blank"
-                  className="flex items-center gap-x-3 justify-center  w-full rounded border border-red-600 bg-red-600 px-12 py-3 text-sm font-medium text-white hover:text-red-500 hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+                  className="flex items-center gap-x-3 justify-center  w-full rounded border
+                   border-red-600 bg-red-600 px-12 py-3 text-sm font-medium text-white
+                    hover:text-red-500 hover:bg-transparent  focus:outline-none focus:ring
+                     active:text-opacity-75 sm:w-auto"
                 >
-                  <span>Schedule A Meeting</span>
+                  <span>Set A Meeting</span>
                   <GoArrowUpRight size={24} />
                 </Link>
 
                 <Link
                   href="/contact"
                   target="_self"
-                  className="flex items-center gap-x-3 justify-center min-w-36 w-full rounded border border-red-600 px-12 py-3 text-sm font-medium text-red-600 hover:text-white hover:bg-red-600 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
+                  className="flex items-center gap-x-3 justify-center min-w-48 w-full rounded border
+                   border-red-600 px-12 py-3 text-sm font-medium text-red-600 hover:text-white
+                    hover:bg-red-600 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
                 >
                   <span>Let talk</span>
                   <GoArrowUpRight size={24} />
