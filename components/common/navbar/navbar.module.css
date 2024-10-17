@@ -10,7 +10,7 @@
     }
 
     .bar {
-        @apply absolute h-1 text-inherit opacity-100 transition-none duration-[0.35s] ease-[cubic-bezier(.5_,-0.35,_0.35,_1.5)] rounded-[calc(4px_/_2)] inset-x-0 bg-gray-700;
+        @apply absolute h-1 text-inherit opacity-100 transition-none duration-300 ease-[cubic-bezier(.5_,-0.35,_0.35,_1.5)] rounded-[calc(4px_/_2)] inset-x-0 bg-gray-700;
 
     }
 

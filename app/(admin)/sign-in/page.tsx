@@ -2,6 +2,7 @@
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import loginBackground from "@/assets/images/loginBg.png"
 import {
   Form,
   FormControl,
@@ -10,10 +11,10 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";  // Adjust this path based on your actual setup
+} from "@/components/ui/form";  
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 // Define Zod schema for form validation
 const loginSchema = z.object({
@@ -26,7 +27,6 @@ type LoginFormValues = z.infer<typeof loginSchema>;
 export default function LoginPage() {
   const router = useRouter();
 
-  // Initialize react-hook-form with Zod resolver
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema),
   });
@@ -50,7 +50,7 @@ export default function LoginPage() {
     <div className="flex items-center justify-center min-h-screen bg-gray-50">
       <div className="flex max-w-[1400px] shadow-lg rounded-lg overflow-hidden w-full bg-white">
         {/* Left Side: Image */}
-        <div className="hidden lg:flex w-2/3 bg-cover" style={{ backgroundImage: 'url("/path-to-your-image.jpg")' }} />
+        <div className="hidden lg:flex w-2/3 bg-cover" style={{ backgroundImage: `url("${loginBackground.src}")` }} />
 
         {/* Right Side: Form */}
         <div className="w-full lg:w-1/3 p-8">
