@@ -1,5 +1,4 @@
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import AdminSidebar from "./components/common/Sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 
 export default function DashboardLayout({
@@ -13,9 +12,9 @@ export default function DashboardLayout({
                 className={`antialiased font-grotesk`}
             >
                 <SidebarProvider>
-                    <AppSidebar/>
+                    <AppSidebar />
                     <main className=" min-h-screen flex-1 w-full">
-                        <header className="h-10 w-full flex justify-between items-center px-2">
+                        <header className="h-10 w-full flex justify-between items-center px-2 bg-red-500">
                             <SidebarTrigger />
                             <div></div>
                         </header>

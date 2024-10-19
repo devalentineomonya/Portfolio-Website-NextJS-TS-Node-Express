@@ -1,6 +1,3 @@
-import AdminSidebar from "../components/common/Sidebar";
-
-
 const Dashboard = () => {
     return (
 

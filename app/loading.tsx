@@ -7,7 +7,7 @@ const Loading = () => {
     <div className="h-[calc(100vh-6rem)]">
       <div className={styles.loaderContainer}>
         <div className={styles.loaderLine}></div>
-        <FaSpinner className={styles.spinner} />
+        <FaSpinner size={14} className={styles.spinner} />
       </div>
     </div>
   );

@@ -5,12 +5,18 @@ import {
   AudioWaveform,
   BookOpen,
   Bot,
+  Car,
+  Clapperboard,
   Command,
+  FolderGit2,
   Frame,
   GalleryVerticalEnd,
+  Home,
+  LayoutDashboard,
   Map,
   PieChart,
   Settings2,
+  ShoppingBag,
   SquareTerminal,
 } from "lucide-react"
 
@@ -35,80 +41,67 @@ const data = {
   },
   teams: [
     {
-      name: "Acme Inc",
+      name: "Devalentine",
       logo: GalleryVerticalEnd,
-      plan: "Enterprise",
+      plan: "Owner",
     },
-    {
-      name: "Acme Corp.",
-      logo: AudioWaveform,
-      plan: "Startup",
-    },
-    {
-      name: "Evil Corp.",
-      logo: Command,
-      plan: "Free",
-    },
+    
   ],
   navMain: [
     {
-      title: "Playground",
+      title: "Home",
       url: "#",
-      icon: SquareTerminal,
+      icon: Home,
       isActive: true,
       items: [
         {
-          title: "History",
+          title: "Dashboard",
           url: "#",
         },
         {
-          title: "Starred",
+          title: "Visitors",
           url: "#",
         },
         {
-          title: "Settings",
+          title: "Link Clicks",
           url: "#",
         },
       ],
     },
     {
-      title: "Models",
+      title: "Projects",
       url: "#",
-      icon: Bot,
+      icon: FolderGit2,
       items: [
         {
-          title: "Genesis",
+          title: "Add Project",
           url: "#",
         },
         {
-          title: "Explorer",
+          title: "View Projects",
           url: "#",
         },
         {
-          title: "Quantum",
+          title: "Projects Stats",
           url: "#",
         },
       ],
     },
     {
-      title: "Documentation",
+      title: "Blogs",
       url: "#",
       icon: BookOpen,
       items: [
         {
-          title: "Introduction",
+          title: "Add Blog",
           url: "#",
         },
         {
-          title: "Get Started",
+          title: "All Blogs",
           url: "#",
         },
         {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
+          title: "Blogs Stats",
           url: "#",
         },
       ],
@@ -123,15 +116,7 @@ const data = {
           url: "#",
         },
         {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
+          title: "Preference",
           url: "#",
         },
       ],
@@ -139,19 +124,19 @@ const data = {
   ],
   projects: [
     {
-      name: "Design Engineering",
+      name: "DevalShopping Cart",
       url: "#",
-      icon: Frame,
+      icon: ShoppingBag ,
     },
     {
-      name: "Sales & Marketing",
+      name: "DevalRide Hire",
       url: "#",
-      icon: PieChart,
+      icon: Car,
     },
     {
-      name: "Travel",
+      name: "DevalCinemaz",
       url: "#",
-      icon: Map,
+      icon: Clapperboard ,
     },
   ],
 }
