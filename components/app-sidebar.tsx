@@ -2,22 +2,14 @@
 
 import * as React from "react"
 import {
-  AudioWaveform,
   BookOpen,
-  Bot,
   Car,
   Clapperboard,
-  Command,
   FolderGit2,
-  Frame,
   GalleryVerticalEnd,
   Home,
-  LayoutDashboard,
-  Map,
-  PieChart,
   Settings2,
   ShoppingBag,
-  SquareTerminal,
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"

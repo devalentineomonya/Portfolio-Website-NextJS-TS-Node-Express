@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from "./loading.module.css";
-import { FaSpinner } from 'react-icons/fa';
+import { ImSpinner2 } from 'react-icons/im';
 
 const Loading = () => {
   return (
     <div className="h-[calc(100vh-6rem)]">
       <div className={styles.loaderContainer}>
         <div className={styles.loaderLine}></div>
-        <FaSpinner size={14} className={styles.spinner} />
+        <ImSpinner2 size={14} className={styles.spinner} />
       </div>
     </div>
   );
