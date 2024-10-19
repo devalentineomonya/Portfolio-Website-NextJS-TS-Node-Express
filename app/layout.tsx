@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import React from "react";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/common/navbar/Navbar";
@@ -7,18 +8,10 @@ import SocialLinks from "@/components/common/socialLinks/SocialLinks";
 import NetworkStatus from "@/components/common/NetworkStatus/NetworkStatus";
 import PWAInstallButton from "@/components/common/PWAInstallButton/PWAInstallButton";
 import RegisterWorker from "@/components/common/RegisterWorker/RegisterWorker";
+
 import { ToastContainer } from "react-toastify";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+
 
 export const metadata: Metadata = {
   title: "Valentine Omonya | Software Engineer",
@@ -38,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased font-grotesk`}
+        className={`antialiased font-grotesk`}
       >
         <ToastContainer/>
         <NetworkStatus />

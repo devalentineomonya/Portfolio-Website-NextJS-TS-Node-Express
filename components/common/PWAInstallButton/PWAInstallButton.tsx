@@ -1,9 +1,11 @@
 "use client";
+import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 
 const PWAInstallButton = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
   const [isInstallable, setIsInstallable] = useState(false);
+  const pathname = usePathname().substring(1)
 
   useEffect(() => {
     // Ensure this code runs only on the client-side
@@ -46,7 +48,7 @@ const PWAInstallButton = () => {
   if (isStandalone) return null; // Hide button if already installed
 
   return (
-    <div className="fixed z-30 top-1/2 right-5 transform -translate-y-1/2">
+    <div className={`${pathname.includes("admin")  && "hidden"} fixed z-30 top-1/2 right-5 transform -translate-y-1/2`}>
       {isInstallable && (
         <button 
           onClick={handleInstallClick} 

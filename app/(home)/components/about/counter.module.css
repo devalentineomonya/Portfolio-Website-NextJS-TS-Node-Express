@@ -26,5 +26,4 @@
     .counterItem:nth-child(3) {
         @apply border-none;
     }
-
 }

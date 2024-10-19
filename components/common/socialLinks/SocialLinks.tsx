@@ -4,10 +4,12 @@ import { useState, useEffect } from "react";
 import socialLinksList from "./socialLinksList";
 import { CgShare } from "react-icons/cg";
 import styles from "./socialLinks.module.css";
+import { usePathname } from "next/navigation";
 
 const SocialLinks = () => {
   const [active, setActive] = useState(false);
   const [scaleActive, setScaleActive] = useState(false);
+  const pathname = usePathname().substring(1)
 
   useEffect(() => {
 
@@ -36,7 +38,7 @@ const SocialLinks = () => {
 
   return (
     <div
-      className={`flex-1 flex justify-center items-center fixed top-1/2 transition-all ease-in-out duration-400 ${
+      className={`${pathname.includes("admin") ? "hidden" : "flex" } flex-1  justify-center items-center fixed top-1/2 transition-all ease-in-out duration-400 ${
         active
           ? " right-1/2 md:right-[85%] w-full md:w-[280px] z-10 bg-black bg-opacity-40 md:bg-transparent h-full"
           : " right-[90%] md:right-[85%] w-fit h-fit z-[2]"

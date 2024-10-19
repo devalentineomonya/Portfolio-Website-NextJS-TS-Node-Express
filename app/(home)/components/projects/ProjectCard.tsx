@@ -52,7 +52,7 @@ const ProjectCard = ({
         <div className="h-full w-full flex items-center justify-center ">
           <button onClick={openPopup} className="relative border hover:border-sky-600 duration-500 group cursor-pointer text-sky-50  overflow-hidden h-10 w-40 rounded-md bg-red-800 p-2 flex justify-center items-center font-extrabold">
             <div className="absolute z-[5] w-48 h-48 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-red-900 delay-150 group-hover:delay-75"></div>
-            <div className="absolute z-[5] w-40 h-40 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-red-800 delay-150 group-hover:delay-[5]0"></div>
+            <div className="absolute z-[5] w-40 h-40 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-red-800 delay-150 group-hover:delay-100"></div>
             <div className="absolute z-[5] w-32 h-32 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-red-700 delay-150 group-hover:delay-150"></div>
             <div className="absolute z-[5] w-24 h-24 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-red-600 delay-150 group-hover:delay-200"></div>
             <div className="absolute z-[5] w-16 h-16 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-red-500 delay-150 group-hover:delay-300"></div>
