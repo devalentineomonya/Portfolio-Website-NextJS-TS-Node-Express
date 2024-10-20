@@ -5,7 +5,7 @@ const withPWAConfig = withPWA({
   register: true,
   skipWaiting: true,
   cacheOnFrontEndNav: true,
-  cacheStartUrl:true,
+  cacheStartUrl: true,
   runtimeCaching,
   reloadOnOnline: true,
   disable: process.env.NODE_ENV === 'development',
@@ -19,13 +19,27 @@ const withPWAConfig = withPWA({
 const nextConfig = withPWAConfig({
   reactStrictMode: true,
   swcMinify: true,
+  productionBrowserSourceMaps: false,
+  optimizeFonts: false,
+  experimental: {
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+      resolveExtensions: [
+        '.mdx',
+        '.tsx',
+        '.ts',
+        '.jsx',
+        '.js',
+        '.mjs',
+        '.json',
+      ],
+    },
+  }
 });
 
 export default nextConfig;
-
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   /* config options here */
-// }
- 
-// export default nextConfig
