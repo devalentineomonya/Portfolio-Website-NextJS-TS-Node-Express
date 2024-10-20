@@ -61,7 +61,7 @@ export default function LoginPage() {
 
   return (
     <div className="flex items-center justify-center  bg-gray-50">
-      <div className="flex shadow-lg rounded-lg overflow-hidden h-fit max-w-6xl min-h-screen w-full bg-white">
+      <div className="flex shadow-lg rounded-lg overflow-hidden h-fit max-w-8xl min-h-screen w-full bg-white">
         {/* Left Side: Image */}
         <div className="hidden lg:flex w-2/3 bg-cover" style={{ backgroundImage: `url("${loginBackground.src}")` }} />
 
