@@ -32,12 +32,12 @@ const ProjectPopup = ({
       className={`fixed h-screen w-full top-0 left-0 bg-[rgba(0,_0,_0,_0.4)]  flex justify-center items-center z-50 transition-all ease-in-out duration-300 `}
       style={{ scale: ` ${showPopup ? "1" : "0"}` }}
     >
-      <div className="flex bg-white h-[98%] w-[98%] md:h-[80%] ms:w-[70%] rounded-md relative overflow-hidden">
+      <div className="flex bg-white h-[98%] w-[98%] md:h-[80%] ms:w-[70%] max-w-8xl rounded-md relative overflow-hidden">
         <button
-          className="absolute right-2 top-[5px] h-10 aspect-square cursor-pointer bg-[rgba(0,_0,_0,_0.3)] rounded-full flex justify-center items-center text-white text-lg  z-50  "
+          className="absolute right-2 top-[5px] h-10 aspect-square cursor-pointer bg-[rgba(0,_0,_0,_0.3)] rounded-md flex justify-center items-center text-white text-lg  z-50  "
           onClick={() => setShowPopup(false)}
         >
-          <BsXLg size={30} />
+          <BsXLg size={24} />
         </button>
         {project && (
           <div className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-[1.1fr_0.9fr] gap-x-4 p-[5px]">

@@ -4,7 +4,7 @@
 }
 
 .socialLinksToggle {
-    @apply shadow-[0_3px_4px_rgba(0,_0,_0,_0.15)] transition-[0.5s];
+    @apply transition-[0.5s];
     @apply relative h-16 w-16 rounded-full bg-white flex justify-center items-center font-[2em] text-[#333] cursor-pointer;
 }
 

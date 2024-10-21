@@ -16,7 +16,7 @@
   }
   
   .options {
-    @apply absolute flex flex-col bg-white shadow-md w-full left-0 mt-2 opacity-0 invisible;
+    @apply absolute flex flex-col bg-white shadow-md w-full left-0 mt-2 opacity-0 invisible text-slate-950;
     transition: opacity 300ms ease, visibility 0s linear 300ms;
     z-index: 50;
     padding: 5px;
@@ -33,7 +33,7 @@
   }
   
   .option {
-    @apply p-2 rounded-md text-dark-primary inline-block py-1 text-left text-lg w-full;
+    @apply p-2 rounded-md text-dark-primary inline-block py-1 text-left text-lg w-full  cursor-pointer;
   }
   
   .options input[type="radio"] {

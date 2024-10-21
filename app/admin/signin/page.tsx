@@ -38,14 +38,14 @@ export default function LoginPage() {
   const onSubmit = async (data: LoginFormValues) => {
     setIsLoading(true)
     try {
-      const res = await fetch('/api/auth', {
+      const res = await fetch('/api/auth/signin', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
 
       if (res.ok) {
-        router.push('/dashboard');
+        router.push('/admin/dashboard');
       } else {
         toast.error("Login Failed")
         console.error('Login failed');

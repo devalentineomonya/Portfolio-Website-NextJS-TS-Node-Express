@@ -29,7 +29,7 @@ const Contact = () => {
                 <span className="sm:block"> amazing together. </span>
               </h1>
 
-              <p className="mx-auto mt-4 max-w-xl sm:text-xl/relaxed">
+              <p className="mx-auto mt-4 max-w-3xl sm:text-xl/relaxed">
                 &apos;m excited to explore project collaborations that leverage
                 the skills I&apos;ve developed. In addition to my full-time
                 coding work, I also take on freelance projects that challenge my

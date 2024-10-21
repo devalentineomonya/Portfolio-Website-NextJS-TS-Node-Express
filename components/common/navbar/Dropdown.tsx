@@ -51,7 +51,7 @@ const Dropdown = ({setShowSideMenu}:{setShowSideMenu:(state:boolean)=>void}) => 
           <div
             key={page.name}
             title={page.name.toLowerCase()}
-            className="py-1 w-full cursor-pointer hover:bg-gray-100 my-1"
+            className="py-1 w-full  hover:bg-gray-100 my-1"
             onClick={() => handleSelect(page)}
           >
             <input id={page.name} name="option" type="radio" />

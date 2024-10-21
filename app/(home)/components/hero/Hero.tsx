@@ -32,8 +32,8 @@ const Hero = () => {
           id="home"
         >
           <div className="flex items-center justify-center  h-full w-full max-w-8xl px-4 lg:p-0">
-            <div className="flex flex-col items-center">
-              <div className="flex w-full gap-x-5 text-start text-white text-lg sm:text-2xl font-medium cursor-default ">
+            <div className="flex flex-col items-center w-2/3">
+              <div className="flex w-full items-center justify-center text-white text-lg sm:text-2xl font-medium cursor-default ">
                 <p className="flex items-center justify-start">
                   I am a{" "}
                   <span className="ml-2 h-[2px] w-10 bg-white inline-block "></span>
@@ -50,7 +50,7 @@ const Hero = () => {
                 <h1 className={styles.heroTextContainer}>Valentine</h1>
               </div>
               <div className="flex flex-col items-start">
-                <p className="flex gap-x-5 text-start text-lg sm:text-3xl font-medium cursor-default mt-8 md:mt-3 text-white">
+                <p className="flex gap-x-3 text-start text-lg sm:text-2xl font-medium cursor-default mt-8 md:mt-3 text-white">
                   <span>Full Stack</span> -<span>Mobile Apps</span>-
                   <span>ML Engineer</span>
                 </p>
@@ -64,8 +64,8 @@ const Hero = () => {
                 </Link>
               </div>
             </div>
+          <div className="flex-1 max-lg:hidden h-12"></div>
           </div>
-          <div className="flex-1 hidden lg:inline-flex"></div>
         </div>
         {/* </Animation> */}
         <div
