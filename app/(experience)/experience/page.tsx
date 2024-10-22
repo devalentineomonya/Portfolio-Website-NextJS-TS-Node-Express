@@ -129,7 +129,7 @@ const ExperienceShowcase = () => {
               key={experience.name}
               className={classNames(
                 idx !== experiences.length ? "pb-4" : "",
-                "relative bg-white"
+                "relative"
               )}
             >
               {experience.status === "past" ? (
