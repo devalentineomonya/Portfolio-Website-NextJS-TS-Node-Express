@@ -13,6 +13,7 @@ const projectsList = [
     previewImage: defaultPreview,
     popupImage: defaultPopup,
     technologies: ["ReactJS", "NodeJS", "Express"],
+    environment:"web",
     description:
       "DevalShopping Cart is a full-stack eCommerce app built with ReactJS, NodeJS, and Express. It offers user login, product browsing, a shopping cart, secure checkout, and order tracking. With an intuitive interface, it provides a smooth and efficient shopping experience.",
     liveLink: "https://devalshoppingcart.vercel.app/",
@@ -25,7 +26,8 @@ const projectsList = [
     name: "DevalCinemaz",
     previewImage: defaultPreview,
     popupImage: defaultPopup,
-    technologies: ["Web", "NextJS", "TMDB API", "Cleck Auth"],
+    technologies: ["NextJS", "TMDB API", "Cleck Auth"],
+    environment:"web",
     description:
       "DevalCinemaz is a movie trailer platform built with NextJS and powered by the TMDB API. It lets users explore a vast collection of movies, view trailers, and access movie details like release dates, ratings, and overviews. With a responsive interface, users can browse through popular and upcoming films.",
     liveLink: "https://devalcinemaz.vercel.app/",
@@ -37,7 +39,8 @@ const projectsList = [
     name: "DevalMotors",
     previewImage: defaultPreview,
     popupImage: defaultPopup,
-    technologies: ["Web", "NextJS", "TS", "Hono", "NodeJS"],
+    technologies: ["NextJS", "TS", "Hono", "NodeJS"],
+    environment:"web",
     description:
       "DevalMotors is a vehicle booking platform built with NextJS, TypeScript, Hono, and NodeJS. It allows users to browse and book various vehicles, offering a streamlined experience for scheduling rides and managing reservations. With a user-friendly interface and real-time booking features, DevalMotors makes vehicle rentals quick and efficient.",
     liveLink: "http://devalmotors.vercel.app",
@@ -49,7 +52,8 @@ const projectsList = [
     name: "DevalWeather App",
     previewImage: weatherPreview,
     popupImage: weatherPopup,
-    technologies: ["Web", "ReactJS", "OpenWeather API"],
+    technologies: [ "ReactJS", "OpenWeather API"],
+    environment:"web",
     description:
       "The React Weather App provides hyperlocal, 5-day forecasts in 3-hour increments for any location. Access temperature, humidity, wind speed, and pressure data. Ideal for travelers and professionals, this app offers effortless navigation and a clear, intuitive interface for informed decision-making",
     liveLink: "https://deval-weather-app.vercel.app/",
@@ -60,7 +64,8 @@ const projectsList = [
     name: "254 Outfit E-Commerce",
     previewImage: defaultPreview,
     popupImage: defaultPopup,
-    technologies: ["Web", "NextJS", "Hono", "TS", "Node"],
+    technologies: ["NextJS", "Hono", "TS", "Node"],
+    environment:"web",
     description:
       "254 Outfit E-Commerce is an online platform built with NextJS, Hono, TypeScript, and NodeJS, designed to help users find stylish outfits in Kenya. With a focus on local fashion, the website offers a wide range of clothing options, easy navigation, and a seamless shopping experience.",
     liveLink: "https://254outfitcommerce.vercel.app",
@@ -71,7 +76,8 @@ const projectsList = [
     name: "DevalCodeMe",
     previewImage: defaultPreview,
     popupImage: defaultPopup,
-    technologies: ["Web", "NextJS", "Hono", "TS", "Node"],
+    technologies: ["NextJS", "Hono", "TS", "Node"],
+    environment:"web",
     description:
       "DevalCodeMe is an e-learning platform built with NextJS, Hono, TypeScript, and NodeJS. It offers coding challenges, tests, and learning resources to help users improve their programming skills in a practical and engaging way.",
     liveLink: "https://devalcodeme.vercel.app",

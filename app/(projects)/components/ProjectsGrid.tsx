@@ -12,13 +12,11 @@ const ProjectsGrid = () => {
 
   useEffect(() => {
     let Isotope: any;
-    
+
     if (gridRef.current) {
       import("isotope-layout").then((mod) => {
         Isotope = mod.default;
-        import("isotope-packery").then((packeryMod) => {
-         
-         let _ = packeryMod.default;
+        import("isotope-packery").then(() => {
           isoRef.current = new Isotope(gridRef.current, {
             itemSelector: ".grid-item",
             layoutMode: "packery",
@@ -56,56 +54,104 @@ const ProjectsGrid = () => {
 
   return (
     <>
-      <div className="w-full flex items-center justify-center">
+      <div className="w-full flex items-center justify-center gap-x-3 flex-wrap gap-y-4">
         <button
-          className="bg-blue-500 text-white px-4 py-1 rounded-sm h-6"
+          className={`${
+            selectedStack === "" && selectedEnvironment === ""
+              ? "bg-primary text-white"
+              : "bg-white text-slate-900"
+          } px-3 py-1 gap-x-3`}
           onClick={() => {
             setSelectedStack("");
             setSelectedEnvironment("");
           }}
         >
-          Show All
+          All
         </button>
         <button
-          className="bg-blue-500 text-white px-4 py-1 rounded-sm h-6"
+          className={`${
+            selectedStack === "reactjs" ? "bg-primary text-white" : "bg-white text-slate-900"
+          } px-3 py-1 gap-x-3`}
           onClick={() => setSelectedStack("reactjs")}
         >
           ReactJS
         </button>
         <button
-          className="bg-blue-500 text-white px-4 py-1 rounded-sm h-6"
-          onClick={() => setSelectedStack("nodejs")}
+          className={`${
+            selectedStack === "angular" ? "bg-primary text-white" : "bg-white text-slate-900"
+          } px-3 py-1 gap-x-3`}
+          onClick={() => setSelectedStack("angular")}
         >
-          NodeJS
+          Angular
         </button>
         <button
-          className="bg-blue-500 text-white px-4 py-1 rounded-sm h-6"
+          className={`${
+            selectedStack === "nextjs" ? "bg-primary text-white" : "bg-white text-slate-900"
+          } px-3 py-1 gap-x-3`}
           onClick={() => setSelectedStack("nextjs")}
         >
           NextJS
         </button>
         <button
-          className="bg-blue-500 text-white px-4 py-1 rounded-sm h-6"
+          className={`${
+            selectedStack === "nodejs" ? "bg-primary text-white" : "bg-white text-slate-900"
+          } px-3 py-1 gap-x-3`}
+          onClick={() => setSelectedStack("nodejs")}
+        >
+          NodeJS
+          </button>
+        <button
+          className={`${
+            selectedStack === "laravel" ? "bg-primary text-white" : "bg-white text-slate-900"
+          } px-3 py-1 gap-x-3`}
+          onClick={() => setSelectedStack("laravel")}
+        >
+          Laravel
+        </button>
+        <button
+          className={`${
+            selectedStack === "python" ? "bg-primary text-white" : "bg-white text-slate-900"
+          } px-3 py-1 gap-x-3`}
+          onClick={() => setSelectedStack("python")}
+        >
+          Python
+          </button>
+      </div>
+          <div className="w-full flex items-center justify-center gap-x-3 flex-wrap gap-y-4 mt-3">
+        <button
+          className={`${
+            selectedEnvironment === "web" ? "bg-primary text-white" : "bg-white text-slate-900"
+          } px-3 py-1 gap-x-3`}
           onClick={() => setSelectedEnvironment("web")}
         >
           Web
         </button>
         <button
-          className="bg-blue-500 text-white px-4 py-1 rounded-sm h-6"
+          className={`${
+            selectedEnvironment === "mobile" ? "bg-primary text-white" : "bg-white text-slate-900"
+          } px-3 py-1 gap-x-3`}
           onClick={() => setSelectedEnvironment("mobile")}
         >
           Mobile
         </button>
-      </div>
+        <button
+          className={`${
+            selectedEnvironment === "aiml" ? "bg-primary text-white" : "bg-white text-slate-900"
+          } px-3 py-1 gap-x-3`}
+          onClick={() => setSelectedEnvironment("aiml")}
+        >
+          AIML
+        </button>
+        </div>
 
       <div className="flex items-start justify-center h-fit min-h-[calc(100vh-6rem)] py-12">
-        <div className="flex flex-wrap  w-full max-w-[1400px]  mx-[calc(1.5rem/-2)] " ref={gridRef}>
+        <div className="flex flex-wrap w-full max-w-[1400px] mx-[calc(1.5rem/-2)]" ref={gridRef}>
           {projectsList.map((project) => (
             <div
               key={project.id}
               className={`${getFilterClassName(project.technologies)} ${
-                project.name.includes("Mobile") ? "mobile" : "web"
-              } rounded shadow flex-[0_0_auto] mx-[calc(1.5rem/-2)] shrink-0 w-2/5 lg:w-1/4 aspect-square  grid-item`}
+                project.environment
+              } rounded shadow flex-[0_0_auto] mx-[calc(1.5rem/-3)] lg:mx-[calc(1.5rem/-2)] shrink-0 w-full lg:mt-3 lg:w-1/4 aspect-square grid-item`}
             >
               <Image
                 src={project.popupImage}
@@ -121,4 +167,3 @@ const ProjectsGrid = () => {
 };
 
 export default ProjectsGrid;
-
