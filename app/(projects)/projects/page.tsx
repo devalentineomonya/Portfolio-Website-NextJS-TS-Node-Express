@@ -1,22 +1,25 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import Isotope from "isotope-layout";
 import projectsList from "@/app/(home)/components/projects/projectsList";
 import Image from "next/image";
 
-const Gallery = () => {
+const Projectsm = () => {
   const gridRef = useRef<HTMLDivElement | null>(null);
-  const isoRef = useRef<Isotope | null>(null);
+  const isoRef = useRef<any | null>(null);
 
   const [selectedStack, setSelectedStack] = useState<string>("");
   const [selectedEnvironment, setSelectedEnvironment] = useState<string>("");
 
   useEffect(() => {
-    if (typeof window !== "undefined" && gridRef.current) {
-      isoRef.current = new Isotope(gridRef.current, {
-        itemSelector: ".grid-item",
-        layoutMode: "fitRows",
-        percentPosition: true,
+    let Isotope: any;
+    if (gridRef.current) {
+      import("isotope-layout").then((mod) => {
+        Isotope = mod.default;
+        isoRef.current = new Isotope(gridRef.current, {
+          itemSelector: ".grid-item",
+          layoutMode: "fitRows",
+          percentPosition: true,
+        });
       });
     }
 
@@ -27,7 +30,7 @@ const Gallery = () => {
     };
   }, []);
 
-  const handleFilter = () => {
+  useEffect(() => {
     const filterValue =
       `${selectedStack ? `.${selectedStack}` : ""}${
         selectedEnvironment ? `.${selectedEnvironment}` : ""
@@ -35,7 +38,7 @@ const Gallery = () => {
     if (isoRef.current) {
       isoRef.current.arrange({ filter: filterValue });
     }
-  };
+  }, [selectedStack, selectedEnvironment]);
 
   const getFilterClassName = (technologies: string[]) => {
     return technologies
@@ -51,56 +54,37 @@ const Gallery = () => {
           onClick={() => {
             setSelectedStack("");
             setSelectedEnvironment("");
-            handleFilter();
           }}
         >
           Show All
         </button>
-        {/* Hardcoded filter buttons */}
         <button
           className="bg-blue-500 text-white px-4 py-2 rounded"
-          onClick={() => {
-            setSelectedStack("reactjs");
-            handleFilter();
-          }}
+          onClick={() => setSelectedStack("reactjs")}
         >
           ReactJS
         </button>
         <button
           className="bg-blue-500 text-white px-4 py-2 rounded"
-          onClick={() => {
-            setSelectedStack("nodejs");
-            handleFilter();
-          }}
+          onClick={() => setSelectedStack("nodejs")}
         >
           NodeJS
         </button>
         <button
           className="bg-blue-500 text-white px-4 py-2 rounded"
-          onClick={() => {
-            setSelectedStack("nextjs");
-            handleFilter();
-          }}
+          onClick={() => setSelectedStack("nextjs")}
         >
           NextJS
         </button>
-
-        {/* Environment filters */}
         <button
           className="bg-blue-500 text-white px-4 py-2 rounded"
-          onClick={() => {
-            setSelectedEnvironment("web");
-            handleFilter();
-          }}
+          onClick={() => setSelectedEnvironment("web")}
         >
           Web
         </button>
         <button
           className="bg-blue-500 text-white px-4 py-2 rounded"
-          onClick={() => {
-            setSelectedEnvironment("mobile");
-            handleFilter();
-          }}
+          onClick={() => setSelectedEnvironment("mobile")}
         >
           Mobile
         </button>
@@ -128,4 +112,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default Projectsm;
