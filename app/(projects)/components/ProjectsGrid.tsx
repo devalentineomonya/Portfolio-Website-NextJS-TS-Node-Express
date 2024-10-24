@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import projectsList from "@/app/(home)/components/projects/projectsList";
 import Image from "next/image";
 
-const Projects = () => {
+const ProjectsGrid = () => {
   const gridRef = useRef<HTMLDivElement | null>(null);
   const isoRef = useRef<any | null>(null);
 
@@ -56,9 +56,9 @@ const Projects = () => {
 
   return (
     <>
-      <div className="mb-4 space-x-4">
+      <div className="w-full flex items-center justify-center">
         <button
-          className="bg-blue-500 text-white px-4 py-2 rounded"
+          className="bg-blue-500 text-white px-4 py-1 rounded-sm h-6"
           onClick={() => {
             setSelectedStack("");
             setSelectedEnvironment("");
@@ -67,31 +67,31 @@ const Projects = () => {
           Show All
         </button>
         <button
-          className="bg-blue-500 text-white px-4 py-2 rounded"
+          className="bg-blue-500 text-white px-4 py-1 rounded-sm h-6"
           onClick={() => setSelectedStack("reactjs")}
         >
           ReactJS
         </button>
         <button
-          className="bg-blue-500 text-white px-4 py-2 rounded"
+          className="bg-blue-500 text-white px-4 py-1 rounded-sm h-6"
           onClick={() => setSelectedStack("nodejs")}
         >
           NodeJS
         </button>
         <button
-          className="bg-blue-500 text-white px-4 py-2 rounded"
+          className="bg-blue-500 text-white px-4 py-1 rounded-sm h-6"
           onClick={() => setSelectedStack("nextjs")}
         >
           NextJS
         </button>
         <button
-          className="bg-blue-500 text-white px-4 py-2 rounded"
+          className="bg-blue-500 text-white px-4 py-1 rounded-sm h-6"
           onClick={() => setSelectedEnvironment("web")}
         >
           Web
         </button>
         <button
-          className="bg-blue-500 text-white px-4 py-2 rounded"
+          className="bg-blue-500 text-white px-4 py-1 rounded-sm h-6"
           onClick={() => setSelectedEnvironment("mobile")}
         >
           Mobile
@@ -120,4 +120,5 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectsGrid;
+
