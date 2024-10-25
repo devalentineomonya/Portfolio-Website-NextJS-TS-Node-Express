@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const BlogCard = () => {
   return (
-    <article className="w-full h-fit min-h-[700px] max-w-3xl bg-white shadow-sm ">
+    <article className="w-full h-fit min-h-[700px] max-w-3xl bg-white shadow-md ">
       <figure className="relative">
         <Image
           src={blogImage}

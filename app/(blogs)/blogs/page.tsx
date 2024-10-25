@@ -1,12 +1,14 @@
 import React from "react";
 import BlogCard from "../components/BlogCard";
 import { ChevronRightIcon, ChevronLeftIcon } from "lucide-react";
+import SectionLayout from "@/components/layouts/section/SectionLayout";
 const page = () => {
   return (
-    <div className="flex items-center flex-col justify-start w-full bg-[#f8f8f8] py-12">
-      <div className="min-h-8 mb-12 font-semibold font-dosis text-5xl">
-        My Blogs
-      </div>
+    <SectionLayout sectionDescription="Get to know more from me" sectionId="blogs-page" sectionName="My Blogs" sectionNumber="01">
+
+
+    <div className="flex items-center flex-col justify-start w-full py-12">
+      
       <div className=" flex items-center justify-center flex-col gap-y-16 w-full max-w-3xl">
         <BlogCard />
         <BlogCard />
@@ -78,6 +80,7 @@ const page = () => {
         </nav>
       </div>
     </div>
+    </SectionLayout>
   );
 };
 

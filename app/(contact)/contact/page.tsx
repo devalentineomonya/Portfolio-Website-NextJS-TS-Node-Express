@@ -4,9 +4,13 @@ import { FaRegComment } from "react-icons/fa6";
 import { BsGithub, BsTelephone } from "react-icons/bs";
 import { SlLocationPin } from "react-icons/sl";
 import ContactForm from "../components/ContactForm";
+import SectionLayout from "@/components/layouts/section/SectionLayout";
 const page = () => {
   return (
-    <div className="h-full pb-12 lg:min-h-[calc(100vh-6rem)] flex justify-center px-4 md:px-0 pt-12">
+    <SectionLayout sectionDescription="Let Have a professional conversation" sectionId="contact-page" sectionName="Contact Me" sectionNumber="01">
+
+
+    <div className="h-full py-12 flex justify-center px-4 md:px-0">
       <div className="h-full w-full max-w-8xl flex items-center flex-col">
         <div className="w-full flex items-center justify-center flex-col lg:flex-row gap-4 max-w-7xl">
           <ContactCard icon={<SlLocationPin />} content="Nairobi, Kenya" />
@@ -32,6 +36,7 @@ const page = () => {
         </div>
       </div>
     </div>
+    </SectionLayout>
   );
 };
 

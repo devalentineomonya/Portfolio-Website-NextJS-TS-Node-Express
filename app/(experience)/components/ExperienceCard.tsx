@@ -32,7 +32,7 @@ const ExperienceCard = ({
           )}
         </span>
       </span>
-      <span className=" bg-white  ml-2 md:ml-16 flex flex-col w-full min-h-52 h-fit shadow-md rounded-md p-4 relative max-md:before:hidden before:h-full before:w-28 before:content-[''] before:-left-28 before:bg-white before:absolute before:top-0 experience-card px-3">
+      <span className=" bg-white  ml-2 flex flex-col w-full min-h-52 h-fit shadow-md rounded-md p-4 relative experience-card px-3">
         <span className="text-sm font-semibold tracking-wide uppercase text-red-600 flex items-center flex-wrap gap-x-3 gap-y-2">
           <span className="whitespace-nowrap">{name}</span>
           <span className="bg-red-500 w-8 h-[2px] max-sm:hidden"></span>
