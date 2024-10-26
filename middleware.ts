@@ -9,12 +9,12 @@ export async function middleware(req: NextRequest) {
   const requestedPath = req.nextUrl.pathname;
 
   if (token) {
-    if (requestedPath === '/admin/auth/signin') {
+    if (requestedPath === '/admin/signin') {
       return NextResponse.redirect(new URL('/admin/dashboard', req.url));
     }
   } else {
-    if (!requestedPath.startsWith('/admin/auth')) {
-      return NextResponse.redirect(new URL('/admin/auth/signin', req.url));
+    if (!requestedPath.startsWith('/admin/signin')) {
+      return NextResponse.redirect(new URL('/admin/signin', req.url));
     }
   }
 
