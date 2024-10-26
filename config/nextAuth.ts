@@ -16,57 +16,53 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         },
       },
       async authorize(credentials) {
-        let user = null;
-      
         const parsedCredentials = loginSchema.safeParse(credentials);
         if (!parsedCredentials.success) {
           console.error("Invalid credentials:", parsedCredentials.error.errors);
           return null;
         }
-      
+
         await connectToDatabase();
-        user = await User.findOne({ email: credentials.email });
-        
+        const user = await User.findOne({ email: credentials.email });
+
         if (!user) {
           console.log("Invalid credentials");
           return null;
         }
-      
-        const isValid = await bcrypt.compare(credentials.password as string, user.password); 
-      
+
+        const isValid = await bcrypt.compare(
+          credentials.password as string,
+          user.password
+        );
+
         if (!isValid) {
           console.log("Invalid credentials");
           return null;
         }
-      
-        return user; 
-      }
+
+        return user;
+      },
     }),
   ],
   callbacks: {
-    async authorized({ request: { nextUrl }, auth }) {
+    authorized({ request: { nextUrl }, auth }) {
       const isLoggedIn = !!auth?.user;
       const { pathname } = nextUrl;
-  
-      // Check if the user is already logged in
       if (pathname.startsWith("/admin/signin") && isLoggedIn) {
-        return true; // Allow access since they're already logged in
+        return Response.redirect(new URL("/admin/dashboard", nextUrl));
       }
-      
-      // Add additional path checks as needed
-      if (pathname.startsWith("/page2") && !auth?.user?.isAdmin) {
-        return false; // Deny access for non-admin users
-      }
-  
-      return !!auth; // Return whether the user is authenticated
+      return !!auth;
     },
+
     jwt({ token, user, trigger, session }) {
-      console.log("user",user)
+      console.log("user", user , "token", token , "session", session);
       if (user) {
-        token.id = user?._id as string;
-        token.fullName = `${user?.firstName} ${user?.lastName}`; 
-        token.isAdmin = user?.isAdmin;
+        token._id = user._id;
+        token.fullName = `${user.firstName} ${user.lastName}`;
+        token.isAdmin = user.isAdmin;
+        token.email = user.email;
       }
+
       if (trigger === "update" && session) {
         token = { ...token, ...session };
       }
@@ -74,8 +70,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     },
     session({ session, token }) {
       session.user._id = token._id;
-      session.user.fullName = token.fullName as string
+      session.user.fullName = token.fullName;
       session.user.isAdmin = token.isAdmin;
+      session.user.email = token.email as string;
       return session;
     },
   },
