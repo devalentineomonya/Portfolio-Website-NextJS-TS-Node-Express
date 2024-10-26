@@ -34,7 +34,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/not-found.tsx"
-  ],
+, "config/nextAuth.text"  ],
   "exclude": [
     "node_modules"
   ]

@@ -1,5 +1,3 @@
-import { NextRequest, NextResponse } from "next/server";
+import { handlers } from "@/config/nextAuth";
 
-export async function POST(req:NextRequest){
-  return NextResponse.json({message: "Hello World!", data: await req.json()});
-}
+export const {GET, POST} = handlers;
