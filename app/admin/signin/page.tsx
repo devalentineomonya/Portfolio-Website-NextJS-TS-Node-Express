@@ -35,10 +35,10 @@ export default function LoginPage() {
       const response = await handleCredentialsSignin(data);
       console.log(response?.message)
     
-      if (!response.success) {
-        toast.error(response.message || "An error occurred while logging in");
+      if (!response?.success) {
+        toast.error(response?.message || "An error occurred while logging in");
       } else {
-toast.success("Loggedin  successfully")
+toast.success("Log In  successful")
       }
     } catch (error: any) {
       console.error(error);
