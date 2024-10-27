@@ -1,8 +1,8 @@
 "use client";
 import * as React from "react";
-import { NavMain } from "./nav-main";
+import { NavMain } from "./NavMain";
 import { NavProjects } from "./nav-projects";
-import { TeamSwitcher } from "./team-switcher";
+import { TeamSwitcher } from "./TeamSwitcher";
 import NavUserWrapper from "./NavUserWrapper";
 import { sidebarData } from "./sidebarItems";
 import {
