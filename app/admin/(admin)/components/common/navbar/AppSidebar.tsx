@@ -1,9 +1,10 @@
 "use client";
 import * as React from "react";
-import { NavMain } from "@/app/admin/(admin)/components/common/navbar/NavMain";
-import { NavProjects } from "@/app/admin/(admin)/components/common/navbar/NavProjects";
-import { NavUser } from "@/app/admin/(admin)/components/common/navbar/NavUser";
-import { TeamSwitcher } from "@/app/admin/(admin)/components/common/navbar/TeamSwitcher";
+import { NavMain } from "./nav-main";
+import { NavProjects } from "./nav-projects";
+import { TeamSwitcher } from "./team-switcher";
+import NavUserWrapper from "./NavUserWrapper";
+import { sidebarData } from "./sidebarItems";
 import {
   Sidebar,
   SidebarContent,
@@ -11,7 +12,6 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar";
-import { sidebarData } from "./sidebarItems";
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
@@ -24,7 +24,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavProjects projects={sidebarData.projects} />
       </SidebarContent>
       <SidebarFooter>
-        <NavUser />
+        <NavUserWrapper />
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>

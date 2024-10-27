@@ -1,23 +1,43 @@
 import mongoose from 'mongoose';
 
-const uri = process.env.MONGODB_URI || 'mongodb://localhost:27017/devalentineProjects';
-
-if (!uri) {
-  throw new Error('Please add your Mongo URI to .env.local');
+declare global {
+  var mongoose: any; 
 }
-let isConnected = false; 
-export async function connectToDatabase() {
-  if (isConnected) {
-    console.log('Using existing database connection');
-    return mongoose.connection;
+
+const MONGODB_URI = process.env.MONGODB_URI as string || 'mongodb://localhost:27017/devalentineProjects';
+
+if (!MONGODB_URI) {
+  throw new Error(
+    "Please define the MONGODB_URI environment variable inside .env.local",
+  );
+}
+
+let cached = global.mongoose;
+
+if (!cached) {
+  cached = global.mongoose = { conn: null, promise: null };
+}
+
+async function connectToDatabase() {
+  if (cached.conn) {
+    return cached.conn;
+  }
+  if (!cached.promise) {
+    const opts = {
+      bufferCommands: false,
+    };
+    cached.promise = mongoose.connect(MONGODB_URI, opts).then((mongoose) => {
+      return mongoose;
+    });
   }
   try {
-    const db = await mongoose.connect(uri);
-    isConnected = db.connections[0].readyState === 1;
-    console.log('Connected to MongoDB');
-    return db;
-  } catch (error) {
-    console.error('Failed to connect to MongoDB', error);
-    throw error;
+    cached.conn = await cached.promise;
+  } catch (e) {
+    cached.promise = null;
+    throw e;
   }
+
+  return cached.conn;
 }
+
+export default connectToDatabase;

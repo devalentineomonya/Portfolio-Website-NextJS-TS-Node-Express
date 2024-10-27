@@ -18,12 +18,12 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar";
-import { auth } from "@/config/nextAuth";
+
+
 import { handleSignOut } from "@/app/actions/sigin.action";
 
-export async function NavUser() {
+export function NavUser({ session }: { session:any}) {
   const { isMobile } = useSidebar();
-  const session = await auth();
   return (
     <SidebarMenu>
       <SidebarMenuItem>

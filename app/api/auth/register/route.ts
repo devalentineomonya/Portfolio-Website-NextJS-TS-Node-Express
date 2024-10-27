@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import bcrypt from "bcryptjs";
 import User from "@/models/User";
-import { connectToDatabase } from "@/lib/mongodb";
+import  connectToDatabase  from "@/lib/mongodb";
 
 const userSchema = z.object({
   firstName: z.string().min(1, "First name is required"),
