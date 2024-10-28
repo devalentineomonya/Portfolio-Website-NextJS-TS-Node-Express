@@ -1,1 +1,0 @@
-ALTER TABLE "userTable" ADD COLUMN "image" varchar;

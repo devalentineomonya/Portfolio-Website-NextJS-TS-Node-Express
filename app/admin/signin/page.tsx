@@ -1,5 +1,5 @@
 "use client";
-import {z} from "zod"
+import { z } from "zod";
 import { useForm } from "react-hook-form";
 import loginBackground from "@/assets/images/loginBg.png";
 import {
@@ -19,7 +19,6 @@ import { handleCredentialsSignin } from "@/app/actions/sigin.action";
 import { loginSchema } from "@/lib/zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-
 type LoginFormValues = z.infer<typeof loginSchema>;
 
 export default function LoginPage() {
@@ -33,12 +32,12 @@ export default function LoginPage() {
     setIsLoading(true);
     try {
       const response = await handleCredentialsSignin(data);
-      console.log(response?.message)
-    
+      console.log(response?.message);
+
       if (!response?.success) {
         toast.error(response?.message || "An error occurred while logging in");
       } else {
-toast.success("Log In  successful")
+        toast.success("Log In  successful");
       }
     } catch (error: any) {
       console.error(error);

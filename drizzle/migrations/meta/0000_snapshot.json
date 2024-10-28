@@ -1,9 +1,102 @@
 {
-  "id": "f77c2780-2713-44f0-991f-5c265ed52e3a",
+  "id": "ed21308d-03b9-4ef1-9e29-081451b70c66",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
+    "public.projectTable": {
+      "name": "projectTable",
+      "schema": "",
+      "columns": {
+        "project_id": {
+          "name": "project_id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "created_by": {
+          "name": "created_by",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "project_name": {
+          "name": "project_name",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "project_description": {
+          "name": "project_description",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "project_preview_image": {
+          "name": "project_preview_image",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "project_popup_image": {
+          "name": "project_popup_image",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "project_live_link": {
+          "name": "project_live_link",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "project_github_link": {
+          "name": "project_github_link",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "project_technologies": {
+          "name": "project_technologies",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "project_environment": {
+          "name": "project_environment",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "projectTable_created_by_userTable_user_id_fk": {
+          "name": "projectTable_created_by_userTable_user_id_fk",
+          "tableFrom": "projectTable",
+          "tableTo": "userTable",
+          "columnsFrom": [
+            "created_by"
+          ],
+          "columnsTo": [
+            "user_id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "cascade"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "projectTable_project_id_unique": {
+          "name": "projectTable_project_id_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "project_id"
+          ]
+        }
+      },
+      "checkConstraints": {}
+    },
     "public.userTable": {
       "name": "userTable",
       "schema": "",
@@ -11,7 +104,7 @@
         "user_id": {
           "name": "user_id",
           "type": "serial",
-          "primaryKey": false,
+          "primaryKey": true,
           "notNull": true
         },
         "first_name": {
@@ -44,12 +137,25 @@
           "type": "varchar",
           "primaryKey": false,
           "notNull": true
+        },
+        "image": {
+          "name": "image",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": false
         }
       },
       "indexes": {},
       "foreignKeys": {},
       "compositePrimaryKeys": {},
       "uniqueConstraints": {
+        "userTable_user_id_unique": {
+          "name": "userTable_user_id_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "user_id"
+          ]
+        },
         "userTable_email_unique": {
           "name": "userTable_email_unique",
           "nullsNotDistinct": false,
