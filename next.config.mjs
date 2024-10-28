@@ -20,6 +20,15 @@ const nextConfig = withPWAConfig({
   reactStrictMode: true,
   swcMinify: true,
   productionBrowserSourceMaps: false,
+  webpack:(config, { isServer }) => {
+    if (!isServer) {
+      config.node = {
+        fs: 'empty'
+      }
+    }
+
+    return config
+  },
   optimizeFonts: false,
   experimental: {
     turbo: {
