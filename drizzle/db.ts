@@ -1,8 +1,12 @@
 "use server"
 import { drizzle } from 'drizzle-orm/vercel-postgres';
 import * as schema from "./schema";
-// import "./config"
-import {sql} from "@vercel/postgres"
-const db = drizzle(sql, { schema, logger: true });
+import { sql } from "@vercel/postgres";
 
-export default db;
+export async function connectToDB() {
+    return await drizzle(sql, { schema, logger: true });
+}
+
+const db = await connectToDB();
+
+export { db };
