@@ -1,10 +1,7 @@
-"use server"
-import { drizzle } from 'drizzle-orm/vercel-postgres';
-import * as schema from "./schema";
-import { sql } from "@vercel/postgres";
+import { neon } from '@neondatabase/serverless';
+import { drizzle } from 'drizzle-orm/neon-http';
+import * as schema from "./schema"
 
-export  default async function connectToDB() {
-    return await drizzle(sql, { schema, logger: true });
-}
+const client = neon(process.env.DATABASE_URL! as string);
 
-
+export const db = drizzle(client, {schema, logger:true}); 

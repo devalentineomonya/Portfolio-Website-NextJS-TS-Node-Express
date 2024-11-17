@@ -3,6 +3,8 @@ import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
 import { getUserByEmailService } from "@/services/user.service";
+
+
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
     Credentials({
@@ -80,3 +82,4 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     signIn: "/admin/signin",
   },
 });
+

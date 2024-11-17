@@ -10,13 +10,10 @@ export async function handleCredentialsSignin({
   password: string;
 }) {
   try {
-     await signIn("credentials", {
+    await signIn("credentials", {
       email,
       password,
-      redirectTo: "/admin/dashboard",
     });
-
- 
   } catch (error) {
     if (error instanceof AuthError) {
       switch (error.type) {
@@ -32,7 +29,7 @@ export async function handleCredentialsSignin({
       }
     }
 
-    console.log("An error from outer scope",error)
+    console.log("An error from outer scope", error);
     return {
       success: false,
       message: "An unexpected error occurred. from outer scope",
@@ -40,7 +37,6 @@ export async function handleCredentialsSignin({
   }
 }
 
-
 export async function handleSignOut() {
-  await signOut({redirectTo:"/"});
+  await signOut({ redirectTo: "/" });
 }

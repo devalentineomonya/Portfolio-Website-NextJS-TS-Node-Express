@@ -1,8 +1,8 @@
-import connectToDB  from "@/drizzle/db";
+import {db}  from "@/drizzle/db";
 import { TUserInsert, TUserSelect, userTable } from "@/drizzle/schema";
 import { eq } from "drizzle-orm";
 
-const db = await connectToDB()
+
 export const getUserByEmailService = async (
   email: string
 ): Promise<TUserSelect | undefined> => {

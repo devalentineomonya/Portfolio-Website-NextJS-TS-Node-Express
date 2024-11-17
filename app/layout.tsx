@@ -9,6 +9,7 @@ import PWAInstallButton from "@/components/common/PWAInstallButton/PWAInstallBut
 import RegisterWorker from "@/components/common/RegisterWorker/RegisterWorker";
 
 import { ToastContainer } from "react-toastify";
+import ProgressProvider from "@/components/ui/progress-provider";
 
 
 
@@ -29,17 +30,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`antialiased font-grotesk`}
-      >
-        <ToastContainer/>
-        <NetworkStatus />
-        {process.env.NODE_ENV === "production" && <RegisterWorker />}
-        <Navbar />
-        <SocialLinks />
-        <PWAInstallButton />
-        <main>{children}</main>
-        <Footer />
+      <body className={`antialiased font-grotesk`}>
+        <ProgressProvider>
+          <ToastContainer />
+          <NetworkStatus />
+          {process.env.NODE_ENV === "production" && <RegisterWorker />}
+          <Navbar />
+          <SocialLinks />
+          <PWAInstallButton />
+          <main>{children}</main>
+          <Footer />
+        </ProgressProvider>
       </body>
     </html>
   );
