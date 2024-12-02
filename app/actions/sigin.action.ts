@@ -37,6 +37,6 @@ export async function handleCredentialsSignin({
   }
 }
 
-export async function handleSignOut() {
-  await signOut({ redirectTo: "/" });
-}
+// export async function handleSignOut() {
+//   await signOut({ redirectTo: "/" });
+// }

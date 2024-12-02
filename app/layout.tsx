@@ -7,11 +7,9 @@ import SocialLinks from "@/components/common/socialLinks/SocialLinks";
 import NetworkStatus from "@/components/common/NetworkStatus/NetworkStatus";
 import PWAInstallButton from "@/components/common/PWAInstallButton/PWAInstallButton";
 import RegisterWorker from "@/components/common/RegisterWorker/RegisterWorker";
-
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { ToastContainer } from "react-toastify";
 import ProgressProvider from "@/components/ui/progress-provider";
-
-
 
 export const metadata: Metadata = {
   title: "Valentine Omonya | Software Engineer",
@@ -30,6 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+
       <body className={`antialiased font-grotesk`}>
         <ProgressProvider>
           <ToastContainer />
@@ -42,6 +41,7 @@ export default function RootLayout({
           <Footer />
         </ProgressProvider>
       </body>
+      <GoogleAnalytics gaId="G-8R64WK8YFE" />
     </html>
   );
 }

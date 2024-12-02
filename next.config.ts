@@ -29,6 +29,8 @@ const nextConfig = withPWAConfig({
         },
       },
     },
+
+      
   },
 });
 

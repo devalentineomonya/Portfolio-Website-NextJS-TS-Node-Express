@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import { BadgeCheck, Bell, ChevronsUpDown, LogOut } from "lucide-react";
 
@@ -20,7 +20,7 @@ import {
 } from "@/components/ui/sidebar";
 
 
-import { handleSignOut } from "@/app/actions/sigin.action";
+// import { handleSignOut } from "@/app/actions/sigin.action";
 
 export function NavUser({ session }: { session:any}) {
   const { isMobile } = useSidebar();

@@ -1,10 +1,26 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import bcrypt from "bcryptjs";
-import {
-  getUserByEmailService,
-  insertUserService,
-} from "@/services/user.service";
+
+import {db}  from "@/drizzle/db";
+import { TUserInsert, TUserSelect, userTable } from "@/drizzle/schema";
+import { eq } from "drizzle-orm";
+
+
+export const getUserByEmailService = async (
+  email: string
+): Promise<TUserSelect | undefined> => {
+  return await db.query.userTable.findFirst({
+    where: eq(userTable.email, email),
+  });
+};
+
+export const insertUserService = async (
+  userPayLoad: TUserInsert
+): Promise<TUserSelect | undefined> => {
+  const rows = await db.insert(userTable).values(userPayLoad).returning();
+  return rows[0];
+};
 
 const userSchema = z.object({
   firstName: z.string().min(1, "First name is required"),

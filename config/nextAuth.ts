@@ -2,7 +2,10 @@ import { loginSchema } from "@/lib/zod";
 import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
-import { getUserByEmailService } from "@/services/user.service";
+import { db } from "@/drizzle/db";
+import { eq } from "drizzle-orm";
+import { userTable } from "@/drizzle/schema";
+
 
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
@@ -26,7 +29,10 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           );
           return null;
         }
-        const user = await getUserByEmailService(credentials.email as string);
+        const user = await db.query.userTable.findFirst({
+              where: eq(userTable.email, credentials!.email as string),
+            });
+        
 
         if (!user) {
           console.log("Invalid credentials from nextAuth config");
