@@ -57,7 +57,7 @@ const Hero = () => {
 
                 <Link
                   className="py-3 px-4 bg-primary font-xl text-white rounded-md mt-4 hover:bg-pink-600"
-                  href="https://1drv.ms/b/c/5ecdd90a5b4bfa60/Ea5_R8VjxJZHnSHL4wSEbCgB1Foskewbv4Hyid3E2KT4Rg?e=L2PJOs"
+                  href="/resume.pdf"
                   target="_blank"
                 >
                   Read Resume
