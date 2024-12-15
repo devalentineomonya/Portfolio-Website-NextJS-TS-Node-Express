@@ -26,7 +26,7 @@ const projectsList = [
     name: "DevalCinemaz",
     previewImage: defaultPreview,
     popupImage: defaultPopup,
-    technologies: ["NextJS", "TMDB API", "Cleck Auth"],
+    technologies: ["NextJS", "TMDB API", "Firebase"],
     environment:"web",
     description:
       "DevalCinemaz is a movie trailer platform built with NextJS and powered by the TMDB API. It lets users explore a vast collection of movies, view trailers, and access movie details like release dates, ratings, and overviews. With a responsive interface, users can browse through popular and upcoming films.",
@@ -56,7 +56,7 @@ const projectsList = [
     environment:"web",
     description:
       "The React Weather App provides hyperlocal, 5-day forecasts in 3-hour increments for any location. Access temperature, humidity, wind speed, and pressure data. Ideal for travelers and professionals, this app offers effortless navigation and a clear, intuitive interface for informed decision-making",
-    liveLink: "https://deval-weather-app.vercel.app/",
+    liveLink: "https://devalweatherapp.vercel.app/",
     githubLink: "https://github.com/devalentineomonya/ReactJS-Weather-App",
   },
   {
