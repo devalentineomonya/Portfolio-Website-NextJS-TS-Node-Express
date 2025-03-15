@@ -45,7 +45,6 @@ const Navbar: FC = () => {
         } ${pathname.includes("admin") ? "hidden" : "flex"} `}
     >
       <div className="max-w-9xl w-full flex justify-between md:justify-start items-center px-4 md:px-2">
-        {/* Logo */}
         <div className="w-fit md:z-40">
           <Link href="/">
             <h1 className="text-primary text-2xl md:text-5xl font-semibold font-caveat">
@@ -54,7 +53,6 @@ const Navbar: FC = () => {
           </Link>
         </div>
 
-        {/* Navbar Links */}
         <nav
           className={`flex-1 w-full  bg-black bg-opacity-50 transition-all ease-in-out duration-300 ${showSideMenu
               ? "opacity-100 left-0 delay-600 overflow-scroll"
@@ -82,7 +80,6 @@ const Navbar: FC = () => {
           </ul>
         </nav>
 
-        {/* Hamburger Menu */}
         <div>
           <div
             className={`block md:hidden z-40 relative ${showSideMenu
