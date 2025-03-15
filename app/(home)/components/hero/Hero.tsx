@@ -1,5 +1,4 @@
 import Link from "next/link";
-// import Animation from "./Animation";
 import React from "react"
 import styles from "./hero.module.css";
 import { sectionMetadata } from "@/assets/data/metaDatas";
@@ -26,7 +25,6 @@ const Hero = () => {
           backgroundAttachment: "fixed",
         }}
       >
-        {/* <Animation> */}
         <div
           className="w-full h-screen flex items-center justify-center"
           id="home"
@@ -67,7 +65,6 @@ const Hero = () => {
           <div className="flex-1 max-lg:hidden h-12"></div>
           </div>
         </div>
-        {/* </Animation> */}
         <div
           className="absolute bottom-0 w-full h-[70px] sm:h-[105px] md:h-[135px] lg:-[182px] xl:h-[260px]"
           style={{
