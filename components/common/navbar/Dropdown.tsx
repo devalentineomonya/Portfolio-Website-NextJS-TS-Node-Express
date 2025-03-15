@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { CgChevronRight } from "react-icons/cg";
-import { useRouter, usePathname } from "next/navigation"; // usePathname gets the current path in Next.js 13+
+import { useRouter, usePathname } from "next/navigation";
 import styles from "./dropdown.module.css";
 
-// Define the type for the pages
 type Page = {
   name: string;
   href: string;
@@ -20,14 +19,17 @@ const pages: Page[] = [
   { name: "404", href: "/404" },
 ];
 
-const Dropdown = ({setShowSideMenu}:{setShowSideMenu:(state:boolean)=>void}) => {
+const Dropdown = ({
+  setShowSideMenu,
+}: {
+  setShowSideMenu: (state: boolean) => void;
+}) => {
   const [selectedPage, setSelectedPage] = useState<Page | null>(null);
   const router = useRouter();
-  const pathname = usePathname(); 
-
+  const pathname = usePathname();
 
   const handleSelect = (page: Page): void => {
-    setShowSideMenu(false)
+    setShowSideMenu(false);
     setSelectedPage(page);
     router.push(page.href);
   };
@@ -35,9 +37,9 @@ const Dropdown = ({setShowSideMenu}:{setShowSideMenu:(state:boolean)=>void}) => 
   useEffect(() => {
     const currentPage = pages.find((page) => page.href === pathname);
     if (currentPage) {
-      setSelectedPage(currentPage); 
+      setSelectedPage(currentPage);
     }
-  }, [pathname]); 
+  }, [pathname]);
   const filteredPages: Page[] = pages.filter((page) => page !== selectedPage);
 
   return (
@@ -55,7 +57,11 @@ const Dropdown = ({setShowSideMenu}:{setShowSideMenu:(state:boolean)=>void}) => 
             onClick={() => handleSelect(page)}
           >
             <input id={page.name} name="option" type="radio" />
-            <label className={styles.option} htmlFor={page.name} data-txt={page.name}>
+            <label
+              className={styles.option}
+              htmlFor={page.name}
+              data-txt={page.name}
+            >
               {page.name}
             </label>
           </div>
