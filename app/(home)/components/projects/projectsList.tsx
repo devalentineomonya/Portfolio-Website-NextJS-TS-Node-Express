@@ -2,9 +2,6 @@ import weatherPreview from "@/assets/images/devalWeatherApp.png";
 import weatherPopup from "@/assets/images/devalWeatherApp2.png";
 import defaultPreview from "@/assets/images/defaultPreview.png";
 import defaultPopup from "@/assets/images/defaultPopup.png";
-//
-//SUGGESTED DEXCRIPTION LWNGTH 43 WORDS 295 CHARACTERS
-// __________________________________________________//
 
 const projectsList = [
   {
