@@ -11,8 +11,13 @@ type LinkItem = {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   href?: string;
   sectionName?: string;
+=======
+  href?: string; 
+  sectionName?: string; 
+>>>>>>> Stashed changes
 =======
   href?: string; 
   sectionName?: string; 
@@ -35,7 +40,11 @@ const Footer: React.FC = () => {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+  
+>>>>>>> Stashed changes
 =======
   
 >>>>>>> Stashed changes
@@ -63,6 +72,10 @@ const Footer: React.FC = () => {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+        {/* About Section */}
+>>>>>>> Stashed changes
 =======
         {/* About Section */}
 >>>>>>> Stashed changes
@@ -84,6 +97,10 @@ const Footer: React.FC = () => {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+        {/* Links Section */}
+>>>>>>> Stashed changes
 =======
         {/* Links Section */}
 >>>>>>> Stashed changes
@@ -109,7 +126,11 @@ type FooterSectionProps = {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   isExternal?: boolean;
+=======
+  isExternal?: boolean; 
+>>>>>>> Stashed changes
 =======
   isExternal?: boolean; 
 >>>>>>> Stashed changes
@@ -131,6 +152,7 @@ const FooterSection: React.FC<FooterSectionProps> = ({ title, items, isExternal 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
           <Link
             href={item.href || `/#${item.sectionName}`}
             target={isExternal ? "_blank" : "_self"}
@@ -140,6 +162,8 @@ const FooterSection: React.FC<FooterSectionProps> = ({ title, items, isExternal 
             {item.name}
             {isExternal && <LuExternalLink className="inline ml-1" />}
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -154,6 +178,9 @@ const FooterSection: React.FC<FooterSectionProps> = ({ title, items, isExternal 
             {isExternal && <LuExternalLink className="inline ml-1" />} 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

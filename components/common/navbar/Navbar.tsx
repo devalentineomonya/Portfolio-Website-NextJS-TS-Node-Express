@@ -48,6 +48,10 @@ const Navbar: FC = () => {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+        {/* Logo */}
+>>>>>>> Stashed changes
 =======
         {/* Logo */}
 >>>>>>> Stashed changes
@@ -68,6 +72,10 @@ const Navbar: FC = () => {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+        {/* Navbar Links */}
+>>>>>>> Stashed changes
 =======
         {/* Navbar Links */}
 >>>>>>> Stashed changes
@@ -107,6 +115,10 @@ const Navbar: FC = () => {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+        {/* Hamburger Menu */}
+>>>>>>> Stashed changes
 =======
         {/* Hamburger Menu */}
 >>>>>>> Stashed changes

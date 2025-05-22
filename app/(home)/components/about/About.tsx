@@ -23,12 +23,15 @@ const About = () => {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   const [bgImage, setBgImage] = useState<string>(lightSlider.src);
   const { darkMode } = useTheme();
 
   useEffect(() => {
     setBgImage(darkMode ? darkSlider.src : lightSlider.src);
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -40,6 +43,9 @@ const About = () => {
     setBgImage(darkMode ? darkSlider.src : lightSlider.src); // Use .src
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

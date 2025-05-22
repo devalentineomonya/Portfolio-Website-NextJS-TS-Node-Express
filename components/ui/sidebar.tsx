@@ -73,6 +73,11 @@ const SidebarProvider = React.forwardRef<
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+    // This is the internal state of the sidebar.
+    // We use openProp and setOpenProp for control from outside the component.
+>>>>>>> Stashed changes
 =======
     // This is the internal state of the sidebar.
     // We use openProp and setOpenProp for control from outside the component.
@@ -100,6 +105,10 @@ const SidebarProvider = React.forwardRef<
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+        // This sets the cookie to keep the sidebar state.
+>>>>>>> Stashed changes
 =======
         // This sets the cookie to keep the sidebar state.
 >>>>>>> Stashed changes
@@ -117,6 +126,10 @@ const SidebarProvider = React.forwardRef<
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+    // Helper to toggle the sidebar.
+>>>>>>> Stashed changes
 =======
     // Helper to toggle the sidebar.
 >>>>>>> Stashed changes
@@ -135,6 +148,10 @@ const SidebarProvider = React.forwardRef<
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+    // Adds a keyboard shortcut to toggle the sidebar.
+>>>>>>> Stashed changes
 =======
     // Adds a keyboard shortcut to toggle the sidebar.
 >>>>>>> Stashed changes
@@ -162,6 +179,11 @@ const SidebarProvider = React.forwardRef<
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+    // We add a state so that we can do data-state="expanded" or "collapsed".
+    // This makes it easier to style the sidebar with Tailwind classes.
+>>>>>>> Stashed changes
 =======
     // We add a state so that we can do data-state="expanded" or "collapsed".
     // This makes it easier to style the sidebar with Tailwind classes.
@@ -284,6 +306,10 @@ const Sidebar = React.forwardRef<
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+        {/* This is what handles the sidebar gap on desktop */}
+>>>>>>> Stashed changes
 =======
         {/* This is what handles the sidebar gap on desktop */}
 >>>>>>> Stashed changes
@@ -312,6 +338,10 @@ const Sidebar = React.forwardRef<
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+            // Adjust the padding for floating and inset variants.
+>>>>>>> Stashed changes
 =======
             // Adjust the padding for floating and inset variants.
 >>>>>>> Stashed changes
@@ -546,6 +576,10 @@ const SidebarGroupAction = React.forwardRef<
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+        // Increases the hit area of the button on mobile.
+>>>>>>> Stashed changes
 =======
         // Increases the hit area of the button on mobile.
 >>>>>>> Stashed changes
@@ -703,6 +737,10 @@ const SidebarMenuAction = React.forwardRef<
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+        // Increases the hit area of the button on mobile.
+>>>>>>> Stashed changes
 =======
         // Increases the hit area of the button on mobile.
 >>>>>>> Stashed changes
@@ -757,6 +795,10 @@ const SidebarMenuSkeleton = React.forwardRef<
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+  // Random width between 50 to 90%.
+>>>>>>> Stashed changes
 =======
   // Random width between 50 to 90%.
 >>>>>>> Stashed changes

@@ -3,10 +3,13 @@ import { CgChevronRight } from "react-icons/cg";
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import { useRouter, usePathname } from "next/navigation";
 import styles from "./dropdown.module.css";
 
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -17,6 +20,9 @@ import styles from "./dropdown.module.css";
 // Define the type for the pages
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -41,6 +47,7 @@ const pages: Page[] = [
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 const Dropdown = ({
   setShowSideMenu,
 }: {
@@ -57,6 +64,8 @@ const Dropdown = ({
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 const Dropdown = ({setShowSideMenu}:{setShowSideMenu:(state:boolean)=>void}) => {
   const [selectedPage, setSelectedPage] = useState<Page | null>(null);
   const router = useRouter();
@@ -67,6 +76,9 @@ const Dropdown = ({setShowSideMenu}:{setShowSideMenu:(state:boolean)=>void}) => 
     setShowSideMenu(false)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -82,9 +94,15 @@ const Dropdown = ({setShowSideMenu}:{setShowSideMenu:(state:boolean)=>void}) => 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       setSelectedPage(currentPage);
     }
   }, [pathname]);
+=======
+      setSelectedPage(currentPage); 
+    }
+  }, [pathname]); 
+>>>>>>> Stashed changes
 =======
       setSelectedPage(currentPage); 
     }
@@ -120,11 +138,15 @@ const Dropdown = ({setShowSideMenu}:{setShowSideMenu:(state:boolean)=>void}) => 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             <label
               className={styles.option}
               htmlFor={page.name}
               data-txt={page.name}
             >
+=======
+            <label className={styles.option} htmlFor={page.name} data-txt={page.name}>
+>>>>>>> Stashed changes
 =======
             <label className={styles.option} htmlFor={page.name} data-txt={page.name}>
 >>>>>>> Stashed changes
