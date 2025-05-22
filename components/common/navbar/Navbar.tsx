@@ -46,6 +46,14 @@ const Navbar: FC = () => {
     >
       <div className="max-w-9xl w-full flex justify-between md:justify-start items-center px-4 md:px-2">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+        {/* Logo */}
+>>>>>>> Stashed changes
+=======
+        {/* Logo */}
+>>>>>>> Stashed changes
 =======
         {/* Logo */}
 >>>>>>> Stashed changes
@@ -58,6 +66,14 @@ const Navbar: FC = () => {
         </div>
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+        {/* Navbar Links */}
+>>>>>>> Stashed changes
+=======
+        {/* Navbar Links */}
+>>>>>>> Stashed changes
 =======
         {/* Navbar Links */}
 >>>>>>> Stashed changes
@@ -89,6 +105,14 @@ const Navbar: FC = () => {
         </nav>
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+        {/* Hamburger Menu */}
+>>>>>>> Stashed changes
+=======
+        {/* Hamburger Menu */}
+>>>>>>> Stashed changes
 =======
         {/* Hamburger Menu */}
 >>>>>>> Stashed changes

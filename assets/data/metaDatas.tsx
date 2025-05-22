@@ -1,4 +1,12 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+// metadata.js
+>>>>>>> Stashed changes
+=======
+// metadata.js
+>>>>>>> Stashed changes
 =======
 // metadata.js
 >>>>>>> Stashed changes
@@ -29,6 +37,14 @@ export const sectionMetadata = {
     },
   };
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+  
+>>>>>>> Stashed changes
+=======
+  
+>>>>>>> Stashed changes
 =======
   
 >>>>>>> Stashed changes

@@ -9,6 +9,14 @@ const PWAInstallButton = () => {
 
   useEffect(() => {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+    // Ensure this code runs only on the client-side
+>>>>>>> Stashed changes
+=======
+    // Ensure this code runs only on the client-side
+>>>>>>> Stashed changes
 =======
     // Ensure this code runs only on the client-side
 >>>>>>> Stashed changes
@@ -19,6 +27,14 @@ const PWAInstallButton = () => {
     };
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+    // Check if window is defined
+>>>>>>> Stashed changes
+=======
+    // Check if window is defined
+>>>>>>> Stashed changes
 =======
     // Check if window is defined
 >>>>>>> Stashed changes
@@ -28,6 +44,14 @@ const PWAInstallButton = () => {
 
     return () => {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+      // Clean up the event listener
+>>>>>>> Stashed changes
+=======
+      // Clean up the event listener
+>>>>>>> Stashed changes
 =======
       // Clean up the event listener
 >>>>>>> Stashed changes
@@ -51,23 +75,45 @@ const PWAInstallButton = () => {
     setIsInstallable(false);
   };
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
   const isStandalone = typeof window !== "undefined" && window.matchMedia('(display-mode: standalone)').matches;
 
   if (isStandalone) return null;
 =======
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 
   // Check if the app is already installed
   const isStandalone = typeof window !== "undefined" && window.matchMedia('(display-mode: standalone)').matches;
 
   if (isStandalone) return null; // Hide button if already installed
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
   return (
     <div className={`${pathname.includes("admin")  && "hidden"} fixed z-30 top-1/2 right-5 transform -translate-y-1/2`}>
       {isInstallable && (
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
         <button
           onClick={handleInstallClick}
+=======
+        <button 
+          onClick={handleInstallClick} 
+>>>>>>> Stashed changes
+=======
+        <button 
+          onClick={handleInstallClick} 
+>>>>>>> Stashed changes
 =======
         <button 
           onClick={handleInstallClick} 

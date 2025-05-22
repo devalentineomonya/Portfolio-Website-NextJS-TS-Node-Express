@@ -9,8 +9,18 @@ import { usePathname } from "next/navigation";
 type LinkItem = {
   name: string;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
   href?: string;
   sectionName?: string;
+=======
+  href?: string; 
+  sectionName?: string; 
+>>>>>>> Stashed changes
+=======
+  href?: string; 
+  sectionName?: string; 
+>>>>>>> Stashed changes
 =======
   href?: string; 
   sectionName?: string; 
@@ -23,7 +33,15 @@ const Footer: React.FC = () => {
   const pathname = usePathname().substring(1)
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+  
+>>>>>>> Stashed changes
+=======
+  
+>>>>>>> Stashed changes
 =======
   
 >>>>>>> Stashed changes
@@ -43,6 +61,14 @@ const Footer: React.FC = () => {
     <footer className={`${pathname.includes("admin") ? "hidden" : "flex"} justify-center items-center w-full h-auto text-gray-900 bg-white py-12 shadow-[0.5px_-4.5px_6px_-3.5px_#dddddd]`}>
       <div className="max-w-7xl w-full h-full flex flex-col md:flex-row justify-between items-start md:items-center md:gap-x-16 px-6 space-y-8 md:space-y-0">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+        {/* About Section */}
+>>>>>>> Stashed changes
+=======
+        {/* About Section */}
+>>>>>>> Stashed changes
 =======
         {/* About Section */}
 >>>>>>> Stashed changes
@@ -56,6 +82,14 @@ const Footer: React.FC = () => {
         </div>
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+        {/* Links Section */}
+>>>>>>> Stashed changes
+=======
+        {/* Links Section */}
+>>>>>>> Stashed changes
 =======
         {/* Links Section */}
 >>>>>>> Stashed changes
@@ -73,7 +107,15 @@ type FooterSectionProps = {
   title: string;
   items: LinkItem[];
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
   isExternal?: boolean;
+=======
+  isExternal?: boolean; 
+>>>>>>> Stashed changes
+=======
+  isExternal?: boolean; 
+>>>>>>> Stashed changes
 =======
   isExternal?: boolean; 
 >>>>>>> Stashed changes
@@ -87,6 +129,8 @@ const FooterSection: React.FC<FooterSectionProps> = ({ title, items, isExternal 
       {items.map((item) => (
         <li key={item.name} className="text-sm my-3 font-medium">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
           <Link
             href={item.href || `/#${item.sectionName}`}
             target={isExternal ? "_blank" : "_self"}
@@ -96,6 +140,10 @@ const FooterSection: React.FC<FooterSectionProps> = ({ title, items, isExternal 
             {item.name}
             {isExternal && <LuExternalLink className="inline ml-1" />}
 =======
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
           <Link 
             href={item.href || `/#${item.sectionName}`} 
             target={isExternal ? "_blank" : "_self"} 
@@ -104,6 +152,12 @@ const FooterSection: React.FC<FooterSectionProps> = ({ title, items, isExternal 
           >
             {item.name}
             {isExternal && <LuExternalLink className="inline ml-1" />} 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
           </Link>
         </li>
