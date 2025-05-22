@@ -1,3 +1,7 @@
+<<<<<<< Updated upstream
+=======
+// metadata.js
+>>>>>>> Stashed changes
 export const sectionMetadata = {
     home: {
       title: "Welcome to My Portfolio",
@@ -24,3 +28,7 @@ export const sectionMetadata = {
       description: "Read what others have to say about my work.",
     },
   };
+<<<<<<< Updated upstream
+=======
+  
+>>>>>>> Stashed changes

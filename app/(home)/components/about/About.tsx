@@ -20,11 +20,19 @@ export const metadata: Metadata = {
 }
 
 const About = () => {
+<<<<<<< Updated upstream
   const [bgImage, setBgImage] = useState<string>(lightSlider.src);
   const { darkMode } = useTheme();
 
   useEffect(() => {
     setBgImage(darkMode ? darkSlider.src : lightSlider.src);
+=======
+  const [bgImage, setBgImage] = useState<string>(lightSlider.src); // Use src
+  const { darkMode } = useTheme();
+
+  useEffect(() => {
+    setBgImage(darkMode ? darkSlider.src : lightSlider.src); // Use .src
+>>>>>>> Stashed changes
   }, [darkMode]);
 
   return (
