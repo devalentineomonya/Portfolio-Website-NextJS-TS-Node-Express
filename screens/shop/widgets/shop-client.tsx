@@ -29,12 +29,11 @@ const ShopClient: React.FC<{ products: Product[] }> = ({ products }) => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredSortedProducts = useMemo(() => {
-    // Filter products based on search query
+
     const filtered = products.filter((product) =>
       product.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
-    // Sort filtered products
     return filtered.sort((a, b) => {
       const comparison = a.name.localeCompare(b.name);
       return sortAscending ? comparison : -comparison;
@@ -119,7 +118,7 @@ const ShopClient: React.FC<{ products: Product[] }> = ({ products }) => {
             <motion.div
               key={product.slug.current}
               variants={itemVariants}
-              layout // Add layout animation for smooth reordering
+              layout 
             >
               <ProductCard
               sizes={product.sizes}

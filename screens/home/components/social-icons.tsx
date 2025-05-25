@@ -2,20 +2,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import {
-  Link2,
-  Instagram,
-  Youtube,
-  Codepen,
-  Github,
-  Linkedin,
-} from "lucide-react";
-import {
-  PiXLogo,
-  PiStackOverflowLogo,
-  PiDevToLogoLight,
-  PiMediumLogo,
-} from "react-icons/pi";
+import {Link2} from "lucide-react"
+import { socialLinks } from "@/lib/constants";
 
 const SocialLinks = () => {
   const [showIcons, setShowIcons] = useState(false);
@@ -24,24 +12,10 @@ const SocialLinks = () => {
     setShowIcons(true);
     setTimeout(() => {
       setShowIcons(false);
-    }, 10000); // 10 seconds
+    }, 10000);
   };
 
-  const socialLinks = [
-    { name: "GitHub", icon: <Github />, href: "https://github.com" },
-    { name: "LinkedIn", icon: <Linkedin />, href: "https://linkedin.com" },
-    { name: "Twitter", icon: <PiXLogo />, href: "https://twitter.com" },
-    {
-      name: "Stack Overflow",
-      icon: <PiStackOverflowLogo size={14} />,
-      href: "https://stackoverflow.com",
-    },
 
-    { name: "Medium", icon: <PiMediumLogo />, href: "https://medium.com" },
-    { name: "Linkedin", icon: <Linkedin />, href: "https://hashnode.com" },
-    { name: "Instagram", icon: <Instagram />, href: "https://dribbble.com" },
-    { name: "Youtube", icon: <Youtube />, href: "https://behance.net" },
-  ];
 
   return (
     <div className="border-t py-2 flex justify-between items-center mt-5">
@@ -55,7 +29,7 @@ const SocialLinks = () => {
               key={link.name}
             >
               <Link href={link.href} target="_blank" rel="noopener noreferrer">
-                {link.icon}
+                {<link.icon/>}
               </Link>
             </Button>
           ))}

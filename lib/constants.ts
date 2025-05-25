@@ -5,7 +5,18 @@ import {
   Mountain,
   BookOpen,
   MessageCircle,
+  Instagram,
+  Youtube,
+  Github,
+  Linkedin,
 } from "lucide-react";
+
+import {
+  PiXLogo,
+  PiStackOverflowLogo,
+  PiMediumLogo,
+} from "react-icons/pi";
+import { TbBrandLeetcode } from "react-icons/tb";
 
 export const navigationLinks = [
   { href: "/", label: "Home" },
@@ -53,3 +64,20 @@ export const personalFavorites = [
     icon: MessageCircle,
   },
 ] as const;
+
+
+ export const socialLinks = [
+    { name: "GitHub", icon: Github, href: "https://github.com/devalentineomonya" },
+    { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com/in/devalentineomonya" },
+    { name: "Twitter", icon: PiXLogo, href: "https://x.com/devalentine_" },
+    {
+      name: "Stack Overflow",
+      icon: PiStackOverflowLogo,
+      href: "https://stackoverflow.com/users/22697841/valentine-omonya",
+    },
+
+    { name: "Medium", icon: PiMediumLogo, href: "https://medium.com/@devalentineomonya" },
+    { name: "Leetcode", icon: TbBrandLeetcode, href: "https://leetcode.com/devalentineomonya" },
+    { name: "Instagram", icon: Instagram, href: "https://instagram.com/devalentineomonya" },
+    { name: "Youtube", icon: Youtube, href: "https://youtube.com/@devMinutes" },
+  ] as const
