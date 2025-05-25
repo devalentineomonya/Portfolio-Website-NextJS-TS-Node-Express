@@ -1,4 +1,3 @@
-import PageHeader from "@/components/shared/page-header";
 import { client } from "@/sanity/lib/client";
 import ProductClient from "@/screens/shop/widgets/product-client";
 import { Product } from "@/types/product";

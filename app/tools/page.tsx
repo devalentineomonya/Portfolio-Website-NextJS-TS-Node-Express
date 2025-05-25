@@ -23,7 +23,7 @@ export default async function Tools() {
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {tools.map((tool, index) => (
+          {tools.map((tool) => (
             <ToolCard
               key={tool._id}
               name={tool.name}

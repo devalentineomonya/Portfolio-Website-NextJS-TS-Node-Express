@@ -65,7 +65,7 @@ export default function CartPage() {
 
   useEffect(() => {
     form.setValue("cartItems", items);
-  }, [items]);
+  }, [items,form]);
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {

@@ -107,7 +107,7 @@ const About = () => {
                   className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm"
                   variants={containerVariants}
                 >
-                  {personalFavorites.map((item, index) => (
+                  {personalFavorites.map((item) => (
                     <motion.div
                       key={item.category}
                       variants={itemVariants}

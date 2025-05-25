@@ -1,5 +1,4 @@
 import { client } from "@/sanity/lib/client";
-import { type SanityDocument } from "next-sanity";
 
 import PageHeader from "@/components/shared/page-header";
 import ProjectsClient from "@/screens/projects/widgets/projects-client";
