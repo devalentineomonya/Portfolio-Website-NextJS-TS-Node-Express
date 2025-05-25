@@ -1,23 +1,27 @@
 import type { Metadata } from "next";
-import React from "react";
+import { Rubik } from "next/font/google";
+import { ThemeProvider } from "@/providers/theme-provider";
 import "./globals.css";
-import Navbar from "@/components/common/navbar/Navbar";
-import Footer from "@/components/common/footer/Footer";
-import SocialLinks from "@/components/common/socialLinks/SocialLinks";
-import NetworkStatus from "@/components/common/NetworkStatus/NetworkStatus";
-import PWAInstallButton from "@/components/common/PWAInstallButton/PWAInstallButton";
-import RegisterWorker from "@/components/common/RegisterWorker/RegisterWorker";
-import { GoogleAnalytics } from '@next/third-parties/google'
-import { ToastContainer } from "react-toastify";
-import ProgressProvider from "@/components/ui/progress-provider";
+import { Navbar } from "@/components/navbar/navbar";
+import { Toaster } from "@/components/ui/sonner";
+
+const rubik = Rubik({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Valentine Omonya | Software Engineer",
   description:
-    "Explore the work of Valentine Omonya, a passionate Software Engineer specializing in web and mobile development. Discover innovative projects showcasing expertise in Python, JavaScript, PHP, and React, all crafted with a focus on user experience and creative problem-solving",
+    "Valentine Omonya is a Software Engineer specializing in Python and JavaScript, building intuitive web and mobile applications with a focus on user experience and problem-solving.",
   creator: "Valentine Omonya",
-  keywords:
-    "Valentine Omonya, Omonya, Valentine, valentine omonya, valentine mutinda, devalentine,Devalentine, devalentin.me, devalentine .me, devalentine me, devalentine omonya, devalenthcohen, deval enth cohen, devalenthcohen.inpynb.dev, deval enth cohen.ipynb.dev, devalenthcohen ipynb.dev, Software Engineer, Python, JavaScript, PHP, React, Web Development, Mobile Development, User Experience, Creative Problem-Solving",
+  keywords: [
+    "Valentine Omonya",
+    "Software Engineer",
+    "Python",
+    "JavaScript",
+    "Web Development",
+    "Mobile Development",
+    "User Experience",
+    "Problem Solving",
+  ],
   manifest: "/manifest.json",
 };
 
@@ -27,21 +31,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-
-      <body className={`antialiased font-grotesk`}>
-        <ProgressProvider>
-          <ToastContainer />
-          <NetworkStatus />
-          {process.env.NODE_ENV === "production" && <RegisterWorker />}
+    <html lang="en" suppressHydrationWarning>
+      <body className={`antialiased ${rubik.className}`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           <Navbar />
-          <SocialLinks />
-          <PWAInstallButton />
-          <main>{children}</main>
-          <Footer />
-        </ProgressProvider>
+          {children}
+          <Toaster position="top-center" richColors />
+        </ThemeProvider>
       </body>
-      <GoogleAnalytics gaId="G-8R64WK8YFE" />
     </html>
   );
 }

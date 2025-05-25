@@ -1,41 +1,35 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+node_modules
+# Next.js build output
+.next/
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-.yarn/install-state.gz
-/drizzle/migrations
+# VS Code settings
+.vscode/
 
-# testing
-/coverage
+#
+.env.local
+.env.development
+.env.production
+.env.test
+.env.*.local
 
-# next.js
-/.next/
-/out/
+# Allow .env.example to be committed
+!.env.example
 
-# production
-/build
+# Sanity Studio build output
+dist/
 
-# misc
-.DS_Store
-*.pem
+# pnpm specific files
+pnpm-lock.yaml
 
-# debug
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
-.env*.local
+# Dependency directories
+node_modules/
 
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-.env
-**/public/workbox-*.js
-**/public/sw.js
-**/public/fallback-*.js
+# Other
+.DS_Store
+Thumbs.db
+ Environment files

@@ -1,37 +1,18 @@
-import withPWA from "next-pwa";
-const withPWAConfig = withPWA({
-  dest: "public",
-  register: true,
-  skipWaiting: true,
-  cacheOnFrontEndNav: true,
-  cacheStartUrl: true,
-  reloadOnOnline: true,
-  disable: process.env.NODE_ENV === "development",
-  fallbacks: {
-    document: "/offline",
-    image: "/fallback.png",
-    audio: "/fallback.mp3",
-    video: "/fallback.mp4",
-    font: "/fallback.woff",
-  },
-});
+import type { NextConfig } from "next";
 
-/** @type {import('next').NextConfig} */
-const nextConfig = withPWAConfig({
-  reactStrictMode: true,
-  productionBrowserSourceMaps: false,
+const nextConfig: NextConfig = {
+  allowedDevOrigins: ["127.0.0.1"],
   experimental: {
-    turbo: {
-      rules: {
-        "*.svg": {
-          loaders: ["@svgr/webpack"],
-          as: "*.js",
-        },
-      },
-    },
-
-      
+    viewTransition: true,
   },
-});
+  images:{
+   remotePatterns: [
+     {
+       protocol: "https",
+       hostname: "cdn.sanity.io",
+     }
+   ]
+  }
+};
 
 export default nextConfig;
