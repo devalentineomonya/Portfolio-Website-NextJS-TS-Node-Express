@@ -1,59 +1,24 @@
-"use client"
+
+"use client";
+
 import React from "react";
-import socialLinksList from "../socialLinks/socialLinksList";
 import Link from "next/link";
-import { LuExternalLink } from "react-icons/lu";
-import { navbarItems } from "../navbar/navbarItems";
 import { usePathname } from "next/navigation";
+import { LuExternalLink } from "react-icons/lu";
+
+import socialLinksList from "../socialLinks/socialLinksList";
+import { navbarItems } from "../navbar/navbarItems";
 
 type LinkItem = {
   name: string;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
   href?: string;
   sectionName?: string;
-=======
-  href?: string; 
-  sectionName?: string; 
->>>>>>> Stashed changes
-=======
-  href?: string; 
-  sectionName?: string; 
->>>>>>> Stashed changes
-=======
-  href?: string; 
-  sectionName?: string; 
->>>>>>> Stashed changes
-=======
-  href?: string; 
-  sectionName?: string; 
->>>>>>> Stashed changes
 };
 
 const Footer: React.FC = () => {
   const today = new Date();
   const dayName = today.toLocaleDateString("en-US", { weekday: "long" });
-  const pathname = usePathname().substring(1)
-
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-
-=======
-  
->>>>>>> Stashed changes
-=======
-  
->>>>>>> Stashed changes
-=======
-  
->>>>>>> Stashed changes
-=======
-  
->>>>>>> Stashed changes
+  const pathname = usePathname().substring(1);
 
   const pages: LinkItem[] = [
     { name: "Experience", href: "/experience" },
@@ -67,51 +32,27 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className={`${pathname.includes("admin") ? "hidden" : "flex"} justify-center items-center w-full h-auto text-gray-900 bg-white py-12 shadow-[0.5px_-4.5px_6px_-3.5px_#dddddd]`}>
+    <footer
+      className={`${
+        pathname.includes("admin") ? "hidden" : "flex"
+      } justify-center items-center w-full h-auto text-gray-900 bg-white py-12 shadow-[0.5px_-4.5px_6px_-3.5px_#dddddd]`}
+    >
       <div className="max-w-7xl w-full h-full flex flex-col md:flex-row justify-between items-start md:items-center md:gap-x-16 px-6 space-y-8 md:space-y-0">
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
         {/* About Section */}
->>>>>>> Stashed changes
-=======
-        {/* About Section */}
->>>>>>> Stashed changes
-=======
-        {/* About Section */}
->>>>>>> Stashed changes
-=======
-        {/* About Section */}
->>>>>>> Stashed changes
         <div className="md:w-1/2 space-y-4">
           <h1 className="text-2xl font-bold">Devalentine 👩‍💻</h1>
           <p className="text-sm leading-relaxed">
-            Valentine Omonya is a software developer from Nairobi, Kenya, with a passion for building beautiful and functional websites and applications.
+            Valentine Omonya is a software developer from Nairobi, Kenya, with a
+            passion for building beautiful and functional websites and
+            applications.
           </p>
           <h2 className="text-sm">&copy; {today.getFullYear()} Devalentine</h2>
           <h3 className="text-sm">Have a blessed {dayName}</h3>
         </div>
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
         {/* Links Section */}
->>>>>>> Stashed changes
-=======
-        {/* Links Section */}
->>>>>>> Stashed changes
-=======
-        {/* Links Section */}
->>>>>>> Stashed changes
-=======
-        {/* Links Section */}
->>>>>>> Stashed changes
         <div className="md:w-1/2 flex justify-between w-full space-x-4">
-          <FooterSection title="Social" items={socialLinksList} isExternal={true} />
+          <FooterSection title="Social" items={socialLinksList} isExternal />
           <FooterSection title="Pages" items={pages} />
           <FooterSection title="Quick Links" items={navbarItems} />
         </div>
@@ -123,36 +64,19 @@ const Footer: React.FC = () => {
 type FooterSectionProps = {
   title: string;
   items: LinkItem[];
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
   isExternal?: boolean;
-=======
-  isExternal?: boolean; 
->>>>>>> Stashed changes
-=======
-  isExternal?: boolean; 
->>>>>>> Stashed changes
-=======
-  isExternal?: boolean; 
->>>>>>> Stashed changes
-=======
-  isExternal?: boolean; 
->>>>>>> Stashed changes
 };
 
-
-const FooterSection: React.FC<FooterSectionProps> = ({ title, items, isExternal }) => (
+const FooterSection: React.FC<FooterSectionProps> = ({
+  title,
+  items,
+  isExternal,
+}) => (
   <div className="space-y-2">
     <p className="text-lg font-semibold">{title}</p>
     <ul className="space-y-2">
       {items.map((item) => (
         <li key={item.name} className="text-sm my-3 font-medium">
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
           <Link
             href={item.href || `/#${item.sectionName}`}
             target={isExternal ? "_blank" : "_self"}
@@ -161,31 +85,6 @@ const FooterSection: React.FC<FooterSectionProps> = ({ title, items, isExternal 
           >
             {item.name}
             {isExternal && <LuExternalLink className="inline ml-1" />}
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-          <Link 
-            href={item.href || `/#${item.sectionName}`} 
-            target={isExternal ? "_blank" : "_self"} 
-            rel={isExternal ? "noopener noreferrer" : undefined} 
-            className="hover:text-gray-700 transition-colors flex items-center gap-x-3"
-          >
-            {item.name}
-            {isExternal && <LuExternalLink className="inline ml-1" />} 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
           </Link>
         </li>
       ))}
