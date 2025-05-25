@@ -7,10 +7,11 @@ import { notFound } from "next/navigation";
 export default async function ProductPage({
   params,
 }: {
-  params: { productSlug: string };
+  params: Promise<{ productSlug: string }>;
 }) {
-  const { productSlug } = params;
+  const { productSlug } = await params;
   const PRODUCT_QUERY = `*[_type == "product" && slug.current == $slug][0]`;
+
   const product = await client.fetch<Product | null>(PRODUCT_QUERY, {
     slug: productSlug,
   });
