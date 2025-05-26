@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { navigationLinks, socialLinks } from "@/lib/constants";
 import { usePathname } from "next/navigation";
 
-export default function FooterSection() {
+export default function Footer() {
   const pathName = usePathname();
   return (
     <footer className={cn("bg-white py-32 dark:bg-transparent", pathName==="/" && "hidden")}>

@@ -3,6 +3,7 @@ import { Rubik } from "next/font/google";
 import { ThemeProvider } from "@/providers/theme-provider";
 import "./globals.css";
 import { Navbar } from "@/components/navbar/navbar";
+import Footer from "@/components/footer/footer";
 import { Toaster } from "@/components/ui/sonner";
 
 const rubik = Rubik({ subsets: ["latin"] });
@@ -41,6 +42,7 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
+          <Footer />
           <Toaster position="top-center" richColors />
         </ThemeProvider>
       </body>
