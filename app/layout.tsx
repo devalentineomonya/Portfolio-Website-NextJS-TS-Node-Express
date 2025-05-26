@@ -8,23 +8,7 @@ import { Toaster } from "@/components/ui/sonner";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Valentine Omonya | Software Engineer",
-  description:
-    "Valentine Omonya is a Software Engineer specializing in Python and JavaScript, building intuitive web and mobile applications with a focus on user experience and problem-solving.",
-  creator: "Valentine Omonya",
-  keywords: [
-    "Valentine Omonya",
-    "Software Engineer",
-    "Python",
-    "JavaScript",
-    "Web Development",
-    "Mobile Development",
-    "User Experience",
-    "Problem Solving",
-  ],
-  manifest: "/manifest.json",
-};
+export { rootMetaData as metadata } from "./metadata";
 
 export default function RootLayout({
   children,

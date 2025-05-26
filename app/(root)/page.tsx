@@ -51,18 +51,23 @@ const page = () => {
             OTHER LINKS
           </h2>
           <div className="space-y-1 w-full">
-            <div className="grid grid-cols-2 space-x-3">
+            <div className="grid grid-cols-2 gap-x-3">
               <Link
+                className="w-full inline-block"
                 target="_blank"
                 href="https://linkedin.com/in/devalentineomonya"
               >
-                <Button variant="outline" className="items-center">
+                <Button variant="outline" className="w-full">
                   <Linkedin />
                   <span>LinkedIn</span>
                 </Button>
               </Link>
-              <Link target="_blank" href="https://github.com/devalentineomonya">
-                <Button variant="outline" className="items-center">
+              <Link
+                className="w-full inline-block"
+                target="_blank"
+                href="https://github.com/devalentineomonya"
+              >
+                <Button variant="outline" className="w-full">
                   <Github />
                   <span>GitHub</span>
                 </Button>

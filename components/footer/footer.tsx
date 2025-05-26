@@ -7,17 +7,21 @@ import { usePathname } from "next/navigation";
 export default function Footer() {
   const pathName = usePathname();
   return (
-    <footer className={cn("bg-white py-32 dark:bg-transparent", pathName==="/" && "hidden")}>
+    <footer
+      className={cn(
+        "bg-white py-32 dark:bg-transparent",
+        pathName === "/" && "hidden"
+      )}
+    >
       <div className="mx-auto max-w-6xl px-4">
         <Link href="" aria-label="go home" className="mx-auto block size-fit">
           <img className="size-8" src="/logo.png" />
         </Link>
 
-        <div
-          className=       "my-8 flex flex-wrap justify-center gap-6 text-sm"
-        >
+        <div className="my-8 flex flex-wrap justify-center gap-6 text-sm">
           {navigationLinks.map((link) => (
             <Link
+              key={link.href}
               className={cn(
                 "transition-colors  hover:text-black dark:hover:text-white"
               )}
@@ -30,6 +34,7 @@ export default function Footer() {
         <div className="my-8 flex flex-wrap justify-center gap-6 text-sm">
           {socialLinks.map((link) => (
             <Link
+              key={link.href}
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
