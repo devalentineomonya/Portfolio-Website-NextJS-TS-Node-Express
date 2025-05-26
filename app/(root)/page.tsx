@@ -6,7 +6,6 @@ import { ChevronRight, Github, House, Linkedin } from "lucide-react";
 import SocialLinks from "@/screens/home/components/social-icons";
 import { navigationLinks } from "@/lib/constants";
 
-
 const page = () => {
   return (
     <main className="min-h-screen flex items-center justify-center flex-col w-full">
@@ -53,14 +52,21 @@ const page = () => {
           </h2>
           <div className="space-y-1 w-full">
             <div className="grid grid-cols-2 space-x-3">
-              <Button variant="outline" className="items-center">
-                <Linkedin />
-                <span>LinkedIn</span>
-              </Button>
-              <Button variant="outline" className="items-center">
-                <Github />
-                <span>GitHub</span>
-              </Button>
+              <Link
+                target="_blank"
+                href="https://linkedin.com/in/devalentineomonya"
+              >
+                <Button variant="outline" className="items-center">
+                  <Linkedin />
+                  <span>LinkedIn</span>
+                </Button>
+              </Link>
+              <Link target="_blank" href="https://github.com/devalentineomonya">
+                <Button variant="outline" className="items-center">
+                  <Github />
+                  <span>GitHub</span>
+                </Button>
+              </Link>
             </div>
             <SocialLinks />
           </div>
