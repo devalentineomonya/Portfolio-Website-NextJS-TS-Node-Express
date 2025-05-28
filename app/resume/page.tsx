@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -20,8 +21,10 @@ export default function ResumePage() {
             description="A detailed overview of my professional journey, showcasing my roles, responsibilities, and achievements across various positions."
           />
           <Button className="flex items-center gap-2">
+            <Link  className="flex items-center gap-x-2 justify-center" target="_black" href="https://v1.devalentine.me/resume.pdf">
             <Download className="h-4 w-4" />
-            Download Resume
+            <span>Download Resume</span>
+</Link>
           </Button>
         </div>
 
