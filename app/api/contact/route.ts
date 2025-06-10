@@ -53,7 +53,7 @@ export async function POST(request: NextRequest) {
                 `;
 
     await transporter.sendMail({
-      from: process.env.EMAIL_FROM,
+      from: `Contact - ${process.env.EMAIL_FROM}`,
       to: process.env.ADMIN_EMAIL,
       subject: `New Contact: ${formData.subject}`,
       text: textVersion,
