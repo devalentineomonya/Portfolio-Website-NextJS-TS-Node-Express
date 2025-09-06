@@ -1,16 +1,16 @@
 "use client";
 
-import { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Link2, Search } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Link2, Search } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 
 interface ChangelogEntry {
   version: string;
@@ -23,7 +23,7 @@ const changelogData: ChangelogEntry[] = [
   {
     version: "4.0",
     date: "25 de May de 2025",
-    link: "https://v4.devalentine.me",
+    link: "https://v4.valentinee.dev",
     description:
       "Personal tech playground featuring experimental stacks, e-commerce integration, and enhanced professional showcase.",
     changes: [
@@ -38,7 +38,7 @@ const changelogData: ChangelogEntry[] = [
   {
     version: "3.0",
     date: "5 de Jan de 2025",
-    link: "https://v3.devalentine.me",
+    link: "https://v3.valentinee.dev",
     description:
       "Professional showcase focused on project case studies and product demonstrations.",
     changes: [
@@ -54,7 +54,7 @@ const changelogData: ChangelogEntry[] = [
   {
     version: "2.0",
     date: "26 de Jul de 2024",
-    link: "https://v2.devalentine.me",
+    link: "https://v2.valentinee.dev",
     description:
       "Modern redesign with component-driven architecture and advanced styling.",
     changes: [
@@ -70,7 +70,7 @@ const changelogData: ChangelogEntry[] = [
   {
     version: "1.0",
     date: "15 de Jan de 2024",
-    link: "https://v1.devalentine.me",
+    link: "https://v1.valentinee.dev",
     description:
       "Initial portfolio foundation with core functionality and basic presentation.",
     changes: [

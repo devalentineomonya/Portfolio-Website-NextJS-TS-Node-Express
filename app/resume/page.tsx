@@ -1,4 +1,5 @@
-import Link from "next/link"
+import PageHeader from "@/components/shared/page-header";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -7,9 +8,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Download, FileText } from "lucide-react";
-import PageHeader from "@/components/shared/page-header";
+import { Download } from "lucide-react";
+import Link from "next/link";
 
 export default function ResumePage() {
   return (
@@ -21,10 +21,14 @@ export default function ResumePage() {
             description="A detailed overview of my professional journey, showcasing my roles, responsibilities, and achievements across various positions."
           />
           <Button className="flex items-center gap-2">
-            <Link  className="flex items-center gap-x-2 justify-center" target="_black" href="https://v1.devalentine.me/resume.pdf">
-            <Download className="h-4 w-4" />
-            <span>Download Resume</span>
-</Link>
+            <Link
+              className="flex items-center gap-x-2 justify-center"
+              target="_black"
+              href="https://v1.valentinee.dev/resume.pdf"
+            >
+              <Download className="h-4 w-4" />
+              <span>Download Resume</span>
+            </Link>
           </Button>
         </div>
 

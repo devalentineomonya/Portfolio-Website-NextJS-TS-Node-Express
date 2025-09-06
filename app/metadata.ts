@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-export const rootMetaData:Metadata = {
+export const rootMetaData: Metadata = {
   title: "Valentine Omonya | Software Engineer",
   description:
     "Valentine Omonya is a Software Engineer specializing in Python and JavaScript, building intuitive web and mobile applications with a focus on user experience and problem-solving.",
@@ -16,13 +16,13 @@ export const rootMetaData:Metadata = {
     "Problem Solving",
   ],
   manifest: "/manifest.json",
-  metadataBase: new URL("https://v4.devalentine.me"),
+  metadataBase: new URL("https://v4.valentinee.dev"),
   robots: "index, follow",
   openGraph: {
     title: "Valentine Omonya | Software Engineer",
     description:
       "Engineer specializing in Python & JavaScript, creating intuitive and scalable applications.",
-    url: "https://v4.devalentine.me",
+    url: "https://v4.valentinee.dev",
     siteName: "Valentine Omonya",
     images: [
       {

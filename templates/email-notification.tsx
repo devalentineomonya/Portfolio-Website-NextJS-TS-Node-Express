@@ -1,16 +1,16 @@
 import { OrderData } from "@/app/api/submit-order/route";
 import {
-  Html,
-  Head,
   Body,
-  Container,
-  Section,
   Column,
-  Row,
-  Text,
-  Link,
-  Img,
+  Container,
+  Head,
   Hr,
+  Html,
+  Img,
+  Link,
+  Row,
+  Section,
+  Text,
 } from "@react-email/components";
 
 const baseStyles = {
@@ -217,7 +217,7 @@ function ProductRow({ item }: ProductRowProps) {
       </Column>
 
       <Column style={productStyles.productDetailsColumn}>
-        <Link href={`https://v4.devalentine.me/shop/${item.productId}`}>
+        <Link href={`https://v4.valentinee.dev/shop/${item.productId}`}>
           <Text style={productStyles.productName}>{item.name}</Text>
         </Link>
         <Text style={productStyles.productDetail}>Size: {item.size}</Text>
@@ -419,7 +419,6 @@ interface ContactData {
   message: string;
 }
 
-
 export function ContactNotificationAdmin({ data }: { data: ContactData }) {
   return (
     <Html>
@@ -460,11 +459,13 @@ export function ContactNotificationAdmin({ data }: { data: ContactData }) {
             <Row style={infoStyles.infoRow}>
               <Column>
                 <Text style={infoStyles.infoLabel}>Message</Text>
-                <Text style={{
-                  ...infoStyles.infoText,
-                  whiteSpace: "pre-wrap",
-                  lineHeight: "1.6"
-                }}>
+                <Text
+                  style={{
+                    ...infoStyles.infoText,
+                    whiteSpace: "pre-wrap",
+                    lineHeight: "1.6",
+                  }}
+                >
                   {data.message}
                 </Text>
               </Column>
